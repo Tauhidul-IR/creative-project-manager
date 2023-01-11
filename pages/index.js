@@ -18,7 +18,6 @@ export default function Home() {
         <div className={styles.description}>
           <p>
             Get abdullah
-
             <code className={styles.code}>pages/index.js</code>
           </p>
           <div>
