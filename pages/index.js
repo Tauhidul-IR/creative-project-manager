@@ -3,9 +3,10 @@ import Client from "../Components/Client/Client";
 
 export default function Home() {
   return (
-    <>
-      <h1>Hello World</h1>
+    <div className="bg-white">
+      <h1 className="text-black">Navbar coming</h1>
+      <h1 className="text-black">Banner Coming</h1>
       <Client></Client>
-    </>
+    </div>
   )
 }
