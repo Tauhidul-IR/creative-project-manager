@@ -5,12 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import "./styles.css";
 
 // import required modules
 import { Pagination } from "swiper";
 
-// import "./styles.css";
 const img = '/images/img1.png'
 const img2 = '/images/img2.png'
 const img3 = '/images/img3.png'
@@ -21,10 +19,10 @@ const img7 = '/images/img7.png'
 
 const Client = () => {
     return (
-        <div className='px-20'>
+        <div className=' py-10 px-20 bg-white'>
             <div className="">
-                <h3 className='text-center'>Our Clients</h3>
-                <h1 className='text-center'>Trusted by world’s leading clients around the world</h1>
+                <h3 className='text-center text-black text-lg sm:text-xl md:text-2xl'>Our Clients</h3>
+                <h1 className='text-center text-black text-xl sm:text-2xl md:text-5xl my-6'>Trusted by world’s leading <br /> clients around the world</h1>
             </div>
             <Swiper
                 slidesPerView={1}
