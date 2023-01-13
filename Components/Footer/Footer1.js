@@ -1,21 +1,12 @@
-import src from "daisyui";
 
 
-const Footer = () => {
-  const footerImage = "/img1.png"
-  const styling = {
-    backgroundImage: `url(${'https://t3.ftcdn.net/jpg/04/54/89/24/240_F_454892434_IJoJ9XZkhWjpNi9A9C93xYlgQxurPa6G.jpg'})`,
-    width: "100%",
-    height: "100%"
-  }
-  return (
-    <div  >
-      <div >
-      </div>
-      <footer style={{
+const Footer1 = () => {
+    return (
+        <div>
+              <footer style={{
         color: "white",
         backgroundColor: "navy",
-        background: blur('104vh')
+       
       }}
         className="footer hover:blur-1         p-10  text-base-content">
         <div>
@@ -47,9 +38,9 @@ const Footer = () => {
             <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
           </div>
         </div>
-      </footer>
-    </div>
-  );
+      </footer> 
+        </div>
+    );
 };
 
-export default Footer;
+export default Footer1;

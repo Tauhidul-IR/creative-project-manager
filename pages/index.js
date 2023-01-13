@@ -1,5 +1,7 @@
 import Client from "../Components/Client/Client";
-import Footer from "../Components/Footer/Footer";
+import Footer1 from "../Components/Footer/Footer1";
+import Footer from "./Footers/Footer";
+
 
 
 export default function Home() {
@@ -8,8 +10,10 @@ export default function Home() {
       <h1 className="text-black">Navbar coming</h1>
       <h1 className="text-black">Banner Coming</h1>
       <Client></Client>
-    
-        <Footer></Footer>
+   
+    <Footer></Footer>
+   
+
      
       
     </div>
