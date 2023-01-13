@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.1",
     "electron-to-chromium": "^1.4.284",
     "fraction.js": "^4.2.0",
     "next": "^13.1.2",
     "node-releases": "^2.0.8",
+    "classname": "^0.0.0",
+    "daisyui": "^2.46.1",
+    "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",

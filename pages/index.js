@@ -2,6 +2,9 @@ import Banner from "../Components/banner/banner";
 import Client from "../Components/Client/Client";
 import Product from "../Components/Product/Product";
 import Testimonial from "../Components/Testimonial/Testimonial";
+import MyTab from "../Components/MyTab/MyTab";
+
+
 
 
 export default function Home() {
@@ -11,6 +14,8 @@ export default function Home() {
       <Product></Product>
       <Client></Client>
       <Testimonial></Testimonial>
+      <MyTab />
+
 
     </div>
   )
