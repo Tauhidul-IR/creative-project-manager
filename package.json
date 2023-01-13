@@ -11,10 +11,17 @@
   "dependencies": {
     "@next/font": "13.1.1",
     "daisyui": "^2.46.1",
+    "fastq": "^1.15.0",
+    "fill-range": "^7.0.1",
     "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "swiper": "^8.4.5"
+    "react-icons": "^4.7.1",
+    "react-wavify": "^1.7.0",
+    "run-parallel": "^1.2.0",
+    "swiper": "^8.4.5",
+    "tslib": "^2.4.1",
+    "xtend": "^4.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
