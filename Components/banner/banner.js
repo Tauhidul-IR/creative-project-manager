@@ -17,9 +17,9 @@ const Banner = () =>
                     <p className='text-center text-1xl text-white'>
                         Collaborate, plan projects and manage resources with powerful features that your whole team can use.
                     </p>
-                    <div className='sm:text-3xl text-white text-center font-semibold'>If you want  know more about us? 
-                    <br /> <button className="btn text-blue-300 text-2xl btn-ghost">Learn More <HiArrowSmRight className='inline-block' /></button></div>
-                    
+                    <div className='sm:text-3xl text-white text-center font-semibold'>If you want  know more about us?
+                        <br /> <button className="btn text-blue-300 text-2xl btn-ghost">Learn More <HiArrowSmRight className='inline-block' /></button></div>
+
                 </div>
                 {/* <Wave mask="url(#mask)" fill="#1277b0" >
                     <defs>
@@ -35,13 +35,6 @@ const Banner = () =>
                 </Wave> */}
             </div>
         </div>
-        // <div className="bg-scroll  bg-no-repeat bg-cover bg-[url('/image.png')]">
-        //     <div className='flex items-center justify-center'>
-        //         <div className='absolute top-0 left-0 right-0 bottom-0'>
-
-        //         </div>
-        //     </div>
-        // </div>
     );
 };
 
