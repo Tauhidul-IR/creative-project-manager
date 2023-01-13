@@ -7,7 +7,7 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 export default function Home() {
   return (
     <div className="bg-white">
-      <Banner/>
+      <Banner></Banner>
       <Product></Product>
       <Client></Client>
       <Testimonial></Testimonial>
