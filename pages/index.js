@@ -1,4 +1,4 @@
-import Banner from "../Components/Banner/banner";
+import Banner from "../Components/banner/banner";
 import Client from "../Components/Client/Client";
 import Product from "../Components/Product/Product";
 import Testimonial from "../Components/Testimonial/Testimonial";
