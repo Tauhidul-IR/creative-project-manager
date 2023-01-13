@@ -91,6 +91,9 @@ body {
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
 }
+.custom-img {
+  background-image: url('https://img.freepik.com/premium-vector/mobile-app-development-background_73903-295.jpg?w=2000')
+}
 
 a {
   color: inherit;
