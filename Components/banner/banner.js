@@ -29,7 +29,7 @@ const Banner = () => {
                 </defs>
 
             </Wave>
-            <h1 className='text-4xl text-white text-center font-semibold'>If you want  know <br /> more about us? <button className="btn text-blue-300 text-4xl btn-ghost">Learn More <HiArrowSmRight /></button></h1>
+            <h1 className='pb-6px lg:text-4xl md:text-4xl sm:text-3xl text-white text-center font-semibold'>If you want  know <br /> more about us? <button className="btn text-blue-300 lg:text-4xl md:text-4xl sm:text-3xl btn-ghost">Learn More <HiArrowSmRight /></button></h1>
 
 
 
