@@ -7,12 +7,12 @@ import classNames from 'classname'
 const MyTab = () => {
     return (
 
-        <div className='className="w-full max-w-md px-2 py-16 mx-auto sm:px-0"'>
+        <div className='className="w-full max-w-md px-2 py-16 mx-auto sm:px-0'>
             <Tab.Group manual>
                 <Tab.List className="flex space-x-5 rounded-xl bg-blue-900/20 p-1">
-                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-white " : "text-blue-700")}>Advantage</Tab>
-                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-white " : "text-blue-700")}>Otherness</Tab>
-                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-white " : "text-blue-700")}>Team Up With CPM</Tab>
+                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Advantage</Tab>
+                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Otherness</Tab>
+                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Team Up With CPM</Tab>
 
                 </Tab.List>
                 <Tab.Panels className="mt-5  ">
