@@ -40,6 +40,305 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+
+.outerdiv
+{
+	width: 100%;
+    min-height: 100vh;
+    background: #EDF2F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerdiv
+{
+	transform: scale(0.9);
+	margin: 1rem;
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-rows: repeat(2,22rem);
+	grid-template-columns: repeat(4,17rem);
+}
+.eachdiv
+{
+	padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+    color: white;
+}
+.div1
+{
+	background: #3a3d3f;
+    grid-column: 1/3;
+    grid-row: 1/2;
+   
+}
+.div2
+{
+	background:#49556B;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.div3
+{
+	background: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    color: black;
+}
+.div4
+{
+	background: white;
+	grid-column: 1/2;
+    grid-row: 2/3;
+    color: black;
+}
+.div5
+{
+	background: #18202D;
+	grid-column: 2/4;
+    grid-row: 2/3;
+}
+.userdetails
+{
+	display: flex;
+}
+.imgbox
+{
+	margin-right: 1rem;
+}
+.imgbox img
+{
+	border-radius: 50%;
+	width: 2rem;
+	border: 2px solid #cec5c5;
+}
+.detbox
+{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detbox p
+{
+	margin: 0;
+}
+.detbox .name
+{
+	color: hsl(0, 0%, 81%);
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+.detbox .name.dark
+{
+	color: #49505A;
+}
+.detbox .designation
+{
+	color: hsl(0, 0%, 81%);
+    opacity: 50%;
+    font-size: 0.8rem;
+}
+.detbox .designation.dark
+{
+	color: #49505A;
+}
+.review h4
+{
+	font-size: 1.4rem;
+	color: #F3DEFF;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+.review.dark h4{
+	color:#4B5258;
+}
+.review p
+{
+	font-size: 0.95rem;
+    color: #F3DEFF;
+    font-weight: 500;
+    opacity: 50%;
+    line-height: 1.5;
+}
+.review.dark p{
+	color: #0e0e0e;
+}
+.attribution
+{
+	font-size: 1rem;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 1000px)
+{
+	.innerdiv
+	{
+		transform: scale(0.7);
+	}
+}
+@media only screen and (max-width: 800px)
+{
+	.innerdiv
+	{
+		transform: scale(0.6);
+	}
+}
+@media only screen and (max-width: 600px)
+{
+	.div1 {
+		background-position-x: 10rem;
+	}
+	.innerdiv
+	{
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 2rem;
+		margin-bottom: 5rem;
+	}
+	
+}
+
+
+
+#card1  {
+  background-image: url('https://www.imaginenation.com.au/wp-content/uploads/2017/04/Blog-Image-18.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 90%;
+}
+
+#card2 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRptxcm1qESsRmuI20uAtxzUikdaaLr5918Zw&usqp=CAU');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 90%;
+}
+#card3{
+  background-image: url('https://images.unsplash.com/photo-1496115965489-21be7e6e59a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 90%;
+}
+#card4 {
+  background-image: url('https://slatesafety.com/wp-content/uploads/2022/08/downtown-atlanta-smaller.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 90%;
+}
+
+
+
+.testimotionals {
+  width:350px;
+   display:inline-block;
+    margin-left:50px;
+    margin-top:50px
+    
+  }
+  
+  
+  .testimotionals .card {
+    
+    position:relative;
+    overflow:hidden;
+    width:300px;
+    background:rgb(240, 92, 92);
+    padding:20px;
+    box-sizing:border-box;
+    text-align:center;
+    border-radius: 5px;
+    box-shadow:0 10px 40px rgba(0,0,0,.5)
+  }
+  .testimotionals .card .layer {
+    z-index:1;
+    position:absolute;
+    top:calc(100% - 2px);
+    height:100%;
+    width:100%;
+    left:0;
+    background-color: #000;
+    color: #fff;
+    opacity: .5;
+
+    transition:0.5s;
+    
+  }
+  
+  .testimotionals .card .content {
+    z-index:2; 
+    position:relative;
+  }
+  
+  .testimotionals .card:hover  .layer{
+    top:0;
+  }
+  
+  .testimotionals .card .content p {
+    font-size:14px;
+    line-height:24px;
+    color:#fff;
+    
+  }
+  .testimotionals .card .content .image {
+    width:100px; height:100px;
+    margin:0 auto;
+    border-radius:50%;
+    overflow:hidden;
+    border: 4px solid white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    
+  }
+  
+  .testimotionals .card .conte nt .details h2 {
+  font-size:18px;
+  color:white;
+  }
+  .testimotionals .card .content .details h2 span {
+  font-size:18px;
+  color:white;
+    transition:0.5s;
+  }
+  .testimotionals .card:hover .content .details h2 span {
+    color:white;
+    position:relative
+  }
+  
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+
+
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -90,6 +389,9 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+}
+.custom-img {
+  background-image: url('https://img.freepik.com/premium-vector/mobile-app-development-background_73903-295.jpg?w=2000')
 }
 
 a {
