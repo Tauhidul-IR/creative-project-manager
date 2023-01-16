@@ -1,4 +1,5 @@
 import Client from "../Components/Client/Client";
+import ContactForm from "../Components/ContactForm/ContactForm";
 import Product from "../Components/Product/Product";
 import Testimonial from "../Components/Testimonial/Testimonial";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Product></Product>
       <Client></Client>
       <Testimonial></Testimonial>
+      <ContactForm></ContactForm>
 
     </div>
   )
