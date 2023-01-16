@@ -4,6 +4,7 @@ import Product from "../Components/Product/Product";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import MyTab from "../Components/MyTab/MyTab";
 import Footer1 from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/Navbar";
 
 
 
@@ -11,6 +12,7 @@ import Footer1 from "../Components/Footer/Footer";
 export default function Home() {
   return (
     <div className="bg-white">
+      <Navbar />
       <Banner></Banner>
       <Product></Product>
       <Client></Client>

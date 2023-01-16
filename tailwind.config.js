@@ -11,6 +11,4 @@ module.exports = {
     themes: ["light"],
   },
   plugins: [require("daisyui")],
-
-  plugins: [],
 }
