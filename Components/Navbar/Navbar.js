@@ -1,11 +1,20 @@
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
+  const { user, logOutUser } = useContext(AuthContext);
+
+
+  const handlelogOut = () => {
+    logOutUser()
+      .then(() => { })
+      .catch(error => console.error(error))
+  }
 
   const handleNav = () => {
     setNav(!nav);
@@ -54,9 +63,15 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>Careers</Link>
           </li>
-          <li className='p-4'>
-            <Link href='/Login/login'>Login</Link>
-          </li>
+          {
+            user?.email ? <li className='p-4'>
+              <Link onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+            </li> :
+              <li className='p-4'>
+                <Link href='/Login/login'>Login</Link>
+              </li>
+
+          }
         </ul>
 
         {/* Mobile Button */}

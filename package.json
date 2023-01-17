@@ -14,6 +14,7 @@
     "classname": "^0.0.0",
     "daisyui": "^2.47.0",
     "electron-to-chromium": "^1.4.284",
+    "firebase": "^9.15.0",
     "fraction.js": "^4.2.0",
     "next": "^13.1.2",
     "node-releases": "^2.0.8",
