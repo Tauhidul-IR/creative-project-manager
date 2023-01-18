@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@headlessui/react": "^1.7.7",
+=======
+    "@emailjs/browser": "^3.10.0",
+>>>>>>> c7dde53cafd30953273d0d3c7fef2328962a651d
     "@next/font": "13.1.1",
     "classname": "^0.0.0",
     "daisyui": "^2.47.0",
