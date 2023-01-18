@@ -1,3 +1,4 @@
+import ApiData from "../Components/APi test/ApiData";
 import Client from "../Components/Client/Client";
 import MyTab from "../Components/MyTab/MyTab";
 
@@ -13,6 +14,7 @@ export default function Home() {
      <div className="bg-blue-400">
      <MyTab/>
      </div>
+     <ApiData></ApiData>
     
     </div>
   )
