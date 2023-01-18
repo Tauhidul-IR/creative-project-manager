@@ -21,12 +21,8 @@ export default function Home() {
         <MyTab />
       </div>
       <Testimonial></Testimonial>
-<<<<<<< HEAD
-      <Footer1 />
-=======
       <ContactForm></ContactForm>
 
->>>>>>> c7dde53cafd30953273d0d3c7fef2328962a651d
     </div>
   )
 }
