@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import Navbar from '../Components/Navbar/Navbar'
 import AuthProvider from '../Others/AuthProvider/AuthProvider'
 import '../styles/globals.css'
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }) {
       {/* <Navbar/> */}
       <AuthProvider>
         <Component {...pageProps} />
+        <Toaster></Toaster>
       </AuthProvider>
     </>
   )

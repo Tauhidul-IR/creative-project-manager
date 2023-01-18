@@ -6,6 +6,7 @@ import imgBG from '../../public/images/hidden.png'
 import google from '../../public/images/google.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 
 const SignUpPage = () => {
@@ -19,18 +20,20 @@ const SignUpPage = () => {
         const password = form.password.value;
         const name = form.name.value;
         console.log(email, password)
+        setSingUpError('')
 
 
         createUser(email, password)
-        setSingUpError('')
             .then(result => {
                 const user = result.user;
                 // console.log(user);
+                form.reset();
                 const userInfo = {
                     displayName: name
                 }
                 updateUser(userInfo)
                     .then(() => {
+                        toast.success('SignUp successfully')
                     })
                     .catch(error => {
                         console.error(error);
@@ -50,6 +53,7 @@ const SignUpPage = () => {
         googleSignIn()
             .then(result => {
                 const user = result.user;
+                toast.success('SignUp successfully')
                 // console.log(user);
             })
             .catch(error => {

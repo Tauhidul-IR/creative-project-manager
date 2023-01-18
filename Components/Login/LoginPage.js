@@ -4,6 +4,7 @@ import img from '../../public/images/login.png'
 import google from '../../public/images/google.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import { toast } from 'react-hot-toast';
 // import img2 from 'Privacy.svg'
 
 const LoginPage = () => {
@@ -22,8 +23,8 @@ const LoginPage = () => {
         loginUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
-                console.log("success");
+                // console.log(user);
+                toast.success('Login Successfully.')
             })
             .catch(error => console.log(error))
 
@@ -61,7 +62,7 @@ const LoginPage = () => {
                                 </label>
                                 <input type="text" name='password' placeholder="password" className="input input-bordered text-black" />
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover text-red-400">Forgot password?</a>
+                                    <Link href={'/resetPassword/resetPassword'} className="label-text-alt link link-hover text-red-400">Forgot password?</Link>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
