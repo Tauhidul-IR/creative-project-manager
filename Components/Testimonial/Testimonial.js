@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Testimonial = () =>
-{
+const Testimonial = () => {
   return (
     <div >
       <div>
@@ -97,14 +96,7 @@ const Testimonial = () =>
         Coded by.
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
-  </div>
- 
-        </div>
-    );
->>>>>>> c7dde53cafd30953273d0d3c7fef2328962a651d
 };
 
 export default Testimonial;
