@@ -1,6 +1,11 @@
-import ApiData from "../Components/APi test/ApiData";
+import Banner from "../Components/banner/banner";
 import Client from "../Components/Client/Client";
+import ContactForm from "../Components/ContactForm/ContactForm";
+import Product from "../Components/Product/Product";
+import Testimonial from "../Components/Testimonial/Testimonial";
 import MyTab from "../Components/MyTab/MyTab";
+import Footer1 from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/Navbar";
 
 
 
@@ -8,14 +13,16 @@ import MyTab from "../Components/MyTab/MyTab";
 export default function Home() {
   return (
     <div className="bg-white">
-      <h1 className="text-black">Navbar coming</h1>
-      <h1 className="text-black">Banner Coming</h1>
+      <Navbar />
+      <Banner></Banner>
+      <Product></Product>
       <Client></Client>
-     <div className="bg-blue-400">
-     <MyTab/>
-     </div>
-     <ApiData></ApiData>
-    
+      <div className="bg-blue-800">
+        <MyTab />
+      </div>
+      <Testimonial></Testimonial>
+      <ContactForm></ContactForm>
+
     </div>
   )
 }
