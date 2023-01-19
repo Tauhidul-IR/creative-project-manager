@@ -311,7 +311,12 @@
     color:white;
     position:relative
   }
-  
+  #contactBg{
+    background-image: url('https://www.tatapower.com/images/contact_banner_laptop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 90%;
+  }
 
 @-webkit-keyframes check {
   50% {

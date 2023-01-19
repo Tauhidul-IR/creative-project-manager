@@ -14,10 +14,10 @@ const ContactForm = () => {
     }
     return (
         <div>
-                <section className="text-gray-700 body-font relative">
+                <section id= "contactBg" className="text-gray-700 body-font relative">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-black">
+            <h1 className="sm:text-3xl text-4xl font-medium title-font mb-4 text-blue-400">
               Contact Us
             </h1>
            
@@ -27,7 +27,7 @@ const ContactForm = () => {
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2">
                 <div className="relative">
-                  <label for="name" className="leading-7 text-sm text-black">
+                  <label for="name" className="leading-7 text-sm text-blue-400">
                     Name
                   </label>
                   <input
@@ -42,7 +42,7 @@ const ContactForm = () => {
                 <div className="relative">
                   <label
                     for="email"
-                    className="leading-7 text-sm text-black"
+                    className="leading-7 text-sm text-blue-400"
                   >
                     Email
                   </label>
@@ -58,7 +58,7 @@ const ContactForm = () => {
                 <div className="relative">
                   <label
                     for="message"
-                    className="leading-7 text-sm text-black"
+                    className="leading-7 text-sm text-blue-400"
                   >
                     Message
                   </label>
@@ -74,7 +74,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="p-2 w-full">
-                <input type='submit' className="flex mx-auto text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-black rounded text-lg"/>
+                <input type='submit' className="flex mx-auto  bg-blue-600 border-0 py-2 text-black font-semibold px-8 focus:outline-none hover:bg-gray-400 hover:text-black rounded text-lg"/>
              
               </div>
           </form>

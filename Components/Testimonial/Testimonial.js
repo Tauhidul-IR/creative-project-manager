@@ -91,10 +91,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div class="attribution">
-        Challenge by<br />
-        Coded by.
-      </div>
+      
     </div>
   );
 };
