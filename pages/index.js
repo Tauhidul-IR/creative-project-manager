@@ -18,7 +18,7 @@ export default function Home() {
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
-      <div className="bg-blue-800">
+      <div className="bg-slate-300">
         <MyTab />
       </div>
       <Testimonial></Testimonial>

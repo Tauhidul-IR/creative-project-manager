@@ -10,17 +10,17 @@ const MyTab = () => {
         <div className='className="w-full max-w-md px-2 py-16 mx-auto sm:px-0'>
             <Tab.Group manual>
                 <Tab.List className="flex space-x-5 rounded-xl bg-blue-900/20 p-1">
-                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Advantage</Tab>
-                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Otherness</Tab>
-                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-blue-700", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Team Up With CPM</Tab>
+                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-white", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Advantage</Tab>
+                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-white", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Otherness</Tab>
+                    <Tab className={({ selected }) => classNames("w-full rounded-lg py-5 text-xl font-medium leading-5 text-white", selected ? "bg-blue-600 text-black " : "text-blue-700")}>Team Up With CPM</Tab>
 
                 </Tab.List>
                 <Tab.Panels className="mt-5  ">
-                    <Tab.Panel className="rounded-xl bg-white p-3">
+                    <Tab.Panel className="rounded-xl bg-slate-300 ">
                         <h1 className='text-center m-5 font-bold '>Advantage  with <strong className='text-indigo-700'>Creative Projects Manager</strong></h1>
-                        <div className='flex '>
+                        <div className=' sm:flex '>
 
-                            <div className="card w-96 bg-neutral text-neutral-content">
+                            <div className="card w-96  text-black">
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-12 text-cyan-400">
@@ -36,7 +36,7 @@ const MyTab = () => {
 
                                 </div>
                             </div>
-                            <div className="card w-96 bg-neutral text-neutral-content">
+                            <div className="card w-96  text-black">
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title text-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 mx-12 text-cyan-400">
@@ -50,7 +50,7 @@ const MyTab = () => {
 
                                 </div>
                             </div>
-                            <div className="card w-96 bg-neutral text-neutral-content">
+                            <div className="card w-96  text-black">
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-12 text-cyan-400">
@@ -72,11 +72,11 @@ const MyTab = () => {
                     </Tab.Panel>
 
 
-                    <Tab.Panel className="rounded-xl bg-white p-3">
+                    <Tab.Panel className="rounded-xl bg-slate-300 p-3">
                         <h1 className='text-center m-5 font-bold '>Why Creative Projects Manager is  <strong className='text-indigo-700'>Otherness</strong></h1>
-                        <div className='flex '>
+                        <div className='lg:flex '>
 
-                            <div className="card w-96 bg-neutral text-neutral-content">
+                            <div className="card w-96  text-black">
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-12 text-cyan-400">
@@ -93,7 +93,7 @@ const MyTab = () => {
 
                                 </div>
                             </div>
-                            <div className="card w-96 bg-neutral text-neutral-content">
+                            <div className="card w-96  text-black">
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title text-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-12 text-cyan-400">
@@ -109,7 +109,7 @@ const MyTab = () => {
 
                                 </div>
                             </div>
-                            <div className="card w-96 bg-neutral text-neutral-content">
+                            <div className="card w-96  text-black">
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mx-12 text-cyan-400">
@@ -131,7 +131,7 @@ const MyTab = () => {
                             Schedule a personalized Demo
                         </button>
                     </Tab.Panel>
-                    <Tab.Panel className="rounded-xl bg-white p-3">
+                    <Tab.Panel className="rounded-xl bg-slate-300 p-3">
                         <h1 className='text-center m-5 font-bold '>Team up with  <strong className='text-indigo-700'>Creative Projects Manager</strong></h1>
                         <div className="card w-96 bg-neutral text-neutral-content">
                             <div className="card-body items-center text-center">
