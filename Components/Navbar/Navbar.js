@@ -51,21 +51,25 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/#'>Products</Link>
           </li>
-        
-          <ul class="menu menu-horizontal px-1">
-     
-      <li tabindex="0">
-        <Link href='/'>
-         Features
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </Link>
-        <ul class="p-2 bg-base-100 text-black ">
-          <li><Link href= '/Features/features'>Task Management</Link></li>
-        </ul>
-      </li>
-   
-    </ul>
 
+          <li>
+            <div className="relative group">
+              <div className="flex items-center cursor-pointer py-1">
+                <button className="bg-blue p-3 inline-flex justify-center items-center ">
+                  <span>Features</span>
+                  <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+              </div>
+              <div className="items-center absolute  invisible group-hover:visible">
+                <ul className="list-reset">
+                  <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block  hover: text-white active:text-blue-500">Task Management</Link></li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
 
           <li className='p-4'>
             <Link href='/work'>Services</Link>
@@ -83,7 +87,6 @@ const Navbar = () => {
               <li className='p-4'>
                 <Link href='/Login/login'>Login</Link>
               </li>
-
           }
         </ul>
 
@@ -107,19 +110,26 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/'>Products</Link>
             </li>
-            <ul class="menu menu-vertical px-1">
-     
-     <li tabindex="0">
-       <Link href='/' className='p-4 text-4xl hover:text-gray-500'>
-        Features
-         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-       </Link>
-       <ul class="p-2 bg-base-100 text-black ">
-         <li><Link href= '/Features/features'>Task Management</Link></li>
-       </ul>
-     </li>
-  
-   </ul>
+            {/* sub button */}
+            <li className='text-4xl'>
+              <div className="relative group">
+                <div className="flex items-center cursor-pointer py-1">
+                  <button className="bg-blue p-3 text-white inline-flex justify-center items-center ">
+                    <span>Features</span>
+                    <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="items-center absolute text-white invisible group-hover:visible">
+                  <ul className="list-reset">
+                    <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block  hover: bg-black active:text-blue-500">Task Management</Link></li>
+                  </ul>
+                </div>
+              </div>
+
+            </li>
+
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Services</Link>
             </li>

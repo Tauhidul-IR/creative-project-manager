@@ -20,18 +20,7 @@ const Banner = () => {
                         <br /> <button className="btn text-blue-300 text-2xl btn-ghost">Learn More <HiArrowSmRight className='inline-block' /></button></div>
 
                 </div>
-                {/* <Wave mask="url(#mask)" fill="#1277b0" >
-                    <defs>
-                        <linearGradient id="gradient" gradientTransform="rotate(90)">
-                            <stop offset="0" stopColor="white" />
-                            <stop offset="0.5" stopColor="black" />
-                        </linearGradient>
 
-                        <mask id="mask">
-                            <rect x="0" y="0" width="2000" height="200" fill="url(#gradient)" />
-                        </mask>
-                    </defs>
-                </Wave> */}
             </div>
         </div>
     );

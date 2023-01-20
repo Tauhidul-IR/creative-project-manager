@@ -10,10 +10,11 @@ import Navbar from "../Components/Navbar/Navbar";
 
 
 
+
 export default function Home() {
   return (
     <div className="bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
@@ -22,6 +23,8 @@ export default function Home() {
       </div>
       <Testimonial></Testimonial>
       <ContactForm></ContactForm>
+      <Footer1 />
+
 
     </div>
   )

@@ -7,9 +7,10 @@ import '../styles/globals.css'
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* <Navbar/> */}
+
       <AuthProvider>
         <Component {...pageProps} />
+        <Navbar />
         <Toaster></Toaster>
       </AuthProvider>
     </>
