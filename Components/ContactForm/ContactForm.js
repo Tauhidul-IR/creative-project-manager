@@ -14,7 +14,7 @@ const ContactForm = () => {
     }
     return (
         <div>
-                <section id= "contactBg" className="text-gray-700 body-font relative">
+                <section data-aos="fade-up" data-aos-duration="1900" id= "contactBg" className="text-gray-700 body-font relative">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-4xl font-medium title-font mb-4 text-blue-400">
