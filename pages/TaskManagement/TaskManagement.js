@@ -5,7 +5,7 @@ const TaskManagement = () => {
     return (
         <div className="">
             <TaskArticle />
-           <TaskTab></TaskTab>
+            <TaskTab></TaskTab>
         </div>
     );
 };

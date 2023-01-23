@@ -122,7 +122,7 @@ const Navbar = () => {
                   </button>
                 </div>
                 <div className="items-center absolute text-white invisible group-hover:visible">
-                  <ul className="list-reset">
+                  <ul className="list-reset bg-black">
                     <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block  hover: bg-black active:text-blue-500">Task Management</Link></li>
                   </ul>
                 </div>
