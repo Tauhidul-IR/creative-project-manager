@@ -6,8 +6,8 @@ import Navbar from '../../Components/Navbar/Navbar';
 const resetPassword = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <LoginpageBanner></LoginpageBanner>
+            {/* <Navbar></Navbar> */}
+            {/* <LoginpageBanner></LoginpageBanner> */}
             <ResetPasswordPage></ResetPasswordPage>
         </div>
     );
