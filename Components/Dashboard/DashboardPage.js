@@ -25,7 +25,7 @@ const DashboardPage = () => {
                         {/* <!-- Sidebar content here --> */}
                         <li>
 
-                           
+
                             <a className="font-bold"> <AiTwotoneHome className="text-cyan-400 text-2xl" ></AiTwotoneHome>Home</a>
                         </li>
                         <li>
@@ -37,21 +37,21 @@ const DashboardPage = () => {
                         <li>
                             <a className="font-bold"> <HiExclamationCircle className="text-cyan-400 text-2xl" ></HiExclamationCircle>Reporting</a>
                         </li>
-                       <li>
-                           <a className="font-bold"> <HiOutlineTrendingUp className="text-cyan-400 text-2xl" ></HiOutlineTrendingUp>Goals</a>
-                      </li>
+                        <li>
+                            <a className="font-bold"> <HiOutlineTrendingUp className="text-cyan-400 text-2xl" ></HiOutlineTrendingUp>Goals</a>
+                        </li>
 
-                    <  li />
+                        <  li />
 
-                </ul>
+                    </ul>
 
+                </div>
             </div>
-        </div>
         </div >
 
 
 
-        
+
     );
 };
 
