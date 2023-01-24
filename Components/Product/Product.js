@@ -3,7 +3,7 @@ import React from 'react';
 const Product = () =>
 {
   return (
-    <div className=' mb-10'>
+    <div className='mb-10'>
       <div >
         <div>
           <h2 className='text-center mt-10 text-black text-4xl font-semibold'>
@@ -17,7 +17,7 @@ const Product = () =>
         </div>
 
 
-        <div className='grid justify-items-center lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 '>
+        <div data-aos="zoom-in-up" data-aos-duration="1500" className='grid justify-items-center lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 '>
           <div class="testimotionals ">
             <div id='card1' class="card">
               <div class="layer">

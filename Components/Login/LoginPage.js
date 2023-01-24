@@ -49,7 +49,7 @@ const LoginPage = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
-                            <h1 className="text-4xl font-bold text-black">Login now!</h1>
+                            <h1 className="text-4xl font-bold text-black text-center">Sign in now</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text font-bold">Email</span>
@@ -60,19 +60,19 @@ const LoginPage = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered text-black" />
+                                <input  type="password" name='password' placeholder="password" className="input input-bordered text-black" />
                                 <label className="label">
                                     <Link href={'/resetPassword/resetPassword'} className="label-text-alt link link-hover text-red-400">Forgot password?</Link>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-info" type="submit" value="Login" />
+                                <input className="btn btn-info" type="submit" value="Sign in" />
                             </div>
                         </form>
 
                         <div>
                             <div className="divider my-0 text-black">OR</div>
-                            <h1 className='text-black text-center font-3xl font-bold mt-5'>login with</h1>
+                            <h1 className='text-black text-center font-3xl font-bold mt-5'>Sign in with</h1>
                             <div className='flex justify-around py-4'>
                                 <Image onClick={handleGoogle} className='w-8 h-8' src={google}></Image>
                             </div>

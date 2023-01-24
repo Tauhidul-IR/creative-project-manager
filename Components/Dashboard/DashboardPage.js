@@ -39,7 +39,7 @@ const DashboardPage = () => {
                             <a className="font-bold"> <HiExclamationCircle className="text-cyan-400 text-2xl" ></HiExclamationCircle>Reporting</a>
                         </li>
                         <li>
-                            <Link href={'/Components/Goal/Goal'} className="font-bold"> <HiOutlineTrendingUp className="text-cyan-400 text-2xl" ></HiOutlineTrendingUp>Goals</Link>
+                            <a className="font-bold"> <HiOutlineTrendingUp className="text-cyan-400 text-2xl" ></HiOutlineTrendingUp>Goals</a>
                         </li>
 
                         <  li />

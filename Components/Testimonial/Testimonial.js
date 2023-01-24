@@ -8,7 +8,7 @@ const Testimonial = () => {
         <h2 className='text-left text-4xl text-black ml-9 mb-5'>What Our Client Say About Us</h2>
       </div>
 
-      <div class="outerdiv">
+      <div data-aos="fade-up" data-aos-duration="1900" class="outerdiv">
         <div class="innerdiv">
           <div class="div1 eachdiv">
             <div class="userdetails">
