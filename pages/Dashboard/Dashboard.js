@@ -1,4 +1,5 @@
-// import Background from "../../Components/Backgroud/Background";
+
+import Background from "../../Components/Backgroud/Background";
 import DashboardPage from "../../Components/Dashboard/DashboardPage";
 import Navbar from "../../Components/Navbar/Navbar";
 
