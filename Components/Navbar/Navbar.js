@@ -51,20 +51,20 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/#'>Products</Link>
           </li>
-        
+
           <ul class="menu menu-horizontal px-1">
-     
-      <li tabindex="0">
-        <Link href='/'>
-         Features
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </Link>
-        <ul class="p-2 bg-base-100 text-black ">
-          <li><Link href= '/Features/features'>Task Management</Link></li>
-        </ul>
-      </li>
-   
-    </ul>
+
+            <li tabindex="1">
+              <Link href='/'>
+                Features
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+              </Link>
+              <ul class="p-2 bg-base-100 text-black ">
+                <li><Link href='/Features/features'>Task Management</Link></li>
+              </ul>
+            </li>
+
+          </ul>
 
 
           <li className='p-4'>
@@ -94,32 +94,41 @@ const Navbar = () => {
           ) : (
             <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}
+
+          
         </div>
         {/* Mobile Menu */}
+        <div>
+            <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+            </label>
+          </div>
         <div
           className={
             nav
               ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
               : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
           }
+          
         >
+          
           <ul>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/'>Products</Link>
             </li>
             <ul class="menu menu-vertical px-1">
-     
-     <li tabindex="0">
-       <Link href='/' className='p-4 text-4xl hover:text-gray-500'>
-        Features
-         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-       </Link>
-       <ul class="p-2 bg-base-100 text-black ">
-         <li><Link href= '/Features/features'>Task Management</Link></li>
-       </ul>
-     </li>
-  
-   </ul>
+
+              <li tabindex="0">
+                <Link href='/' className='p-4 text-4xl hover:text-gray-500'>
+                  Features
+                  <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                </Link>
+                <ul class="p-2 bg-base-100 text-black ">
+                  <li><Link href='/Features/features'>Task Management</Link></li>
+                </ul>
+              </li>
+
+            </ul>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Services</Link>
             </li>

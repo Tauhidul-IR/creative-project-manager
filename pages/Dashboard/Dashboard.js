@@ -1,4 +1,6 @@
 import DashboardPage from "../../Components/Dashboard/DashboardPage";
+import DashboardPageCover from "../../Components/Dashboard/DashboardPageCover";
+import LoginpageBanner from "../../Components/Login/LoginpageBanner";
 import Navbar from "../../Components/Navbar/Navbar";
 
 
@@ -6,9 +8,10 @@ const Dashboard = () => {
     return (
         <div>
            
-           <div>
-           <DashboardPage></DashboardPage>
-           </div>
+        <Navbar></Navbar>
+        <DashboardPageCover></DashboardPageCover>
+        <DashboardPage></DashboardPage>
+        
            
         </div>
     );
