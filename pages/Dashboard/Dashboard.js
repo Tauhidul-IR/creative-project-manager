@@ -10,6 +10,7 @@ const Dashboard = () => {
 
             <div>
                 <Navbar></Navbar>
+                <Background></Background>
                 <DashboardPage></DashboardPage>
             </div>
 
