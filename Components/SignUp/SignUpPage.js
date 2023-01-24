@@ -49,6 +49,25 @@ const SignUpPage = () => {
 
     console.log(singUpError);
 
+
+    // const saveUser = (email, name) => {
+    //     const user = { email, name };
+    //     fetch('', {
+    //         method: "POST",
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    // console.log(data);
+    //         })
+    //         .catch(error => console.error(error))
+    // }
+
+
+
     const handleGoogle = () => {
         googleSignIn()
             .then(result => {
