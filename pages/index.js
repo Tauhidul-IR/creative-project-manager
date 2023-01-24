@@ -25,15 +25,18 @@ export default function Home() {
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
+      <div className="bg-slate-300">
       <div >
         <MyTab />
       </div>
       <CoreConcept></CoreConcept>
+
       <Testimonial></Testimonial>
       <ContactForm></ContactForm>
       <Footer1 />
 
 
+    </div>
     </div>
   )
 }

@@ -78,7 +78,7 @@ const Navbar = () => {
             <Link href='/contact'>About us</Link>
           </li>
           <li className='p-4'>
-            <Link href='/contact'>Careers</Link>
+            <Link href='/Features/features'>Careers</Link>
           </li>
           {
             user?.email ? <li className='p-4'>
