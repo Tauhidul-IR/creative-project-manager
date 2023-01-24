@@ -72,7 +72,7 @@ const Navbar = () => {
           </li>
 
           <li className='p-4'>
-            <Link href='/work'>Services</Link>
+            <Link href='/Dashboard/Dashboard'>Dashboard</Link>
           </li>
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
@@ -108,6 +108,9 @@ const Navbar = () => {
         >
           <ul>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/'>Home</Link>
+            </li>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/'>Products</Link>
             </li>
             {/* sub button */}
@@ -139,9 +142,17 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Careers</Link>
             </li>
-            {/* <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/contact'>Login</Link>
-            </li> */}
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/Dashboard/Dashboard'>DashBoard</Link>
+            </li>
+            {
+              user?.email ? <li className='p-4'>
+                <Link onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+              </li> :
+                <li className='p-4'>
+                  <Link href='/Login/login'>Login</Link>
+                </li>
+            }
           </ul>
         </div>
       </div>
