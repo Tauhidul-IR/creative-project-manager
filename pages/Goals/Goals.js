@@ -165,19 +165,6 @@ const Goals = ({ goals }) => {
 
 
                 {/* Goal Card */}
-                {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10 md:pl-6 lg:ml-0'>
-                    {
-                        posts.map(post => <div className="card w-96 bg-base-100 shadow-xl">
-                            <div className="card-body">
-                                <h2 className="card-title">{post?.title}</h2>
-                                <p>Time Period : <span>Q1</span></p>
-                                <Link href={`/Goals/${post?.id}`} className="card-actions justify-end">
-                                    <button className="btn btn-primary btn-sm">Go details</button>
-                                </Link>
-                            </div>
-                        </div>)
-                    }
-                </div> */}
                 <GoalCard goals={goals}></GoalCard>
 
             </div>
@@ -198,3 +185,25 @@ export const getStaticProps = async () => {
 }
 
 export default Goals;
+
+
+
+
+// const SeeProject = ({ posts }) => {
+//     console.log(posts);
+//     return (
+//         <div>
+//         </div>
+//     );
+// };
+
+// export const getStaticProps = async () => {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//     const data = await res.json();
+//     return {
+//         props: {
+//             posts: data
+//         }
+//     }
+// }
+// export default SeeProject;
