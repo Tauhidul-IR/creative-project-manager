@@ -49,7 +49,7 @@ const LoginPage = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
-                            <h1 className="text-4xl font-bold text-black text-center">Sign in now</h1>
+                            <h1 className="text-4xl font-bold text-black text-center">Login Now</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text font-bold">Email</span>
@@ -60,7 +60,7 @@ const LoginPage = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Password</span>
                                 </label>
-                                <input  type="password" name='password' placeholder="password" className="input input-bordered text-black" />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered text-black" />
                                 <label className="label">
                                     <Link href={'/resetPassword/resetPassword'} className="label-text-alt link link-hover text-red-400">Forgot password?</Link>
                                 </label>
