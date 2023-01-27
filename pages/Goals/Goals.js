@@ -1,9 +1,9 @@
 import Goal from "../../Components/Goal/Goal";
 import Navbar from "../../Components/Navbar/Navbar";
 import Background from "../../Components/Backgroud/Background";
-import { FaUserEdit } from "react-icons/Fa";
+// import { FaUserEdit } from "react-icons/Fa";
 
-import { AiOutlinePlus } from "react-icons/Ai";
+// import { AiOutlinePlus } from "react-icons/Ai";
 import Link from "next/link";
 import GoalCard from "../../Components/Goal/GoalCard";
 import { useContext, useEffect, useState } from "react";
@@ -78,7 +78,7 @@ const Goals = ({ goals }) => {
             <div className="bg-blue-100 pl-4 min-h-screen">
                 <div className="flex justify-start items-center py-2">
                     <div className="mr-3 bg-purple-300 p-5 rounded-lg">
-                        <FaUserEdit className="w-6"></FaUserEdit>
+                        {/* <FaUserEdit className="w-6"></FaUserEdit> */}
                     </div>
                     <div>
                         <h2 className="text-2xl font-bold">My WorkSpace</h2>
@@ -89,7 +89,7 @@ const Goals = ({ goals }) => {
 
                 <div>
                     <label htmlFor="goal-modal" className="btn btn-primary hover:bg-purple-300 hover:text-black btn-xs ">
-                        <AiOutlinePlus></AiOutlinePlus>
+                        {/* <AiOutlinePlus></AiOutlinePlus> */}
                         <h5 className="ml-1">Add One</h5>
                     </label>
                 </div>
