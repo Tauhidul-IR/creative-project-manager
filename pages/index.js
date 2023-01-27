@@ -6,12 +6,19 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import MyTab from "../Components/MyTab/MyTab";
 import Footer1 from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
+import CoreConcept from "../Components/CoreConcept/CoreConcept";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div className="bg-white">
       {/* <Navbar /> */}
@@ -19,13 +26,17 @@ export default function Home() {
       <Product></Product>
       <Client></Client>
       <div className="bg-slate-300">
-        <MyTab />
+        <div >
+          <MyTab />
+        </div>
+        <CoreConcept></CoreConcept>
+
+        <Testimonial></Testimonial>
+        <ContactForm></ContactForm>
+        <Footer1 />
+
+
       </div>
-      <Testimonial></Testimonial>
-      <ContactForm></ContactForm>
-      <Footer1 />
-
-
     </div>
   )
 }

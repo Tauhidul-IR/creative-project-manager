@@ -19,12 +19,14 @@ const img7 = '/images/img7.png'
 
 const Client = () => {
     return (
-        <div className=' py-10 px-20 bg-white'>
-            <div className="">
-                <h3 className='text-center text-black text-lg sm:text-xl md:text-2xl'>Our Clients</h3>
-                <h1 className='text-center text-black text-xl sm:text-2xl md:text-5xl my-6'>Trusted by world’s leading <br /> clients around the world</h1>
+        <div data-aos="zoom-in-up" data-aos-duration="1500" className='mb-16 mt-10 py-10 px-20 bg-white'>
+            <div  className="mb-9">
+                <h3 className='text-center text-black text-2xl font-semibold'>Our Clients</h3>
+                <h1 className='mt-5
+                text-center text-black text-3xl'>Trusted by world’s leading </h1>
+                <h2 className='text-center text-black text-3xl mt-3'> clients around the world</h2>
             </div>
-            <Swiper
+            <Swiper 
                 slidesPerView={1}
                 spaceBetween={10}
                 pagination={{

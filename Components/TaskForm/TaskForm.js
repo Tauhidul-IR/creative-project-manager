@@ -1,53 +1,44 @@
 import DatePicker from "react-datepicker";
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
-import axios from "axios";
 
 const TaskForm = () => {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date("2024/01/08"));
-
-
     const formHandler = (e) => {
         e.preventDefault();
         const form = e.target;
         const pName = form.projectName.value;
         const task = form.task.value;
         const assigner = form.assigner.value;
-        console.log(pName, task, assigner)
-
-        // console.log(startDate, endDate)
 
         const taskData = {
-            pName: pName,
-            task: task,
-            assigner: assigner,
-            startDate: startDate,
-            endDate: endDate
+            pName, task, assigner, startDate, endDate
         }
-        taskCreatedData(taskData)
+        console.log(taskData);
 
-    }
-
-    const taskCreatedData = (taskData) => {
+        const url = 'http://localhost:5000/task'
 
 
-        fetch('http://localhost:5000/task', {
-            method: 'POST',
+        fetch(url, {
+            method: "POST",
             headers: {
-                "content-type": "application/json"
+                'content-type': 'application/json'
             },
             body: JSON.stringify(taskData)
-        })
-            .then(res => { res.json() })
-            .then(data => console.log(data))
-            .catch(err => console.log(err))
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledge) {
+                    alert('Task added')
+
+                    form.reset()
+                }
+            })
+            .catch(err => console.log(err));
 
 
     }
-
-
-
 
     return (
         <div>
