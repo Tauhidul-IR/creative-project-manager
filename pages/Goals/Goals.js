@@ -1,9 +1,9 @@
 import Goal from "../../Components/Goal/Goal";
 import Navbar from "../../Components/Navbar/Navbar";
 import Background from "../../Components/Backgroud/Background";
-import { FaUserEdit } from "react-icons/Fa";
+import { FaUserEdit, FaPlus } from "react-icons/Fa";
 
-import { AiOutlinePlus } from "react-icons/Ai";
+// import { AiOutlinePlus } from "react-icons/Ai";
 import Link from "next/link";
 import GoalCard from "../../Components/Goal/GoalCard";
 import { useContext, useEffect, useState } from "react";
@@ -89,7 +89,7 @@ const Goals = ({ goals }) => {
 
                 <div>
                     <label htmlFor="goal-modal" className="btn btn-primary hover:bg-purple-300 hover:text-black btn-xs ">
-                        <AiOutlinePlus></AiOutlinePlus>
+                        <FaPlus></FaPlus>
                         <h5 className="ml-1">Add One</h5>
                     </label>
                 </div>
