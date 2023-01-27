@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+
 import Background from "../../Components/Backgroud/Background";
 import GoalDetails from "../../Components/Goal/GoalDetails";
 
