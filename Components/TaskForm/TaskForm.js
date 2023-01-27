@@ -1,19 +1,23 @@
 import DatePicker from "react-datepicker";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
+import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 
 const TaskForm = () => {
+    const { user } = useContext(AuthContext);
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date("2024/01/08"));
     const formHandler = (e) => {
         e.preventDefault();
         const form = e.target;
         const pName = form.projectName.value;
+        const email = form.email.value;
+        const user = form.user.value;
         const task = form.task.value;
         const assigner = form.assigner.value;
 
         const taskData = {
-            pName, task, assigner, startDate, endDate
+            email, user, pName, task, assigner, startDate, endDate
         }
         console.log(taskData);
 
@@ -31,7 +35,6 @@ const TaskForm = () => {
                 console.log(data)
                 if (data.acknowledge) {
                     alert('Task added')
-
                     form.reset()
                 }
             })
@@ -51,6 +54,10 @@ const TaskForm = () => {
                         <div className=" mt-4">
                             <form onSubmit={formHandler}>
                                 <div className=" my-4 items-center">
+
+                                    <input name="user" defaultValue={user?.displayName} disabled className="shadow  appearance-none border rounded  py-2 px-3 mr-4 text-grey-darker" placeholder="User name" />
+
+                                    <input name="email" defaultValue={user?.email} disabled className="shadow  appearance-none border rounded  py-2 px-3 mr-4 text-grey-darker" placeholder="User email" />
 
                                     <input name="projectName" className="shadow  appearance-none border rounded  py-2 px-3 mr-4 text-grey-darker" placeholder="Project Name" />
                                 </div>

@@ -15,6 +15,8 @@ import { useEffect } from 'react';
 
 
 
+
+
 export default function Home() {
   useEffect(() => {
     AOS.init();
@@ -33,10 +35,12 @@ export default function Home() {
 
         <Testimonial></Testimonial>
         <ContactForm></ContactForm>
+
         <Footer1 />
 
 
       </div>
     </div>
+
   )
 }

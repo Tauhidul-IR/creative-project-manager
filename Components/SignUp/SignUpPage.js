@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import Link from 'next/link';
 import img from '../../public/images/signUp1.png'
-import imgBG from '../../public/images/hidden.png'
 import google from '../../public/images/google.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
@@ -61,8 +60,11 @@ const SignUpPage = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                toast.success('Successfully saved user info.')
+                console.log(data)
+                if (data.acknowledge) {
+                    alert('Task added')
+                    form.reset()
+                }
             })
             .catch(error => console.error(error))
     }
@@ -88,6 +90,10 @@ const SignUpPage = () => {
     //         })
     //         .catch(error => console.error(error))
     // }
+
+
+
+
 
 
 
