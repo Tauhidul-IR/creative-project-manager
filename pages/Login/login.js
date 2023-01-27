@@ -7,8 +7,8 @@ import Navbar from "../../Components/Navbar/Navbar";
 const Login = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <LoginpageBanner></LoginpageBanner>
+            {/* <Navbar></Navbar>
+            <LoginpageBanner></LoginpageBanner> */}
             <LoginPage></LoginPage>
         </div>
     );

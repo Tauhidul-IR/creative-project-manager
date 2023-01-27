@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.20.13",
     "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.1",
@@ -27,6 +28,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
+    "react-super-responsive-table": "^5.2.1",
     "react-wavify": "^1.7.0",
     "run-parallel": "^1.2.0",
     "swiper": "^8.4.5",

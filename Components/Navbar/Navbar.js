@@ -66,6 +66,9 @@ const Navbar = () => {
                 <ul className="list-reset">
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2  bg-black block  text-white ">Task Management</Link></li>
                 </ul>
+                <ul className="list-reset">
+                  <li><Link href="/Goals/Goals" className="px-2 py-2  bg-black block  text-white ">Goals</Link></li>
+                </ul>
               </div>
             </div>
 
