@@ -2,14 +2,16 @@
 
 import TaskArticle from "../../Components/TaskArticle/TaskArticle";
 import TaskTab from "../../Components/TaskTab/TaskTab";
+import TodoList from "../../Components/TodoList/TodoList";
 
 const TaskManagement = () => {
 
     return (
-        <div className="">
+        <div className="p-18">
             <TaskArticle />
-           <TaskTab></TaskTab>
-         
+            {/* <TaskTab></TaskTab> */}
+            <TodoList></TodoList>
+
         </div>
     );
 };
