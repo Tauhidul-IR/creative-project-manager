@@ -1,6 +1,6 @@
 import DashboardPage from "../../Components/Dashboard/DashboardPage";
 import DashboardPageCover from "../../Components/Dashboard/DashboardPageCover";
-import LoginpageBanner from "../../Components/Login/LoginpageBanner";
+
 import Navbar from "../../Components/Navbar/Navbar";
 
 

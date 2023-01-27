@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiTwotoneHome } from "react-icons/ai";
 import { HiBell, HiChartPie, HiExclamationCircle, HiOutlineTrendingUp, HiShieldCheck } from "react-icons/hi";
 
@@ -17,12 +18,12 @@ const DashboardPage = () => {
                
                 <div className="drawer-side">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 bg-indigo-200 text-base-content">
+                    <ul className="menu p-4 w-60 bg-indigo-200 text-base-content">
                         {/* <!-- Sidebar content here --> */}
                         <li>
 
                            
-                            <a className="font-bold"> <AiTwotoneHome className="text-cyan-400 text-2xl" ></AiTwotoneHome>Home</a>
+                            <Link href='/Dashboard/Home' className="font-bold"> <AiTwotoneHome className="text-cyan-400 text-2xl" ></AiTwotoneHome>Home</Link>
                         </li>
                         <li>
                             <a className="font-bold"> <HiShieldCheck className="text-cyan-400 text-2xl" ></HiShieldCheck>My Task</a>

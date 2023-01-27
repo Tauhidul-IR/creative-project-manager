@@ -61,6 +61,7 @@ const Navbar = () => {
               </Link>
               <ul class="p-2 bg-base-100 text-black ">
                 <li><Link href='/Features/features'>Task Management</Link></li>
+                <li><Link href='/Features/intregrationGoogleCalendar'>Integration</Link></li>
               </ul>
             </li>
 
