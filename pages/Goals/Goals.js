@@ -1,7 +1,7 @@
 import Goal from "../../Components/Goal/Goal";
 import Navbar from "../../Components/Navbar/Navbar";
 import Background from "../../Components/Backgroud/Background";
-import { FaUserEdit, FaPlus } from "react-icons/Fa";
+import { FaUserEdit, FaPlus } from "react-icons/fa";
 
 // import { AiOutlinePlus } from "react-icons/Ai";
 import Link from "next/link";
