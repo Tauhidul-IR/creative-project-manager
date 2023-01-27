@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import Link from 'next/link';
 import img from '../../public/images/signUp1.png'
-import imgBG from '../../public/images/hidden.png'
 import google from '../../public/images/google.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
@@ -34,6 +33,7 @@ const SignUpPage = () => {
                 updateUser(userInfo)
                     .then(() => {
                         toast.success('SignUp successfully')
+                        saveUser(email, name);
                     })
                     .catch(error => {
                         console.error(error);
@@ -47,7 +47,36 @@ const SignUpPage = () => {
 
     }
 
+
+
+    const saveUser = (email, name) => {
+        const user = { email, name };
+        fetch('http://localhost:5000/users', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                if(data.acknowledge){
+                  alert('Task added')
+                  form.reset()
+                }
+              })
+            .catch(error => console.error(error))
+    }
+
+
+
+
     console.log(singUpError);
+
+
+
+
 
     const handleGoogle = () => {
         googleSignIn()
@@ -60,7 +89,7 @@ const SignUpPage = () => {
                 // console.log(error);
                 setSingUpError(error.message)
             })
-    }
+        }
     return (
         <div className="">
             <div className="hero min-h-screen bg-base-200 py-10">

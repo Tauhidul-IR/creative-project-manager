@@ -1,14 +1,50 @@
-import AddGantt from "../../Components/Gantt/AddGantt";
+import NewPortfolio from "../../Components/Portfolio/NewPortfolio";
+import ProjectCard from "../../Components/Portfolio/ProjectCard";
 
 
+const features = ({projects}) => {
 
-const features = () => {
+    // console.log(projects);
+
     return (
-        <div>
-           <h2 className="text-center text-3xl mb-28">Features is coming</h2> 
-       <AddGantt></AddGantt>
+        <div className="bg-sky-100">
+<div>
+ 
+<div>
+    <NewPortfolio></NewPortfolio>
+</div>
+
+
+<h2 className='text-center text-4xl text-gray-500 mt-16'>New Project</h2>
+
+<div className="grid  place-items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+
+{
+    projects.map(project => <ProjectCard project={project}
+    
+    ></ProjectCard>)
+}
+
+
+</div>
+
+</div>
+
         </div>
     );
 };
+
+
+
+export const getStaticProps = async () => {
+ 
+    const res = await fetch(`http://localhost:5000/project`);
+    const data = await res.json();
+    return {
+        props: {
+            projects: data
+        }
+    }
+  }
 
 export default features;
