@@ -6,7 +6,7 @@ const features = () => {
     return (
         <div>
             <h2 className="text-center text-3xl mb-28">Features is coming</h2>
-            {/* <AddGantt></AddGantt> */}
+            <AddGantt></AddGantt>
         </div>
     );
 };
