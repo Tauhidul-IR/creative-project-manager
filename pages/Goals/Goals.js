@@ -6,7 +6,7 @@ import { FaUserEdit } from "react-icons/Fa";
 import { AiOutlinePlus } from "react-icons/Ai";
 import Link from "next/link";
 import GoalCard from "../../Components/Goal/GoalCard";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 
@@ -16,10 +16,16 @@ import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 
 const Goals = ({ goals }) => {
     const { user } = useContext(AuthContext)
-    // const [taskData, setTaskData] = useState(name.user)
+    // const [goals, setGoals] = useState([])
     const [handleCloseModal, setHandleCloseModal] = useState(user?.email)
 
     console.log(handleCloseModal);
+
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/goals?email=${user?.email}`)
+    //         .then(res => res.json())
+    //         .then(data => setGoals(data))
+    // }, [user?.email])
 
 
 
@@ -186,24 +192,3 @@ export const getStaticProps = async () => {
 
 export default Goals;
 
-
-
-
-// const SeeProject = ({ posts }) => {
-//     console.log(posts);
-//     return (
-//         <div>
-//         </div>
-//     );
-// };
-
-// export const getStaticProps = async () => {
-//     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-//     const data = await res.json();
-//     return {
-//         props: {
-//             posts: data
-//         }
-//     }
-// }
-// export default SeeProject;
