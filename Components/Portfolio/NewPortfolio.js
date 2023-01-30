@@ -15,7 +15,7 @@ const NewPortfolio = () => {
         }
         console.log(projectData);
 
-        const url = 'http://localhost:5000/project'
+        const url = 'https://creative-project-manager-server-d0d44dts8.vercel.app/project'
 
 
         fetch(url,{
