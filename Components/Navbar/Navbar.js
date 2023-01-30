@@ -65,12 +65,12 @@ const Navbar = () => {
               <div className="items-center absolute  invisible group-hover:visible">
                 <ul className="list-reset">
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2  bg-black block  text-white ">Task Management</Link></li>
-<li> <Link className="px-2 py-2  bg-black block  text-white " href='/Features/features'>Create Portfolio</Link></li>
+                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/Features/features'>Create Portfolio</Link></li>
 
 
                 </ul>
                 <ul className="list-reset">
-                  <li><Link href="/Goals/Goals" className="px-2 py-2  bg-black block  text-white ">Goals</Link></li>
+                  <li><Link href="/Goals/" className="px-2 py-2  bg-black block  text-white ">Goals</Link></li>
                 </ul>
               </div>
             </div>
@@ -83,15 +83,15 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
-       
-          
+
+
           {
             user?.email ?
-            <li className='p-4 '>
-           
-            
-              <Link onClick={handlelogOut} href='/Login/login'>Log Out</Link>
-            </li> :
+              <li className='p-4 '>
+
+
+                <Link onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+              </li> :
               <li className='p-4'>
                 <Link href='/Login/login'>Login</Link>
               </li>

@@ -50,7 +50,7 @@ const Goals = ({ goals }) => {
         }
 
         console.log(goalModal);
-        fetch('http://localhost:5000/goals', {
+        fetch('https://creative-project-manager-server-d0d44dts8.vercel.app/goals', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -180,7 +180,7 @@ const Goals = ({ goals }) => {
 
 export const getStaticProps = async () => {
     // const res = await fetch(`http://localhost:5000/goals?email=${user?.email}`);
-    const res = await fetch(`http://localhost:5000/goals`);
+    const res = await fetch(`https://creative-project-manager-server-d0d44dts8.vercel.app/goals`);
     const data = await res.json();
 
     return {
