@@ -1,11 +1,10 @@
-import Goal from "../../Components/Goal/Goal";
+// import Goal from "../../Components/Goal/Goal";
 import Navbar from "../../Components/Navbar/Navbar";
 import Background from "../../Components/Backgroud/Background";
 import { FaUserEdit, FaPlus } from "react-icons/fa";
 
-// import { AiOutlinePlus } from "react-icons/Ai";
-import Link from "next/link";
 import GoalCard from "../../Components/Goal/GoalCard";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
@@ -129,7 +128,7 @@ const Goals = ({ goals }) => {
                                     <label className="label">
                                         <span className="label-text font-bold ">Email</span>
                                     </label>
-                                    <input name="email" defaultValue={user?.email} readOnly type="text" placeholder="Email" className="input input-bordered w-full " />
+                                    <input name="email" defaultValue={user?.email} readOnly type="email" placeholder="Email" className="input input-bordered w-full " />
                                 </div>
                                 {/* time period */}
                                 <div className="flex gap-2">
