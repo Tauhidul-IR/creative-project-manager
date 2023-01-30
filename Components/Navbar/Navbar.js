@@ -70,7 +70,7 @@ const Navbar = () => {
 
                 </ul>
                 <ul className="list-reset">
-                  <li><Link href="/Goals/" className="px-2 py-2  bg-black block  text-white ">Goals</Link></li>
+                  <li><Link href="/Goals" className="px-2 py-2  bg-black block  text-white ">Goals</Link></li>
                 </ul>
               </div>
             </div>

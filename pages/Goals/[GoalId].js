@@ -46,7 +46,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
 
-    const res = await fetch("https://creative-project-manager-server-d0d44dts8.vercel.app/goals");
+    const res = await fetch("http://localhost:5000/goals/");
     const goals = await res.json();
 
     const paths = goals.map(goal => {
