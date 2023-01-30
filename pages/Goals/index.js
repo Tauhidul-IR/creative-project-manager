@@ -35,7 +35,7 @@ const Goals = ({ goals }) => {
         const email = form.email.value;
         const goalName = form.goalName.value;
         const goalOwner = form.goalOwner.value;
-        const timeSlot = form.timeSlot.value;
+        // const timeSlot = form.timeSlot.value;
         const privacy = form.privacy.value;
         const member = form.member.value;
 
@@ -43,13 +43,13 @@ const Goals = ({ goals }) => {
             goalName,
             goalOwner,
             email,
-            timeSlot,
+            // timeSlot,
             privacy,
             member,
         }
 
         console.log(goalModal);
-        fetch('https://creative-project-manager-server-d0d44dts8.vercel.app/goals', {
+        fetch('http://localhost:5000/goals', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -132,7 +132,7 @@ const Goals = ({ goals }) => {
                                 </div>
                                 {/* time period */}
                                 <div className="flex gap-2">
-                                    <div className="form-control w-1/2">
+                                    {/* <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text font-bold ">Time period</span>
                                         </label>
@@ -142,7 +142,7 @@ const Goals = ({ goals }) => {
                                             <option value={'Q1-Jan-Mar'}>Q3- <span className="text-sm">July-Sep</span></option>
                                             <option value={'Q1-Jan-Mar'}>Q4- <span className="text-sm">Oct-Dec</span></option>
                                         </select>
-                                    </div>
+                                    </div> */}
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text font-bold ">Privecy</span>
