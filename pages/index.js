@@ -6,7 +6,7 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import MyTab from "../Components/MyTab/MyTab";
 
 import Navbar from "../Components/Navbar/Navbar";
-import Mytask from "../Components/MyTask/Mytask";
+
 export default function Home() {
   return (
     <div className="bg-white">
@@ -19,7 +19,7 @@ export default function Home() {
       </div>
       <Testimonial></Testimonial>
       <ContactForm></ContactForm>
-      <Mytask></Mytask>
+     
 
     </div>
   )

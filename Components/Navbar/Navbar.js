@@ -61,6 +61,9 @@ const Navbar = () => {
         </Link>
         <ul class="p-2 bg-base-100 text-black ">
           <li><Link href= '/Features/features'>Task Management</Link></li>
+          <li><Link href= '/Integration/Management'>Management</Link></li>
+          <li><Link href= '/Integration/Report3'>Report Generator</Link></li>
+
         </ul>
       </li>
    

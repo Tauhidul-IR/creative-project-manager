@@ -1,12 +1,17 @@
 import Link from "next/link";
-import Mytask from "../../Components/Integration/Management";
+import Closeout from "../../pages/Integration/Fileshare";
+import Report from "../../pages/Integration/Uploadfiles";
 
 
-const features = () => {
+const Management = () => {
     return (
-      <div className="grid justify-center items-center">
-        <Link href='/Features/features'>Task</Link>
-        {/* <h1 className="text-center text-3xl my-5">All Task </h1><div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-3">
+      <div>
+        
+       
+
+<div className="grid justify-center items-center">
+       
+        <h1 className="text-center text-3xl my-5">All Task </h1><div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-3">
       <div className="card w-96 bg-green-100 shadow-xl grid justify-center items-center">
         <div className="card-body">
           <h2 className="card-title">Free Online Task Manager</h2>
@@ -82,11 +87,13 @@ const features = () => {
         </div>
       </div>
       
-              </div> */}
-              </div>
-              
-
+            
+   
+        </div>
+        </div>
+      </div>
+  
     );
 };
 
-export default features;
+export default Management;
