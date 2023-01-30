@@ -50,7 +50,7 @@ const Goals = ({ goals }) => {
         }
 
         console.log(goalModal);
-        fetch('http://localhost:5000/goals', {
+        fetch('https://creative-project-manager-server-d0d44dts8.vercel.app/goals', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
