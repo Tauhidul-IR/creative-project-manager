@@ -23,7 +23,7 @@ const PostDetails = ({ goal }) => {
                     <button onClick={handleBack} className="btn btn-primary">Back to post</button>
                 </div>
             </div> */}
-            <GoalDetails goal={goal}></GoalDetails>
+            <GoalDetails goal={goal} key={goal?._id}></GoalDetails>
         </div>
     );
 };
