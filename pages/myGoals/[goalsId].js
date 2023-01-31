@@ -1,25 +1,16 @@
-import { useRouter } from "next/router";
+
+import Background from "../../Components/Backgroud/Background";
+import GoalDetails from "../../Components/Goal/GoalDetails";
+
+const GoalsDetails = ({ goal }) => {
 
 
-const GoalDetails = ({ goal }) => {
-    console.log(goal);
-
-    const router = useRouter();
-
-    const handleBack = () => {
-        router.push("/Goals/Goals")
-    }
     return (
         <div>
-            {/* <div className="card mx-10 my-10 bg-primary text-primary-content">
-                <div className="card-body">
-                    <p>PostId:{goal?._id}</p>
-                    <h2 className="card-title">Title: </h2>
-                    <p>Post: {goal?.body}</p>
+            <Background></Background>
 
-                    <button onClick={handleBack} className="btn btn-primary">Back to post</button>
-                </div>
-            </div> */}
+            {/* <GoalDetails goal={goal}></GoalDetails> */}
+
             <div className="my-6 flex flex-col w-3/4 mx-auto min-h-screen lg:flex-row">
                 <div className=" w-2/3  justify-start">
                     <div className="">
@@ -51,4 +42,44 @@ const GoalDetails = ({ goal }) => {
     );
 };
 
-export default GoalDetails;
+export const getStaticProps = async (context) => {
+    const { params } = context;
+
+    const res = await fetch(`http://localhost:5000/goals/${params?.goalsId}`);
+    const data = await res.json();
+
+    console.log(data._id, '--------------------------------------------------------');
+
+    return {
+        props: {
+            goal: data
+        }
+    }
+}
+
+
+
+export const getStaticPaths = async () => {
+
+    const res = await fetch("http://localhost:5000/goals");
+    const goals = await res.json();
+
+    // console.log(goals[0]._id);
+
+    const paths = goals.map(goal => {
+        return {
+            params: {
+                goalsId: `${goal._id}`
+            }
+        }
+    })
+
+
+    return {
+        paths,
+        fallback: false
+    }
+
+}
+
+export default GoalsDetails;
