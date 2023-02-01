@@ -2,12 +2,16 @@ import Link from 'next/link';
 import React, { useState, useEffect, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import AdminRole from '../Adminhook/AdminRole';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
+
+const [isAdminRole] = AdminRole(user?.email)
+console.log(isAdminRole);
 
 
   const handlelogOut = () => {
@@ -47,13 +51,16 @@ const Navbar = () => {
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-4'>
             <Link href='/'>Home</Link>
+           
           </li>
           <li className='p-4'>
             <Link href='/#'>Products</Link>
           </li>
 
           <li>
-            <div className="relative group">
+            {
+              isAdminRole && 
+              <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
                   <span>Features</span>
@@ -74,6 +81,8 @@ const Navbar = () => {
                 </ul> */}
               </div>
             </div>
+            }
+            
 
           </li>
 
@@ -83,6 +92,11 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
+         {
+          isAdminRole &&  <li className='p-4'>
+          <Link href='/admindashboard/dashboard'>Admin</Link>
+        </li>
+         }
 
 
           {
