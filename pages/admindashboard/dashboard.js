@@ -1,16 +1,19 @@
 import Link from 'next/link';
 import React from 'react';
 import AdminNavber from '../../Components/AdminRoles/AdminNavber';
+import Banner from '../../Components/banner/banner';
 
 const dashboard = () => {
   return (
     <div>
       <AdminNavber></AdminNavber>
-      <div className="drawer drawer-mobile">
+      <div className='grid  grid-cols-2'>
+        <div>
+        <div className="drawer drawer-mobile">
         <input id="drawers" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
-          {/*   
-    <label htmlFor="drawers" className="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
+             
+    {/* <label htmlFor="drawers" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>  */}
 
         </div>
         <div className="drawer-side">
@@ -47,6 +50,14 @@ const dashboard = () => {
 
         </div>
       </div>
+        </div>
+        <div>
+          
+
+        </div>
+      </div>
+     
+
     </div>
   );
 };

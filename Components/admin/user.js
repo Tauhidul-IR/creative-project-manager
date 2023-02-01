@@ -4,20 +4,22 @@ import { AiOutlineDelete, } from 'react-icons/ai';
 const User = ({users}) => {
     console.log(users);
     
-    const  handleDelete =(id)=>{
+    const  handleDelete = async (id)=>{
         console.log(id);
         
-        //   const res = await fetch(`http://localhost:5000/allusers/${id}`,{
+          const res = await fetch(`http://localhost:5000/allusers/${id}`,{
               
-        //       method:"DELETE"
-        //   });
+              method:"DELETE"
+          });
+          const deleteData = await res.json();
+          console.log(deleteData);
         //   const deletes = await res.json();
     
         
         }
     return (
         <tr>
-        <th><button onClick={ ()=>handleDelete(users?._id)}><AiOutlineDelete/></button></th>
+        <th><button onClick={ ()=>handleDelete(users?._id)} className="text-red-400"><AiOutlineDelete/></button></th>
         <td>{users?.name}</td>
         <td>{users?.email}</td>
         {/* <td>Blue</td> */}
