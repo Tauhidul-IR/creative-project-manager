@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Background from "../../Components/Backgroud/Background";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
+import GoalStatusModal from "../../Components/Goal/GoalStatusModal";
 
 
 
@@ -30,32 +31,56 @@ const GoalsDetails = ({ goal }) => {
                         </div>
                         <div className="divider w-full"></div>
                         {/* ------goal summary ------------------------- */}
-                        <div className="w-full ">
-                            <button className="w-full rounded-md border-blue-400 bg-slate-300 text-left">
+                        <div className="w-full " >
+                            <button className="w-full rounded-md border-blue-400 bg-slate-300 text-left" >
                                 <div className="m-10">
                                     <h1 className="text-2xl font-bold">Status Update - 22</h1>
                                     <div className="ml-4">
                                         <h4 className="text-lg font-bold mt-4">summary</h4>
                                         <p className="text-sm font-bold text-primary">dynamic text</p>
                                     </div>
-                                    <div className="flex my-6 justify-left items-center">
-                                        <div className="mr-3">
-                                            {
-                                                user?.displayImage ? <img src="" alt="" /> :
-                                                    <>
-                                                        <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
-                                                            <h6 className="uppercase font-bold text-sm">{goal?.goalOwner.split(' ')[0][0] + goal?.goalOwner.split(' ')[1][0]}</h6>
-                                                        </div>
-                                                    </>
-                                            }
+                                    <div className="flex  justify-between items-center">
+                                        <div className="flex my-6 justify-left items-center">
+                                            <div className="mr-3">
+                                                {
+                                                    user?.displayImage ? <img src="" alt="" /> :
+                                                        <>
+                                                            <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
+                                                                <h6 className="uppercase font-bold text-sm">{goal?.goalOwner.split(' ')[0][0] + goal?.goalOwner.split(' ')[1][0]}</h6>
+                                                            </div>
+                                                        </>
+                                                }
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold">{goal?.goalOwner}</h4>
+                                            </div>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold">{goal?.goalOwner}</h4>
+                                            <label htmlFor="status-modal" className="btn btn-sm btn-outline btn-info text-black font-bold">View Status</label>
                                         </div>
                                     </div>
                                 </div>
                             </button>
+
+
+                            {/* The button to open modal */}
+                            {/* <label htmlFor="status-modal" className="btn">open modal</label> */}
+
+                            {/* Put this part before </body> tag */}
+                            {/* <input type="checkbox" id="status-modal" className="modal-toggle" />
+                            <div className="modal">
+                                <div className="modal-box relative">
+                                    <label htmlFor="status-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                    <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
+                                    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                </div>
+                            </div> */}
+                            {/* <GoalStatusModal></GoalStatusModal> */}
                         </div>
+
+
+
+
                         <div className="divider w-full"></div>
                         {/* progress--------------- */}
                         <div>
