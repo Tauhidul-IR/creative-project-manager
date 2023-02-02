@@ -5,7 +5,7 @@ const features = ({ projects}) => {
  console.log(projects);
  
     return (
-        <div className="bg-sky-100">
+        <div className="">
 
             <div>
                 <div>
