@@ -51,7 +51,7 @@ const SignUpPage = () => {
 
     const saveUser = (email, name) => {
         const user = { email, name };
-        fetch('https://creative-project-manager-server-d0d44dts8.vercel.app/users', {
+        fetch('https://creative-project-manager-server.vercel.app/users', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

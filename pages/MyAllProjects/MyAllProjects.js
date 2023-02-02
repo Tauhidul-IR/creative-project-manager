@@ -9,7 +9,7 @@ const MyAllProjects = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `https://creative-project-manager-server-d0d44dts8.vercel.app/project?email=${user?.email}`;
+    const url = `https://creative-project-manager-server.vercel.app/project?email=${user?.email}`;
     const { data: projects = [] } = useQuery({
         queryKey: ['projects', user?.email],
         queryFn: async () => {

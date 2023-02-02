@@ -6,7 +6,7 @@ import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 
 const AllProjects = () => {
     const { user } = useContext(AuthContext);
-    const url = `http://localhost:5000/project-edited?email=${user?.email}`;
+    const url = `https://creative-project-manager-server.vercel.app/project-edited?email=${user?.email}`;
     const { data: projects = [] } = useQuery({
         queryKey: ['projects', user?.email],
         queryFn: async () => {
