@@ -150,7 +150,7 @@ const SignUpPage = () => {
                             <div className='flex justify-around py-4'>
                                 <Image onClick={handleGoogle} className='w-8 h-8' src={google}></Image>
                             </div>
-                            <p className='text-center text-black mb-5'>Already Have an Account<Link href={'/Login/login'} className='text-orange-500 font-bold ml-2'>Sign in</Link></p>
+                            <p className='text-center text-black mb-5'>Already Have an Account<Link href={'/Login/login'} className='text-orange-500 font-bold ml-2'>Login</Link></p>
                         </div>
                     </div>
 

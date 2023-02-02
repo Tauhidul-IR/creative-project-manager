@@ -66,7 +66,7 @@ const LoginPage = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-info" type="submit" value="Sign in" />
+                                <input className="btn btn-info" type="submit" value="Login" />
                             </div>
                         </form>
 
