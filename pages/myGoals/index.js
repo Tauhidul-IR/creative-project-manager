@@ -18,6 +18,7 @@ const MyGoals = () => {
     const { data: goals = [], refetch, isLoading } = useQuery({
         queryKey: ['goals'],
         queryFn: async () => {
+            // const res = await fetch(`http://localhost:5000/goals?email=${user?.email}`);
             const res = await fetch('http://localhost:5000/goals');
             const data = await res.json();
             return data;
