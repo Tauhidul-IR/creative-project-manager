@@ -1,6 +1,7 @@
-
+import { useContext } from 'react';
+import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 const ProjectDetails = () => {
-
+  const { user } = useContext(AuthContext);
     const formHandler = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -9,9 +10,9 @@ const ProjectDetails = () => {
         const task = form.task.value;
         const date = form.date.value;
         const priority = form.priority.value;
-        
+        const email = form.owner.value;
         const projectData = {
-         task,editProject,date,priority,description
+         task,editProject,date,priority,description,email
         }
         console.log(projectData);
 
@@ -46,6 +47,10 @@ const ProjectDetails = () => {
   class="bg-white p-6 rounded-lg">
   <h2 class="text-lg font-medium mb-4">Add Task</h2>
   <div class="mb-4">
+    <label class="block text-gray-700 font-medium mb-2">Owner</label>
+    <input name='owner' class="bg-gray-200 p-2 rounded-lg w-full" defaultValue={user?.email} disabled  type="text" placeholder="Owner email"/>
+  </div>
+  <div class="mb-4">
     <label class="block text-gray-700 font-medium mb-2">Project name</label>
     <input name='editProject' class="bg-gray-200 p-2 rounded-lg w-full" type="text" placeholder="Edit Project name"/>
   </div>
@@ -73,9 +78,6 @@ const ProjectDetails = () => {
 </form>
   </div>
 </div>
-
-
-  
 
         </div>
     );

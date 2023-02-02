@@ -33,8 +33,6 @@ const NewPortfolio = () => {
           }
         })
         .catch(err =>console.log(err));
-
-
     }
 
     return (
