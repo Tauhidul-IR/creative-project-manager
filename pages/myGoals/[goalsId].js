@@ -1,8 +1,15 @@
 
+import { useContext } from "react";
 import Background from "../../Components/Backgroud/Background";
-import GoalDetails from "../../Components/Goal/GoalDetails";
+import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
+import { FaUserCircle } from "react-icons/fa";
+
+
 
 const GoalsDetails = ({ goal }) => {
+    const { user } = useContext(AuthContext)
+
+    // console.log(goalOwner?.split(' ')[0][0] + goalOwner?.split(' ')[1][0])
 
 
     return (
@@ -22,18 +29,100 @@ const GoalsDetails = ({ goal }) => {
                             </div>
                         </div>
                         <div className="divider w-full"></div>
-                        <div className="w-full ml-10">
-                            <h1>Status Update - 22</h1>
-                            <h4>summary</h4>
+                        {/* ------goal summary ------------------------- */}
+                        <div className="w-full ">
+                            <button className="w-full rounded-md border-blue-400 bg-slate-300 text-left">
+                                <div className="m-10">
+                                    <h1 className="text-2xl font-bold">Status Update - 22</h1>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-bold mt-4">summary</h4>
+                                        <p className="text-sm font-bold text-primary">dynamic text</p>
+                                    </div>
+                                    <div className="flex my-6 justify-left items-center">
+                                        <div className="mr-3">
+                                            {
+                                                user?.displayImage ? <img src="" alt="" /> :
+                                                    <>
+                                                        <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
+                                                            <h6 className="uppercase font-bold text-sm">{goal?.goalOwner.split(' ')[0][0] + goal?.goalOwner.split(' ')[1][0]}</h6>
+                                                        </div>
+                                                    </>
+                                            }
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold">{goal?.goalOwner}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div className="divider w-full"></div>
+                        {/* progress--------------- */}
+                        <div>
+                            <h3 className="text-lg font-bold">Recent status updates <span className="text-green-800">Update date</span></h3>
+
+                        </div>
+                        <br />
+                        <div>
+                            <div className="flex justify-between">
+                                <h3 className="font-bold text-xl">Goal Description</h3>
+                                <button className="btn btn-sm btn-primary">Add</button>
+                            </div>
+                            <textarea className="textarea textarea-bordered w-full mt-3" placeholder="Goal"></textarea>
+                        </div>
+                        <div className="divider w-full"></div>
+                        <div>
+                            <div className="flex my-6 justify-left items-center">
+                                <div className="mr-3">
+                                    {
+                                        user?.displayImage ? <img src="" alt="" /> :
+                                            <>
+                                                <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
+                                                    <h6 className="uppercase font-bold text-sm">{goal?.goalOwner.split(' ')[0][0] + goal?.goalOwner.split(' ')[1][0]}</h6>
+                                                </div>
+                                            </>
+                                    }
+                                </div>
+                                <div>
+                                    <h4 className="font-bold">{goal?.goalOwner} is Created this Goal .</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="divider lg:divider-horizontal">OR</div>
+                <div className="divider lg:divider-horizontal"></div>
                 <div className="grid w-1/4 flex-grow h-32 card rounded-box place-items-center">
                     <div>
                         <div>
-                            <h2>About This Goal</h2>
-                            <h4>{goal?.goalOwner}</h4>
+                            <h2 className="text-2xl font-bold">About This Goal</h2>
+                            <div className="flex my-6 justify-center items-center">
+                                <div className="mr-3">
+                                    {
+                                        user?.displayImage ? <img src="" alt="" /> :
+                                            <>
+                                                <div className="w-8 h-8 rounded-full bg-sky-400 flex justify-center items-center ">
+                                                    <h6 className="uppercase font-bold text-sm">{goal?.goalOwner.split(' ')[0][0] + goal?.goalOwner.split(' ')[1][0]}</h6>
+                                                </div>
+                                            </>
+                                    }
+                                </div>
+                                <div>
+                                    <h6 className="text-xs font-bold
+                                     text-slate-400">Goal Owner</h6>
+                                    <h4 className="font-bold">{goal?.goalOwner}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="divider"></div>
+                        {/* -------------Time period part----------------- */}
+                        <div>
+                            <div>
+                                <h2 className="text-xl font-bold">Time Period</h2>
+                                <h1 className=" font-bold text-gray-400">{goal?.timeSlot}</h1>
+                            </div>
+                            {/* <div className="mt-4">
+                                <h2 className="text-lg font-bold">Custom due date</h2>
+                            </div> */}
                         </div>
                     </div>
                 </div>

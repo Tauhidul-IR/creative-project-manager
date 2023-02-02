@@ -2,7 +2,7 @@ import Link from "next/link";
 
 
 const SingleCard = ({ goal }) => {
-    console.log(goal._id);
+    console.log(goal);
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">

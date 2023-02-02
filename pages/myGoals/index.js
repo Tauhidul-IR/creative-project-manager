@@ -7,7 +7,7 @@ import Background from "../../Components/Backgroud/Background";
 import GoalCard from "../../Components/Goal/GoalCard";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
-// import { format } from "date-fns";
+import { format } from "date-fns";
 
 
 const MyGoals = () => {
@@ -34,7 +34,9 @@ const MyGoals = () => {
         const form = event.target;
         const email = form.email.value;
         const goalName = form.goalName.value;
-        const goalOwner = form.goalOwner.value;
+        const fName = form.fName.value;
+        const lName = form.lName.value;
+        const goalOwner = fName + ' ' + lName;
         const timeSlot = form.timeSlot.value;
         const privacy = form.privacy.value;
         const member = form.member.value;
@@ -46,6 +48,7 @@ const MyGoals = () => {
             timeSlot,
             privacy,
             member,
+            goalCreateDate: format(new Date(), 'PP')
         }
 
         console.log(goalModal);
@@ -123,7 +126,10 @@ const MyGoals = () => {
                                     <label className="label">
                                         <span className="label-text font-bold ">Goal Owner</span>
                                     </label>
-                                    <input name="goalOwner" type="text" placeholder="Name" className="input input-bordered w-full " />
+                                    <div className="flex gap-3">
+                                        <input name="fName" type="text" placeholder="FirstName" className="input input-bordered w-full " required />
+                                        <input name="lName" type="text" placeholder="LastName" className="input input-bordered w-full " required />
+                                    </div>
                                 </div>
                                 {/* Goal owner input */}
                                 <div className="form-control w-full">
