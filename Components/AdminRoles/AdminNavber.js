@@ -36,7 +36,7 @@ const AdminNavber = () => {
             <li><a>Item 3</a></li>
           </ul> */}
         </div>
-        <div className='sm:hidden'>
+        <div className=''>
         {deshbord}
         </div>
 

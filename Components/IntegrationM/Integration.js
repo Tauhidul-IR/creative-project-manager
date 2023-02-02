@@ -22,7 +22,7 @@ const Integration = () => {
                             <h2 className="card-title text-3xl">Google Drives</h2>
                             <p>Bring your Google Docs and more into your workflows.</p>
                             <div className="card-actions">
-                                <Link className='hover:text-teal-300 text-blue-500' href="">Learn more</Link>
+                                <Link className='hover:text-teal-300 text-blue-500' href="/integration/googledrive">Learn more</Link>
                             </div>
                         </div>
                     </div>
