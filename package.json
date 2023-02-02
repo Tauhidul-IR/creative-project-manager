@@ -20,6 +20,7 @@
     "axios": "^1.2.4",
     "classname": "^0.0.0",
     "daisyui": "^2.47.0",
+    "date-fns": "^2.29.3",
     "dhtmlx-gantt": "^7.1.13",
     "electron-to-chromium": "^1.4.284",
     "firebase": "^9.15.0",
