@@ -35,7 +35,7 @@ const features = ({ projects }) => {
 
 export const getStaticProps = async () => {
 
-    const res = await fetch(`https://creative-project-manager-server-d0d44dts8.vercel.app/project`);
+    const res = await fetch(`https://creative-project-manager-server.vercel.app/project`);
     const data = await res.json();
     return {
         props: {

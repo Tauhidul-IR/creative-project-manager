@@ -25,7 +25,7 @@ const GoogleDrive = () => {
                 <div className="grid justify-center items-center">
                     <h1 className='text-center text-3xl mx-3 my-3'>Creative Project Manager works with Google Drive </h1>
                     <div className='justify-center items-center grid'>
-                        <p className='mx-2  my-1 '>Bringing your Google Docs – and files stored in Drive – into Creative Project Manager adds structure and makes your content central to your projects and workflows. Simply connect your account to access and share anything from Google Drive in CPM.</p>
+                        <p className='mx-5  my-3 text-center'>Bringing your Google Docs – and files stored in Drive – into Creative Project Manager adds structure and makes your content central to your projects and workflows. Simply connect your account to access and share anything from Google Drive in CPM.</p>
                     </div>
 
 
@@ -64,7 +64,7 @@ const GoogleDrive = () => {
                         </div>
                         <div className='grid justify-center items-center  my-3 mx-5'>
                             <div className="card lg:card-side ">
-                                <figure><img className='w-52 h-52' src="https://img.freepik.com/premium-vector/checkmark-icon-check-mark-tick-correct-symbol-ok-approved-sign-isolated-vector-illustration_108855-2760.jpg" alt="Album" /></figure>
+                                <figure><img className='w-60 h-56' src="https://e7.pngegg.com/pngimages/495/149/png-clipart-finland-faq-theme-correct-miscellaneous-hand-thumbnail.png" alt="Album" /></figure>
                                 <div className="card-body">
 
                                     <p className='text-xl'>

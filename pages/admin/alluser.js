@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import { AiFillCustomerService,AiOutlineTeam,RiTeamLine } from 'react-icons/ai';
 import User from '../../Components/admin/user';
+import AdminRole from '../../Components/Adminhook/AdminRole';
 import AdminNavber from '../../Components/AdminRoles/AdminNavber';
 
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
@@ -12,7 +13,7 @@ const Alluser = ({alluser}) => {
         return<h1>Loader</h1>
     }
   
-    console.log(user?.email);
+   const [isAdminRole]= AdminRole(user?.email)
     
    
     return (
@@ -45,7 +46,10 @@ const Alluser = ({alluser}) => {
                         <div className="card-body items-center text-center">
                             <h2 className="card-title"><AiFillCustomerService /></h2>
                             <h1>{user?.displayName}</h1>
-                            <p>Active User</p>
+                            {isAdminRole ? <h1 className='text-3xl'>Admin</h1>: <p>Active User</p>
+
+                            }
+                           
 
                         </div>
                     </div>
@@ -91,6 +95,7 @@ export default Alluser;
 export const getStaticProps = async () => {
     const res = await fetch("https://creative-project-manager-server.vercel.app/allusers");
     const data = await res.json();
+    
 
     return {
         props: {

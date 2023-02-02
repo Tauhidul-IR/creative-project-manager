@@ -11,11 +11,6 @@ export default function App({ Component, pageProps }) {
   }
   return (
     <>
-{/* <Navbar></Navbar>
-
-<Footer></Footer>
-
-<> */}
 
 <AuthProvider>
         <Component {...pageProps} />

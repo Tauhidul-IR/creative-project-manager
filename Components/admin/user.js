@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineDelete, } from 'react-icons/ai';
+import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import AdminRole from '../Adminhook/AdminRole';
 
 const User = ({users}) => {
-    console.log(users);
+   
     
     const  handleDelete = async (id)=>{
-        console.log(id);
+       const {user}= useContext(AuthContext)
+     
         
-          const res = await fetch(`https://creative-project-manager-server.vercel.app/allusers/${id}`,{
+        //   fetch(`http://localhost:5000/allusers/${id}`,{
               
-              method:"DELETE"
-          });
-          const deleteData = await res.json();
-          console.log(deleteData);
-        //   const deletes = await res.json();
+        //       method:"DELETE"
+        //   }).then(res.json()).then(dat)
+        //  res.json();
+        //   console.log(deleteData);
+        // //   const deletes = await res.json();
     
         
         }
@@ -22,7 +25,9 @@ const User = ({users}) => {
         <th><button onClick={ ()=>handleDelete(users?._id)} className="text-red-400"><AiOutlineDelete/></button></th>
         <td>{users?.name}</td>
         <td>{users?.email}</td>
-        {/* <td>Blue</td> */}
+       
+        
+       
       </tr>
     );
 };

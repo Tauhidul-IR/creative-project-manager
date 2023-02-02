@@ -9,21 +9,15 @@ const Navbar = () => {
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
-
-const [isAdminRole] = AdminRole(user?.email)
-console.log(isAdminRole);
-
-
+  const [isAdminRole] = AdminRole(user?.email)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
       .catch(error => console.error(error))
   }
-
   const handleNav = () => {
     setNav(!nav);
   };
-
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
@@ -36,7 +30,6 @@ console.log(isAdminRole);
     };
     window.addEventListener('scroll', changeColor);
   }, []);
-
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -51,16 +44,15 @@ console.log(isAdminRole);
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-4'>
             <Link href='/'>Home</Link>
-           
+
           </li>
           <li className='p-4'>
             <Link href='/#'>Products</Link>
           </li>
 
           <li>
-            {
-              isAdminRole && 
-              <div className="relative group">
+
+            <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
                   <span>Features</span>
@@ -73,6 +65,7 @@ console.log(isAdminRole);
                 <ul className="list-reset">
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2  bg-black block  text-white ">Task Management</Link></li>
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/Features/features'>Create Portfolio</Link></li>
+                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/integration/integrations'>Integration</Link></li>
 
 
                 </ul>
@@ -81,8 +74,8 @@ console.log(isAdminRole);
                 </ul> */}
               </div>
             </div>
-            }
-            
+
+
 
           </li>
 
@@ -92,11 +85,11 @@ console.log(isAdminRole);
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
-         {
-          isAdminRole &&  <li className='p-4'>
-          <Link href='/admindashboard/dashboard'>Admin</Link>
-        </li>
-         }
+          {
+            isAdminRole && <li className='p-4'>
+              <Link href='/admindashboard/dashboard'>Admin</Link>
+            </li>
+          }
 
 
           {
