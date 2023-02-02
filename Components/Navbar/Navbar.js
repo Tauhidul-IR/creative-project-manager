@@ -48,9 +48,7 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-4'>
-            <Link href='/#'>Products</Link>
-          </li>
+
 
           <li>
             <div className="relative group">
@@ -68,20 +66,23 @@ const Navbar = () => {
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/Features/features'>Portfolios</Link></li>
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/AllProjects/AllProjects'>My Projects</Link></li>
 
-
                 </ul>
 
               </div>
+
             </div>
 
           </li>
-
+          <li className='p-4'>
+            <Link href='/Enterprise/Enterprise'>Enterprises</Link>
+          </li>
           <li className='p-4'>
             <Link href='/Dashboard/Dashboard'>Dashboard</Link>
           </li>
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
+
 
 
           {
@@ -142,10 +143,8 @@ const Navbar = () => {
               </div>
 
             </li>
-
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-
-              <Link href='/work'>Services</Link>
+            <li className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/Enterprise/Enterprise'>Enterprises</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>
@@ -153,9 +152,7 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Careers</Link>
             </li>
-            {/* <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/contact'>Login</Link>
-            </li> */}
+
 
             {
               user?.email ? <li className='p-4 text-4xl hover:text-gray-500'>

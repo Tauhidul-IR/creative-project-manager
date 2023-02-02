@@ -29,12 +29,12 @@ export default function Home() {
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
-      <div className="bg-slate-300">
-        <div >
-          <MyTab />
-        </div>
+  
+       
+          {/* <MyTab /> */}
+        
         <CoreConcept></CoreConcept>
-  <KommunicateChat></KommunicateChat>
+        <KommunicateChat></KommunicateChat>
         <Testimonial></Testimonial>
         <ContactForm></ContactForm>
 
@@ -42,7 +42,7 @@ export default function Home() {
 
 
       </div>
-    </div>
+
 
   )
 }

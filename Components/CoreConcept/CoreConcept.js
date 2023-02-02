@@ -2,7 +2,7 @@ const CoreConcept = () => {
     return (
         <div>
            <div>
-            <div   class="hero mt-16 mb-16 bg-slate-200">
+            <div   class="hero mt-16 mb-16 ">
   <div class="hero-content flex-col lg:flex-row-reverse ">
  
     <div>
