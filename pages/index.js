@@ -11,6 +11,8 @@ import CoreConcept from "../Components/CoreConcept/CoreConcept";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import KommunicateChat from "./Chat/Chat";
+
 
 
 
@@ -32,7 +34,7 @@ export default function Home() {
           <MyTab />
         </div>
         <CoreConcept></CoreConcept>
-
+  <KommunicateChat></KommunicateChat>
         <Testimonial></Testimonial>
         <ContactForm></ContactForm>
 
