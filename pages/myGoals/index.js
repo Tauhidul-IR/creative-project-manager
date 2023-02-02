@@ -6,19 +6,25 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Background from "../../Components/Backgroud/Background";
 import GoalCard from "../../Components/Goal/GoalCard";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
+import { useQuery } from "@tanstack/react-query";
+// import { format } from "date-fns";
 
 
-const MyGoals = ({ goals }) => {
+const MyGoals = () => {
     const { user } = useContext(AuthContext)
     const [handleCloseModal, setHandleCloseModal] = useState(user?.email)
+    // const date = format(new Date(), 'PP');
 
-    // console.log(goals[0]._id);
+    const { data: goals = [], refetch, isLoading } = useQuery({
+        queryKey: ['goals'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/goals');
+            const data = await res.json();
+            return data;
+        }
+    });
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/goals?email=${user?.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setGoals(data))
-    // }, [user?.email])
+    // console.log(date);
 
 
 
@@ -56,6 +62,8 @@ const MyGoals = ({ goals }) => {
                 if (data.acknowledged) {
                     toast.success('Goal added')
                     setHandleCloseModal(null)
+                    refetch()
+
                 }
 
 
@@ -171,17 +179,41 @@ const MyGoals = ({ goals }) => {
     );
 };
 
-export const getStaticProps = async () => {
-    // const res = await fetch(`http://localhost:5000/goals?email=${user?.email}`);
-    const res = await fetch(`http://localhost:5000/goals`);
-    const data = await res.json();
+// export const getStaticProps = async () => {
+//     // const res = await fetch(`http://localhost:5000/goals?email=${user?.email}`);
+//     const res = await fetch(`http://localhost:5000/goals`);
+//     const data = await res.json();
 
-    return {
-        props: {
-            goals: data
-        }
-    }
-}
+//     return {
+//         props: {
+//             goals: data
+//         }
+//     }
+// }
+
+// export async function getStaticProps() {
+//     const { data: goals = [], refetch, isLoading } = useQuery({
+//         queryKey: ['goals'],
+//         queryFn: async () => {
+//             const res = await fetch('http://localhost:5000/goals');
+//             const data = await res.json();
+//             console.log(data);
+//             return {
+//                 props: {
+//                     goals: data
+//                 }
+//             }
+//         }
+//     });
+
+// }
+
+
+
+
+
+
+
 
 export default MyGoals;
 
