@@ -8,7 +8,7 @@ const AdminRole = (email) => {
   useEffect(
     () => {
       if (email) {
-        fetch(`http://localhost:5000/adminRole/${email}`)
+        fetch(`https://creative-project-manager-server.vercel.app/adminRole/${email}`)
           .then(res => res.json())
           .then(admin => {
             console.log(admin);

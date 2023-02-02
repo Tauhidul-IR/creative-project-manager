@@ -89,7 +89,7 @@ const Alluser = ({alluser}) => {
 
 export default Alluser;
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/allusers");
+    const res = await fetch("https://creative-project-manager-server.vercel.app/allusers");
     const data = await res.json();
 
     return {

@@ -7,7 +7,7 @@ const User = ({users}) => {
     const  handleDelete = async (id)=>{
         console.log(id);
         
-          const res = await fetch(`http://localhost:5000/allusers/${id}`,{
+          const res = await fetch(`https://creative-project-manager-server.vercel.app/allusers/${id}`,{
               
               method:"DELETE"
           });

@@ -26,6 +26,7 @@ const Integration = () => {
                             </div>
                         </div>
                     </div>
+                    {/* emails */}
                     <div className="card w-72 bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Shoes" className="rounded-xl" />
@@ -34,7 +35,7 @@ const Integration = () => {
                             <h2 className="card-title text-3xl">Email</h2>
                             <p>Create tasks, reply to statuses and more - all from your inbox.</p>
                             <div className="card-actions">
-                                <Link className='hover:text-teal-300 text-blue-500' href="">Learn more</Link>
+                                <Link className='hover:text-teal-300 text-blue-500' href="/integration/email">Learn more</Link>
                             </div>
                         </div>
                     </div>
