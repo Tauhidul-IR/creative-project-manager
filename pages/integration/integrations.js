@@ -6,7 +6,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 const integrations = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <Background></Background>
             <Integration></Integration>
         </div>
