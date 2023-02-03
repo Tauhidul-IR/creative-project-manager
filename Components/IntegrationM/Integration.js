@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
-import AdminNavber from '../AdminRoles/AdminNavber';
+import Navbar from '../Navbar/Navbar';
 
 const Integration = () => {
     return (
         <div>
-            <AdminNavber></AdminNavber>
+            <Navbar className="text-black"></Navbar>
             {/* intergration heading */}
-            <div className='grid justify-center items-center my-5 text-center mx-3'>
+            <div className='grid justify-center items-center my-5 mt-16 text-center mx-3'>
                 <h1 className='text-3xl'>Out of the box, Create Project Management works seamlessly with these servies:</h1>
             </div>
             {/* card create */}
