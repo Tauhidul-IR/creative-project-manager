@@ -2,24 +2,22 @@ import Link from 'next/link';
 import React, { useState, useEffect, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import AdminRole from '../Adminhook/AdminRole';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
-
-
+  const [isAdminRole] = AdminRole(user?.email)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
       .catch(error => console.error(error))
   }
-
   const handleNav = () => {
     setNav(!nav);
   };
-
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
@@ -32,7 +30,6 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', changeColor);
   }, []);
-
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -47,10 +44,12 @@ const Navbar = () => {
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-4'>
             <Link href='/'>Home</Link>
+
           </li>
 
 
           <li>
+
             <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
@@ -66,11 +65,16 @@ const Navbar = () => {
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/Features/features'>Portfolios</Link></li>
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/AllProjects/AllProjects'>My Projects</Link></li>
 
+                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/integration/integrations'>Integration</Link></li>
+
+
                 </ul>
 
               </div>
 
             </div>
+
+
 
           </li>
           <li className='p-4'>
@@ -82,6 +86,11 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
+          {
+            isAdminRole && <li className='p-4'>
+              <Link href='/admindashboard/dashboard'>Admin</Link>
+            </li>
+          }
 
 
 
@@ -138,6 +147,8 @@ const Navbar = () => {
                     <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block bg-base-200  text-black text-xl">Task Management</Link></li>
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/Features/features'>Portfolios</Link></li>
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/AllProjects/AllProjects'>My Projects</Link></li>
+
+                    <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/integration/integrations'>Integraion M</Link></li>
                   </ul>
                 </div>
               </div>
@@ -146,6 +157,10 @@ const Navbar = () => {
             <li className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/Enterprise/Enterprise'>Enterprises</Link>
             </li>
+            {isAdminRole && <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/admindashboard/dashboard'>Admin</Link>
+            </li>}
+
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>
             </li>

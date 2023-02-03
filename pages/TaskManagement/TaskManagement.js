@@ -11,8 +11,7 @@ const TaskManagement = () => {
             <TaskArticle />
             {/* <TaskTab></TaskTab> */}
             <TodoList></TodoList>
-
-        </div>
+            </div>
     );
 };
 

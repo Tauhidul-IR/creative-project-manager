@@ -5,12 +5,14 @@ import { HiBell, HiChartPie, HiExclamationCircle, HiOutlineTrendingUp, HiShieldC
 
 const DashboardPage = () => {
     return (
-
-
         <div>
+<<<<<<< HEAD
 
 
 <div className="drawer drawer-mobile">
+=======
+            <div className="drawer drawer-mobile">
+>>>>>>> be78544434705ac305febcb48dd0eb27f4cdd29f
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
                     {/* <!-- Page content here --> */}
