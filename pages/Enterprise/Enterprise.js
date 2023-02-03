@@ -5,6 +5,7 @@ import BusinessValue from "../../Components/Enterprises/BusinessValue/BusinessVa
 import FosterWave from "../../Components/Enterprises/FosterWave/FosterWave";
 import ControlData from "../../Components/Enterprises/ControlData/ControlData";
 import Scalability from "../../Components/Enterprises/Scalability/Scalability";
+import WhyCpm from "../../Components/Enterprises/WhyCpm/WhyCpm";
 const Enterprise = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Enterprise = () => {
            <EnterprisesBanner></EnterprisesBanner>
            <BusinessValue></BusinessValue>
            <ControlData></ControlData>
+           <WhyCpm></WhyCpm>
            <FosterWave></FosterWave>
            <Scalability></Scalability>
           

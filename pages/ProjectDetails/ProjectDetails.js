@@ -16,7 +16,7 @@ const ProjectDetails = () => {
         }
         console.log(projectData);
 
-        const url = 'http://localhost:5000/project-edited'
+        const url = 'https://creative-project-manager-server.vercel.app/project-edited'
 
 
         fetch(url,{
