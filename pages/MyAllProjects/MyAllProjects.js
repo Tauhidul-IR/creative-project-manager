@@ -8,16 +8,13 @@ const MyAllProjects = () => {
     const { user } = useContext(AuthContext);
 
     const url = `https://creative-project-manager-server.vercel.app/project?email=${user?.email}`;
-    const { data: projects = [] } = useQuery({
+    const { data: projects = [],refetch } = useQuery({
         queryKey: ['projects', user?.email],
         queryFn: async () => {
-            const res = await fetch(url, {
-                headers: {
-                    authorization: `bearer ${localStorage.getItem('accessToken')}`
-                }
-            });
+            const res = await fetch(url);
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
+         
             return data;
         }
     })

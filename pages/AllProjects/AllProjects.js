@@ -5,18 +5,16 @@ import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 const AllProjects = () => {
     const { user } = useContext(AuthContext);
     const url = `http://localhost:5000/project-edited?email=${user?.email}`;
-    const { data: projects = [] } = useQuery({
+    const { data: projects = [],refetch } = useQuery({
         queryKey: ['projects', user?.email],
         queryFn: async () => {
-            const res = await fetch(url, {
-                headers: {
-                    authorization: `bearer ${localStorage.getItem('accessToken')}`
-                }
-            });
+            const res = await fetch(url);
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
+        
             return data;
         }
+      
     })
     return (
         <div>
