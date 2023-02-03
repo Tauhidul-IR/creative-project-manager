@@ -80,10 +80,10 @@ const Email = () => {
                 </div>
                 <div>
                     <h1 className='text-center mx-3'>
-                        Connecting your Google Drive and Creative Project Manager accounts is done in just a couple of clicks. Need a hand? Check out <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM article.</span>
+                    For comprehensive, step-by-step guides to these features, see the <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM Email section article.</span>
                     </h1>
                     <h1 className='my-5 mx-4 text-center'>
-                        See first-hand how Podio can transform the way your team works together.
+                        See first-hand how CPM can transform the way your team works together.
                     </h1>
                     <div className='text-center mb-4'>
                         <Link className='btn rounded px-2 py-1' href="">Sign Up now-its free</Link>
