@@ -143,6 +143,7 @@ const Navbar = () => {
                   <ul className="list-reset">
                     <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block bg-base-200  text-black text-xl">Task Management</Link></li>
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/Features/features'>Create Portfolio</Link></li>
+                    <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/integration/integrations'>Integraion M</Link></li>
                   </ul>
                 </div>
               </div>
@@ -152,6 +153,10 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Services</Link>
             </li>
+            {isAdminRole &&   <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/admindashboard/dashboard'>Admin</Link>
+            </li>}
+           
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>
             </li>
