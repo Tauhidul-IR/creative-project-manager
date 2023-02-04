@@ -6,23 +6,43 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import MyTab from "../Components/MyTab/MyTab";
 import Footer1 from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
+import CoreConcept from "../Components/CoreConcept/CoreConcept";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import KommunicateChat from "./Chat/Chat";
+
+
+
 
 
 
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div className="bg-white">
       <Navbar />
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
-      <div className="bg-slate-300">
-        <MyTab />
-      </div>
-      <Testimonial></Testimonial>
-      <ContactForm></ContactForm>
+  
+       
+          {/* <MyTab /> */}
+        
+        <CoreConcept></CoreConcept>
+        <KommunicateChat></KommunicateChat>
+        <Testimonial></Testimonial>
+        <ContactForm></ContactForm>
 
-    </div>
+        <Footer1 />
+
+
+      </div>
+
+
   )
 }

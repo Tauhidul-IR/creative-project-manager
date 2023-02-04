@@ -1,17 +1,23 @@
+import React from 'react';
 import { Toaster } from 'react-hot-toast'
+import Footer from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 import AuthProvider from '../Others/AuthProvider/AuthProvider'
 import '../styles/globals.css'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 
 export default function App({ Component, pageProps }) {
+  const queryClient = new QueryClient()
   return (
     <>
-      {/* <Navbar/> */}
-      <AuthProvider>
-        <Component {...pageProps} />
-        <Toaster></Toaster>
-      </AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <Component {...pageProps} />
+          <Navbar />
+          <Toaster></Toaster>
+        </AuthProvider>
+      </QueryClientProvider>
     </>
   )
 }

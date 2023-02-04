@@ -4,11 +4,12 @@ import { HiArrowSmRight } from "react-icons/hi";
 
 const Banner = () => {
     return (
-        <div className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img'>
+        <div  className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img'>
             {/* Overlay */}
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]' />
             <div className='sm:pt-44 px-1 sm:px-28 md:px-32 pt-32 text-white z-[2] mt-[-10rem]'>
-                <div className=''>
+                <div data-aos="fade-up" data-aos-duration="1900" >
+                    
                     <h1 className='text-3xl sm:text-5xl text-center mb-1 sm:mb-6 text text-white font-bold'>
                         Empower your team with
                         project management software
@@ -20,18 +21,7 @@ const Banner = () => {
                         <br /> <button className="btn text-blue-300 text-2xl btn-ghost">Learn More <HiArrowSmRight className='inline-block' /></button></div>
 
                 </div>
-                {/* <Wave mask="url(#mask)" fill="#1277b0" >
-                    <defs>
-                        <linearGradient id="gradient" gradientTransform="rotate(90)">
-                            <stop offset="0" stopColor="white" />
-                            <stop offset="0.5" stopColor="black" />
-                        </linearGradient>
 
-                        <mask id="mask">
-                            <rect x="0" y="0" width="2000" height="200" fill="url(#gradient)" />
-                        </mask>
-                    </defs>
-                </Wave> */}
             </div>
         </div>
     );

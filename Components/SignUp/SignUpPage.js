@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import Link from 'next/link';
 import img from '../../public/images/signUp1.png'
-import imgBG from '../../public/images/hidden.png'
 import google from '../../public/images/google.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
@@ -34,6 +33,7 @@ const SignUpPage = () => {
                 updateUser(userInfo)
                     .then(() => {
                         toast.success('SignUp successfully')
+                        saveUser(email, name);
                     })
                     .catch(error => {
                         console.error(error);
@@ -47,7 +47,55 @@ const SignUpPage = () => {
 
     }
 
+
+
+    const saveUser = (email, name) => {
+        const user = { email, name };
+        fetch('https://creative-project-manager-server.vercel.app/users', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledge) {
+                    alert('Task added')
+                    form.reset()
+                }
+            })
+            .catch(error => console.error(error))
+    }
+
+
+
+
     console.log(singUpError);
+
+
+    // const saveUser = (email, name) => {
+    //     const user = { email, name };
+    //     fetch('', {
+    //         method: "POST",
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    // console.log(data);
+    //         })
+    //         .catch(error => console.error(error))
+    // }
+
+
+
+
+
+
 
     const handleGoogle = () => {
         googleSignIn()
@@ -70,7 +118,7 @@ const SignUpPage = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
-                            <h1 className="text-4xl font-bold text-black">Sign Up</h1>
+                            <h1 className="text-4xl font-bold text-black text-center">Sign Up</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text font-bold">Name</span>
@@ -91,14 +139,14 @@ const SignUpPage = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-info" type="submit" value="SignUp" />
+                                <input className="btn btn-info" type="submit" value="Sign Up" />
                             </div>
                             {singUpError && <p className='text-red-500'>{singUpError}</p>}
                         </form>
 
                         <div>
                             <div className="divider my-0 text-black">OR</div>
-                            <h1 className='text-black text-center font-3xl font-bold mt-5'>SignUp with</h1>
+                            <h1 className='text-black text-center font-3xl font-bold mt-5'>Sign up with</h1>
                             <div className='flex justify-around py-4'>
                                 <Image onClick={handleGoogle} className='w-8 h-8' src={google}></Image>
                             </div>
