@@ -32,7 +32,7 @@ const dashboard = () => {
               <option>Spark Line</option>
               <option>Apex Chart</option>
             </select>
-              <span><Link href=""></Link></span></li>
+              </li>
             <li>
               <select className="select select-error w-full max-w-xs">
                 <option disabled selected>Project Report</option>
