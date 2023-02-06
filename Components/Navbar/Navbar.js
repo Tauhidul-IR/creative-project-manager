@@ -66,6 +66,7 @@ const Navbar = () => {
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/AllProjects/AllProjects'>My Projects</Link></li>
 
                   <li> <Link className="px-2 py-2  bg-black block  text-white " href='/integration/integrations'>Integration</Link></li>
+                  <li> <Link className="px-2 py-2  bg-black block  text-white " href="/myGoals">Goals</Link></li>
 
 
                 </ul>
@@ -116,19 +117,19 @@ const Navbar = () => {
             <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}
 
-          
+
         </div>
         {/* Mobile Menu */}
-        
+
         <div
           className={
             nav
               ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
               : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
           }
-          
+
         >
-          
+
           <ul>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/'>Home</Link>
