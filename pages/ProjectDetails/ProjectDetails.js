@@ -49,7 +49,7 @@ const ProjectDetails = () => {
             <div class="mb-4">
               <label class="block text-gray-700 font-medium mb-2">Owner</label>
               <input name='owner' class="bg-gray-200 p-2 rounded-lg w-full" defaultValue={user?.email} disabled type="text" placeholder="Owner email" />
-            </div>
+            </div >
             <div class="mb-4">
               <label class="block text-gray-700 font-medium mb-2">Project name</label>
               <input name='editProject' class="bg-gray-200 p-2 rounded-lg w-full" type="text" placeholder="Edit Project name" />
@@ -75,11 +75,11 @@ const ProjectDetails = () => {
               </select>
             </div>
             <button class="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Add Task</button>
-          </form>
-        </div>
-      </div>
+          </form >
+        </div >
+      </div >
 
-    </div>
+    </div >
   );
 };
 
