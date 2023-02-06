@@ -11,6 +11,7 @@ const GoalsDetails = ({ goal }) => {
     const { user } = useContext(AuthContext)
 
     // console.log(goalOwner?.split(' ')[0][0] + goalOwner?.split(' ')[1][0])
+    console.log(goal);
 
 
     return (
@@ -159,14 +160,14 @@ const GoalsDetails = ({ goal }) => {
 export const getStaticProps = async (context) => {
     const { params } = context;
 
-    const res = await fetch(`http://localhost:5000/myGoals/${params?.goalsId}`);
+    const res = await fetch(`https://creative-project-manager-server.vercel.app/myGoals/${params?.goalsId}`);
     const data = await res.json();
 
     console.log(data._id, '--------------------------------------------------------');
 
     return {
         props: {
-            goal: data
+            goal: JSON.parse(JSON.stringify(data))
         }
     }
 }
