@@ -41,7 +41,7 @@ const GoalDetails = ({ goal }) => {
                 <div className="grid w-1/4 flex-grow h-32 card rounded-box place-items-center">
                     <div>
                         <div>
-                            <h2>About This Goal</h2>
+                            <h2>About This Goals</h2>
                             <h4>{goal?.goalOwner}</h4>
                         </div>
                     </div>
