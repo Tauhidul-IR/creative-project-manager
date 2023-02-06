@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+// test
 
 const SingleCard = ({ goal }) => {
     console.log(goal);

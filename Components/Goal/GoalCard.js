@@ -16,15 +16,5 @@ const GoalCard = ({ goals }) => {
     );
 };
 
-// export const getStaticProps = async () => {
-//     const res = await fetch(`http://localhost:5000/goals`);
-//     const data = await res.json();
-
-//     return {
-//         props: {
-//             posts: data
-//         }
-//     }
-// }
 
 export default GoalCard;

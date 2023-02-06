@@ -1,6 +1,7 @@
 
 
 const GoalStatusModal = () => {
+    // test
     return (
         <div>
             <input type="checkbox" id="status-modal" className="modal-toggle" />
@@ -14,5 +15,6 @@ const GoalStatusModal = () => {
         </div>
     );
 };
+
 
 export default GoalStatusModal;
