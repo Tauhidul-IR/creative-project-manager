@@ -2,8 +2,8 @@
 import { useContext } from "react";
 import Background from "../../Components/Backgroud/Background";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
-import GoalStatusModal from "../../Components/Goal/GoalStatusModal";
+// import { FaUserCircle } from "react-icons/fa";
+// import GoalStatusModal from "../../Components/Goal/GoalStatusModal";
 
 
 
