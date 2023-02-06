@@ -159,7 +159,7 @@ const GoalsDetails = ({ goal }) => {
 export const getStaticProps = async (context) => {
     const { params } = context;
 
-    const res = await fetch(`https://creative-project-manager-server.vercel.app/goals/${params?.goalsId}`);
+    const res = await fetch(`http://localhost:5000/myGoals/${params?.goalsId}`);
     const data = await res.json();
 
     console.log(data._id, '--------------------------------------------------------');

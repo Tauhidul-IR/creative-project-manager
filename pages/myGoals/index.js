@@ -30,7 +30,6 @@ const MyGoals = () => {
 
 
     const handleModal = (event) => {
-
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -41,7 +40,6 @@ const MyGoals = () => {
         const timeSlot = form.timeSlot.value;
         const privacy = form.privacy.value;
         const member = form.member.value;
-
         const goalModal = {
             goalName,
             goalOwner,
@@ -51,7 +49,6 @@ const MyGoals = () => {
             member,
             goalCreateDate: format(new Date(), 'PP')
         }
-
         console.log(goalModal);
         fetch('https://creative-project-manager-server.vercel.app/goals', {
             method: "POST",
