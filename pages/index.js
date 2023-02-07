@@ -23,22 +23,13 @@ export default function Home() {
   }, [])
   return (
     <div className="bg-white">
-      {/* <Navbar /> */}
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
-
-
-      {/* <MyTab /> */}
-
       <CoreConcept></CoreConcept>
       <KommunicateChat></KommunicateChat>
       <Testimonial></Testimonial>
       <ContactForm></ContactForm>
-
-      <Footer />
-
-
     </div>
 
 
