@@ -6,11 +6,13 @@ import google from '../../public/images/google.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
+import { useRouter } from "next/router";
 
 
 const SignUpPage = () => {
     const { createUser, googleSignIn, updateUser } = useContext(AuthContext);
     const [singUpError, setSingUpError] = useState(null);
+    const router = useRouter();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -64,6 +66,7 @@ const SignUpPage = () => {
                 if (data.acknowledge) {
                     alert('Task added')
                     form.reset()
+                    router.push('/');
                 }
             })
             .catch(error => console.error(error))
@@ -103,6 +106,7 @@ const SignUpPage = () => {
                 const user = result.user;
                 toast.success('SignUp successfully')
                 // console.log(user);
+                router.push('/');
             })
             .catch(error => {
                 // console.log(error);

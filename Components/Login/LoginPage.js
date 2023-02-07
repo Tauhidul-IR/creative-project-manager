@@ -5,11 +5,13 @@ import google from '../../public/images/google.png'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { useRouter } from 'next/router';
 // import img2 from 'Privacy.svg'
 
 const LoginPage = () => {
     const { googleSignIn, loginUser, user } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
+    const router = useRouter();
 
     console.log(user);
 
@@ -26,6 +28,7 @@ const LoginPage = () => {
                 const user = result.user;
                 // console.log(user);
                 toast.success('Login Successfully.')
+                router.push('/');
             })
             .catch(error => {
                 console.log(error)
@@ -39,6 +42,7 @@ const LoginPage = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                router.push('/');
             })
             .catch(error => {
                 console.log(error)
