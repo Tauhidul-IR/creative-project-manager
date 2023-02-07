@@ -8,8 +8,8 @@ const features = ({ projects }) => {
 
     return (
         <>
-            <Navbar></Navbar>
-            <Background></Background>
+            {/* <Navbar></Navbar>
+            <Background></Background> */}
             <div className="">
 
                 <div>

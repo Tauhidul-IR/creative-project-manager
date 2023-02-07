@@ -40,6 +40,7 @@
     "react-super-responsive-table": "^5.2.1",
     "react-wavify": "^1.7.0",
     "run-parallel": "^1.2.0",
+    "swc-loader": "^0.2.3",
     "swiper": "^8.4.5",
     "swr": "^2.0.1",
     "tslib": "^2.4.1",

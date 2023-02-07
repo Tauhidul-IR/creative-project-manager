@@ -72,8 +72,6 @@ const MyGoals = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
-            <Background></Background>
             <div className="bg-blue-100 pl-4 min-h-screen">
                 <div className="flex justify-start items-center py-2">
                     <div className="mr-3 bg-purple-300 p-5 rounded-lg">

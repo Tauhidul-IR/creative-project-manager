@@ -60,13 +60,13 @@ const Navbar = () => {
                 </button>
               </div>
               <div className="items-center absolute  invisible group-hover:visible">
-                <ul className="list-reset">
-                  <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2  bg-black block  text-white ">Task Management</Link></li>
-                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/Features/features'>Portfolios</Link></li>
-                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/AllProjects/AllProjects'>My Projects</Link></li>
+                <ul className="list-reset bg-blue-400 text-black">
+                  <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
+                  <li> <Link className="px-2 py-2   block" href='/Features/features'>Portfolios</Link></li>
+                  <li> <Link className="px-2 py-2   block" href='/AllProjects/AllProjects'>My Projects</Link></li>
 
-                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/integration/integrations'>Integration</Link></li>
-                  <li> <Link className="px-2 py-2  bg-black block  text-white " href="/myGoals">Goals</Link></li>
+                  <li> <Link className="px-2 py-2   block" href='/integration/integrations'>Integration</Link></li>
+                  <li> <Link className="px-2 py-2   block" href="/myGoals">Goals</Link></li>
 
 
                 </ul>
@@ -155,6 +155,7 @@ const Navbar = () => {
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/AllProjects/AllProjects'>My Projects</Link></li>
 
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/integration/integrations'>Integraion M</Link></li>
+                    <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/myGoals'>Goals</Link></li>
                   </ul>
                 </div>
               </div>

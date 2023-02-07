@@ -20,8 +20,8 @@ const AllProjects = () => {
     })
     return (
         <div>
-            <Navbar></Navbar>
-            <Background></Background>
+            {/* <Navbar></Navbar>
+            <Background></Background> */}
 
             <div className="overflow-x-auto mt-24">
                 <h2 className=" text-center text-4xl mt-9 mb-9 font-semibold text-gray-500">All My Projects</h2>

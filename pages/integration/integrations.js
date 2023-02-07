@@ -7,7 +7,7 @@ const integrations = () => {
     return (
         <div>
             {/* <Navbar></Navbar> */}
-            <Background></Background>
+            {/* <Background></Background> */}
             <Integration></Integration>
         </div>
     );

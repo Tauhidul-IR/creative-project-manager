@@ -3,15 +3,13 @@ import Client from "../Components/Client/Client";
 import ContactForm from "../Components/ContactForm/ContactForm";
 import Product from "../Components/Product/Product";
 import Testimonial from "../Components/Testimonial/Testimonial";
-import MyTab from "../Components/MyTab/MyTab";
-import Footer1 from "../Components/Footer/Footer";
-import Navbar from "../Components/Navbar/Navbar";
 import CoreConcept from "../Components/CoreConcept/CoreConcept";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import KommunicateChat from "./Chat/Chat";
+import Footer from "../Components/Footer/Footer";
 
 
 
@@ -25,23 +23,23 @@ export default function Home() {
   }, [])
   return (
     <div className="bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
       <Banner></Banner>
       <Product></Product>
       <Client></Client>
-  
-       
-          {/* <MyTab /> */}
-        
-        <CoreConcept></CoreConcept>
-        <KommunicateChat></KommunicateChat>
-        <Testimonial></Testimonial>
-        <ContactForm></ContactForm>
-
-        <Footer1 />
 
 
-      </div>
+      {/* <MyTab /> */}
+
+      <CoreConcept></CoreConcept>
+      <KommunicateChat></KommunicateChat>
+      <Testimonial></Testimonial>
+      <ContactForm></ContactForm>
+
+      <Footer />
+
+
+    </div>
 
 
   )

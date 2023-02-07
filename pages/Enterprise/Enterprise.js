@@ -9,15 +9,15 @@ import WhyCpm from "../../Components/Enterprises/WhyCpm/WhyCpm";
 const Enterprise = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <Background></Background>
-           <EnterprisesBanner></EnterprisesBanner>
-           <BusinessValue></BusinessValue>
-           <ControlData></ControlData>
-           <WhyCpm></WhyCpm>
-           <FosterWave></FosterWave>
-           <Scalability></Scalability>
-          
+            {/* <Navbar></Navbar>
+            <Background></Background> */}
+            <EnterprisesBanner></EnterprisesBanner>
+            <BusinessValue></BusinessValue>
+            <ControlData></ControlData>
+            <WhyCpm></WhyCpm>
+            <FosterWave></FosterWave>
+            <Scalability></Scalability>
+
         </div>
     );
 };
