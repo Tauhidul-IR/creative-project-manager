@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 
+
 const EnterprisesBanner = () => {
     return (
         <div>
@@ -17,7 +18,7 @@ const EnterprisesBanner = () => {
 
       <p className="py-6 mt-7 mb-7 text-3xl">Find out why more than 80% of Fortune 100 companies use CPM.*</p>
       <Link href='/SalesTeam/SalesTeam'>
-      <button className="btn btn-outline normal-case">Contact sales</button>
+      <button className="btn btn-outline btn-error normal-case">Contact sales</button>
       </Link>
     </div>
   </div>
