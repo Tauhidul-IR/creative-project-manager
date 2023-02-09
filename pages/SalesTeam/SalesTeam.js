@@ -1,12 +1,20 @@
-import Navbar from "../../Components/Navbar/Navbar";
-import Background from "../../Components/Backgroud/Background"
+import emailjs from '@emailjs/browser';
 
 const SalesTeam = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_kptk7p9', 'template_1jbxn0l', e.target, 'LLV7xYubBmuxyE1nV')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset();
+  }
   return (
 
     <div>
-      {/* <Navbar></Navbar>
-            <Background></Background> */}
+
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
@@ -19,73 +27,78 @@ const SalesTeam = () => {
               <h2 className="text-yellow-400">Fields marked with an asterisk (*) are required.</h2>
 
               {/* div 1 */}
+              <form onSubmit={sendEmail} >
 
-              <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-3">
+
+                <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">First Name <span className="text-red-500">*</span></span>
+                    </label>
+                    <input type="text" placeholder="e.g.. John" name='firstName' className="input input-bordered" />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Last Name <span className="text-red-500">*</span></span>
+                    </label>
+                    <input type="text" placeholder="Smith" name='lastName' className="input input-bordered" />
+                  </div>
+                </div>
+
+
+
+                {/* div 2 */}
+
+
+                <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Company Email <span className="text-red-500">*</span></span>
+                    </label>
+                    <input type="text" placeholder="name@company.com" name='email' className="input input-bordered" />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Phone Number</span>
+                    </label>
+                    <input type="text" placeholder="+15556555" name='phone' className="input input-bordered" />
+                  </div>
+                </div>
+
+                {/* div 3 */}
+                <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Country  <span className="text-red-500">*</span></span>
+                    </label>
+                    <input type="text" placeholder="Country" name='country' className="input input-bordered" />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Company Size  <span className="text-red-500">*</span></span>
+                    </label>
+                    <input type="text" placeholder="Size" name='companySize' className="input input-bordered" />
+                  </div>
+                </div>
+
+
+
+
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">First Name <span className="text-red-500">*</span></span>
+                    <span className="label-text">What would you link to discuss?  <span className="text-red-500">*</span></span>
                   </label>
-                  <input type="text" placeholder="e.g.. John" className="input input-bordered" />
+                  <textarea className="textarea textarea-bordered" name='description' placeholder="Tell us"></textarea>
+
                 </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Last Name <span className="text-red-500">*</span></span>
-                  </label>
-                  <input type="text" placeholder="Smith" className="input input-bordered" />
+
+
+                <div className="form-control mt-6">
+                  <button className="btn btn-outline btn-error normal-case">Submit</button>
                 </div>
-              </div>
 
 
-
-              {/* div 2 */}
-
-
-              <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Company Email <span className="text-red-500">*</span></span>
-                  </label>
-                  <input type="text" placeholder="name@company.com" className="input input-bordered" />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Phone Number</span>
-                  </label>
-                  <input type="text" placeholder="+15556555" className="input input-bordered" />
-                </div>
-              </div>
-
-              {/* div 3 */}
-              <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Country  <span className="text-red-500">*</span></span>
-                  </label>
-                  <input type="text" placeholder="Country" className="input input-bordered" />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Company Size  <span className="text-red-500">*</span></span>
-                  </label>
-                  <input type="text" placeholder="Size" className="input input-bordered" />
-                </div>
-              </div>
-
-
-
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">What would you link to discuss?  <span className="text-red-500">*</span></span>
-                </label>
-                <textarea className="textarea textarea-bordered" placeholder="Tell us"></textarea>
-
-              </div>
-
-
-              <div className="form-control mt-6">
-                <button className="btn btn-outline">Submit</button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
