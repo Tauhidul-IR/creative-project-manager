@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {RxSketchLogo, RxDashboard, RxPerson ,FcManager, RxCardStackMinus} from "react-icons/rx"
 import { HiOutlineShoppingBag } from 'react-icons/hi'
-import { AiFillSetting } from 'react-icons/ai'
+import { AiFillSetting, AiFillSignal } from 'react-icons/ai'
 
 function Sidebar({children}) {
   return (
@@ -30,6 +30,11 @@ function Sidebar({children}) {
             <Link href="/Dashboard/Goals">
               <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4  p-3 rounded-lg inline-block '>
                 <HiOutlineShoppingBag size={20}/>
+              </div>
+            </Link>
+            <Link href="/Dashboard/Reporting">
+              <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4  p-3 rounded-lg inline-block '>
+                <AiFillSignal size={20}/>
               </div>
             </Link>
             <Link href="/">
