@@ -17,10 +17,10 @@ const AllProjects = () => {
       
     })
     return (
-        <div>
+        <div id="details">
         
          <div className="overflow-x-auto mt-24">
-         <h2 className=" text-center text-4xl mt-9 mb-9 font-semibold text-gray-500">All My Projects</h2> 
+         <h2 className=" text-center text-4xl mt-9 mb-9 font-semibold text-black">All My Projects</h2> 
          
 <table className="table w-full">
     <thead>

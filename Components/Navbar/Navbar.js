@@ -78,6 +78,20 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/Enterprise/Enterprise'>Enterprises</Link>
           </li>
+          <ul className="menu menu-horizontal px-1">
+     
+     <li tabIndex={0}>
+       <a className='p-4 mb-5'>
+        Resources
+         <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+       </a>
+       <ul className="p-2 bg-base-200 text-black">
+         <li><Link href= '/BlogPage/BlogPage'>Blog</Link></li>
+        
+       </ul>
+     </li>
+    
+   </ul>
           <li className='p-4'>
             <Link href='/Dashboard/Dashboard'>Dashboard</Link>
           </li>
@@ -148,6 +162,20 @@ const Navbar = () => {
             <li className='p-4 text-4xl hover:text-gray-500'>
             <Link href='/Enterprise/Enterprise'>Enterprises</Link>
           </li>
+          <ul className="menu menu-vertical px-1">
+     
+      <li tabIndex={0}>
+        <a className='p-4 text-4xl hover:text-gray-500'>
+         Resources
+          <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+        <ul className="p-2 bg-base-200 text-black">
+          <li><Link href= '/BlogPage/BlogPage'>Blog</Link></li>
+         
+        </ul>
+      </li>
+     
+    </ul>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>
             </li>
