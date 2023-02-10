@@ -6,8 +6,8 @@ import AdminRole from '../Adminhook/AdminRole';
 const User = ({users}) => {
    
     
-    const  handleDelete = async (id)=>{
-       const {user}= useContext(AuthContext)
+    // const  handleDelete = async (id)=>{
+    //    const {user}= useContext(AuthContext)
      
         
         //   fetch(`http://localhost:5000/allusers/${id}`,{
@@ -19,10 +19,10 @@ const User = ({users}) => {
         // //   const deletes = await res.json();
     
         
-        }
+        // }
     return (
         <tr>
-        <th><button onClick={ ()=>handleDelete(users?._id)} className="text-red-400"><AiOutlineDelete/></button></th>
+        <th><button className="text-red-400"><AiOutlineDelete/></button></th>
         <td>{users?.name}</td>
         <td>{users?.email}</td>
        
