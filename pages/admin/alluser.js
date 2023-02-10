@@ -18,7 +18,7 @@ const Alluser = ({alluser}) => {
    
     return (
         <div>
-            <AdminNavber></AdminNavber>
+           
         <div className="grid justify-center items-center ">
             <div className=" grid grid-cols-3 gap-2 my-4">
                 <div>
@@ -46,9 +46,9 @@ const Alluser = ({alluser}) => {
                         <div className="card-body items-center text-center">
                             <h2 className="card-title"><AiFillCustomerService /></h2>
                             <h1>{user?.displayName}</h1>
-                            {isAdminRole ? <h1 className='text-3xl'>Admin</h1>: <p>Active User</p>
+                            {/* {isAdminRole ? <h1 className='text-3xl'>Admin</h1>: <p>Active User</p>
 
-                            }
+                            } */}
                            
 
                         </div>
@@ -72,7 +72,7 @@ const Alluser = ({alluser}) => {
                         </thead>
                         <tbody>
                             {
-                                alluser.map(users =>
+                                alluser?.map(users =>
 
                                     <User users={users} key={users?._id} ></User>
 

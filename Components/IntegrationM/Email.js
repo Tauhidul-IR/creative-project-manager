@@ -55,7 +55,7 @@ const Email = () => {
                             <div className="card lg:card-side ">
                                 <figure><img className='w-52 h-52' src="http://10xinteractive.com/wp-content/uploads/2018/08/icp-contentm.png" alt="Album" /></figure>
                                 <div className="card-body">
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
 
 
                                         Create status messages by sending an email to the unique email address of each workspace.</p>
@@ -68,7 +68,7 @@ const Email = () => {
                                 <figure><img className='w-52 h-52' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWkp76CpvaudL-xq9xpyfaU-68T-hbm9RPA&usqp=CAU" alt="Album" /></figure>
                                 <div className="card-body">
 
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
                                         Forward emails to any of your Creative Project Manager, for example to start a new project or add a new lead to your CRM.
 
                                     </p>

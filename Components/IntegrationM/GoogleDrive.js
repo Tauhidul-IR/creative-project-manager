@@ -42,10 +42,10 @@ const GoogleDrive = () => {
                     <div>
                         <div className='grid justify-center items-center  my-3 mx-5'>
                             <div className="card lg:card-side ">
-                                <figure><img className='w-52 h-52' src="https://cdn-icons-png.flaticon.com/512/272/272446.png" alt="Album" /></figure>
+                                <figure><img className='w-52 h-52 lg:w-1/3' src="https://cdn-icons-png.flaticon.com/512/272/272446.png" alt="Album" /></figure>
                                 <div className="card-body">
 
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
                                         Attach anything from Drive to your CPM projects – adding business context like deadlines and responsibilities to make teamwork easier.</p>
 
                                 </div>
@@ -55,7 +55,7 @@ const GoogleDrive = () => {
                             <div className="card lg:card-side ">
                                 <figure><img className='w-52 h-52' src="https://play-lh.googleusercontent.com/9nL28cqDO2KToe16cR1jSojnIpJEUYuePCFK1O7yABpY-RjwaVCyVScmZjKsuJSwV_w" alt="Album" /></figure>
                                 <div className="card-body">
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
 
                                         Quickly share from Drive to your Creative Project Manager activity streams. Discuss ongoing work with your team, without relying on email.</p>
 
@@ -67,7 +67,7 @@ const GoogleDrive = () => {
                                 <figure><img className='w-60 h-56' src="https://e7.pngegg.com/pngimages/495/149/png-clipart-finland-faq-theme-correct-miscellaneous-hand-thumbnail.png" alt="Album" /></figure>
                                 <div className="card-body">
 
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
                                     Create CPM tasks with attached content from Drive to streamline your feedback or sign-off process.</p>
 
                                 </div>

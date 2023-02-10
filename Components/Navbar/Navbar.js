@@ -87,7 +87,7 @@ const Navbar = () => {
           </li>
           {
             isAdminRole && <li className='p-4'>
-              <Link href='/admindashboard/dashboard'>Admin</Link>
+              <Link href='/admindashboard/Dashboard'>Admin</Link>
             </li>
           }
 
@@ -142,7 +142,7 @@ const Navbar = () => {
                 <div className="items-center absolute text-white  invisible group-hover:visible">
                   <ul className="list-reset">
                     <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block bg-base-200  text-black text-xl">Task Management</Link></li>
-                    <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/Features/features'>Create Portfolio</Link></li>
+                    
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/integration/integrations'>Integraion M</Link></li>
                   </ul>
                 </div>
@@ -153,8 +153,12 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Services</Link>
             </li>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <button htmlFor="drawer" > Admin Dashbord</button>
+              {/* <Link href='/work'></Link> */}
+            </li>
             {isAdminRole &&   <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/admindashboard/dashboard'>Admin</Link>
+              <Link href='/admindashboard/Dashboard'>Admin</Link>
             </li>}
            
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>

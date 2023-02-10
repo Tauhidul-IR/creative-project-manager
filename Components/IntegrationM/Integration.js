@@ -4,10 +4,10 @@ import Navbar from '../Navbar/Navbar';
 
 const Integration = () => {
     return (
-        <div>
+        <div className='mb-16'>
             <Navbar className="text-black"></Navbar>
             {/* intergration heading */}
-            <div className='grid justify-center items-center my-5 mt-16 text-center mx-3'>
+            <div className='grid justify-center items-center my-5 mt-16  mb-16 text-center mx-3'>
                 <h1 className='text-3xl'>Out of the box, Create Project Management works seamlessly with these servies:</h1>
             </div>
             {/* card create */}
@@ -39,18 +39,20 @@ const Integration = () => {
                             </div>
                         </div>
                     </div>
+                    {/* dropbox */}
                     <div className="card w-72 bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
-                            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/dropbox_tile_logo_icon_168230.png" alt="Shoes" className="rounded-xl" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Dropbox_Icon.svg/1101px-Dropbox_Icon.svg.png" alt="Shoes" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title text-3xl">Dropbox</h2>
                             <p>Access and share any of your Dropbox content in Podio</p>
                             <div className="card-actions">
-                                <Link className='hover:text-teal-300 text-blue-500' href="">Learn more</Link>
+                                <Link className='hover:text-teal-300 text-blue-500' href="/integration/dropdox">Learn more</Link>
                             </div>
                         </div>
                     </div>
+                    {/* sharefiles */}
                     <div className="card w-72 bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src="https://iconarchive.com/download/i86942/uiconstock/round-edge-social/sharethis.ico" className="rounded-xl" />
@@ -63,6 +65,7 @@ const Integration = () => {
                             </div>
                         </div>
                     </div>
+                    {/* Go To Meeting */}
                     <div className="card w-72 bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src="https://play-lh.googleusercontent.com/33hYI8jfhTOvoocwbLwW0BXeReUbksTuwBkfCxB5NY1123v1F_maVF-gVpVucQNJJhU" alt="Shoes" className="rounded-xl" />
@@ -71,11 +74,11 @@ const Integration = () => {
                             <h2 className="card-title text-3xl">GoToMeeting</h2>
                             <p>Schedule and launch GoToMeeting sessions in Podio.</p>
                             <div className="card-actions">
-                                <Link className='hover:text-teal-300 text-blue-500' href="">Learn more</Link>
+                                <Link className='hover:text-teal-300 text-blue-500' href="/integration/gotomeeting">Learn more</Link>
                             </div>
                         </div>
                     </div>
-                    <div className="card w-72 bg-base-100 shadow-xl">
+                    <div className="card w-72 bg-base-100 shadow-xl ">
                         <figure className="px-10 pt-10">
                             <img src="https://cdn-icons-png.flaticon.com/512/906/906310.png" alt="Shoes" className="rounded-xl" />
                         </figure>
