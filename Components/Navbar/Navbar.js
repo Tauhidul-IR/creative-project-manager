@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import TaskManagement from './../../pages/TaskManagement/TaskManagement';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -65,6 +66,12 @@ const Navbar = () => {
               <div className="items-center absolute  invisible group-hover:visible">
                 <ul className="list-reset">
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2  bg-black block  text-white ">Task Management</Link></li>
+                </ul>
+                <ul className="list-reset">
+                  <li><Link href="/teamManagement/createMember" className="px-2 py-2  bg-black block  text-white ">Team Member</Link></li>
+                </ul>
+                <ul className="list-reset">
+                  <li><Link href="/teamManagement/teamMembers" className="px-2 py-2  bg-black block  text-white ">Team Member</Link></li>
                 </ul>
               </div>
             </div>

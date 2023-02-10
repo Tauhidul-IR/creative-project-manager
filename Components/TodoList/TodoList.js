@@ -78,8 +78,24 @@ const TodoList = () => {
                     priority: 0,
                     chat: 0,
                     attachment: 0,
-                    assignees: []
+                    // assignees: []
                 }
+
+
+                const url = 'http://localhost:5000/todoTask'
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(item)
+                }).then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+                    .catch(err => console.log(err))
+                console.log(item)
+
                 let newBoardData = listData;
                 newBoardData[boardId].items.push(item);
                 setData(newBoardData);
@@ -87,16 +103,19 @@ const TodoList = () => {
                 e.target.value = '';
             }
         }
+
     }
 
     console.log(listData)
+
+
 
 
     return (
         <div className="p-18">
             <div className='flex justify-between'>
                 <div className="flex items-center">
-                    <h4 className='text-4xl font-bold text-gray-900'>Studio Board</h4>
+                    <h4 className='text-4xl font-bold text-gray-900'>Task Board</h4>
                     <ChevronDownIcon className='w-8 h-8 rounded bg-white ml-5 shadow-xl ' />
                 </div>
 
@@ -107,7 +126,7 @@ const TodoList = () => {
                                 src="https://iheartcraftythings.com/wp-content/uploads/2021/04/Man-DRAWING-%E2%80%93-STEP-10.jpg"
                                 width="36"
                                 height="36"
-                                objectFit="cover"
+                                // objectFit="cover"
                                 className="rounded-full"
                             />
                         </li>
@@ -116,7 +135,7 @@ const TodoList = () => {
                                 src="https://iheartcraftythings.com/wp-content/uploads/2021/04/Man-DRAWING-%E2%80%93-STEP-10.jpg"
                                 width="36"
                                 height="36"
-                                objectFit="cover"
+                                // objectFit="cover"
                                 className="rounded-full"
                             />
                         </li>
@@ -125,7 +144,7 @@ const TodoList = () => {
                                 src="https://iheartcraftythings.com/wp-content/uploads/2021/04/Man-DRAWING-%E2%80%93-STEP-10.jpg"
                                 width="36"
                                 height="36"
-                                objectFit="cover"
+                                // objectFit="cover"
                                 className="rounded-full"
                             />
                         </li>
