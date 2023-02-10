@@ -78,6 +78,32 @@ const Navbar = () => {
 
 
           </li>
+          <li>
+
+            <div className="relative group">
+              <div className="flex items-center cursor-pointer py-1">
+                <button className="bg-blue p-3 inline-flex justify-center items-center ">
+                  <span>Resources</span>
+                  <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+              </div>
+              <div className="items-center absolute  invisible group-hover:visible">
+                <ul className="list-reset">
+                
+                 
+                  <li> <Link className="px-2 py-2  bg-black block  text-white " href='/resources/workmanresource'>Work management resources</Link></li>
+
+
+                </ul>
+              
+              </div>
+            </div>
+
+
+
+          </li>
 
           <li className='p-4'>
             <Link href='/Dashboard/Dashboard'>Dashboard</Link>
