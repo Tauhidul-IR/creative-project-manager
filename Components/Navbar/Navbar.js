@@ -11,6 +11,7 @@ const Navbar = () => {
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
   const [isAdminRole] = AdminRole(user?.email)
+  console.log(isAdminRole,)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
@@ -31,6 +32,7 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', changeColor);
   }, []);
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -93,6 +95,7 @@ const Navbar = () => {
               </a>
               <ul className="p-2 bg-base-200 text-black">
                 <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+                <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
 
               </ul>
             </li>
@@ -104,11 +107,14 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
-          {
-            isAdminRole && <li className='p-4'>
+          {isAdminRole &&
+            <li className='p-4'>
               <Link href='/admindashboard/dashboard'>Admin</Link>
             </li>
           }
+
+
+
 
 
 
