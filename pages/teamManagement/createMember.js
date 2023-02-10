@@ -40,7 +40,6 @@ export default () => {
 
 
 
-
     return (
         <div className="mt-20 p-18">
             <span className='flex items-center'>

@@ -2,13 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import img from '../../public/images/login.png'
 import google from '../../public/images/google.png'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { useRouter } from 'next/router';
 // import img2 from 'Privacy.svg'
 
 const LoginPage = () => {
     const { googleSignIn, loginUser, user } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState('');
+    const router = useRouter();
 
     console.log(user);
 
@@ -25,8 +28,12 @@ const LoginPage = () => {
                 const user = result.user;
                 // console.log(user);
                 toast.success('Login Successfully.')
+                router.push('/');
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                setLoginError(error.message)
+            })
 
     }
 
@@ -35,8 +42,12 @@ const LoginPage = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                router.push('/');
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                setLoginError(error.message)
+            })
     }
 
 
@@ -49,7 +60,7 @@ const LoginPage = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
-                            <h1 className="text-4xl font-bold text-black text-center">Sign in now</h1>
+                            <h1 className="text-4xl font-bold text-black text-center">Login Now</h1>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text font-bold">Email</span>
@@ -60,13 +71,16 @@ const LoginPage = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Password</span>
                                 </label>
-                                <input  type="password" name='password' placeholder="password" className="input input-bordered text-black" />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered text-black" />
                                 <label className="label">
                                     <Link href={'/resetPassword/resetPassword'} className="label-text-alt link link-hover text-red-400">Forgot password?</Link>
                                 </label>
                             </div>
+                            {
+                                loginError && <p className='text-red-500'>{loginError}</p>
+                            }
                             <div className="form-control mt-6">
-                                <input className="btn btn-info" type="submit" value="Sign in" />
+                                <input className="btn btn-info" type="submit" value="Login" />
                             </div>
                         </form>
 

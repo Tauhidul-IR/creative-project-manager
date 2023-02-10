@@ -6,7 +6,7 @@ import SignUpPage from "../../Components/SignUp/SignUpPage";
 const signUp = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <LoginpageBanner></LoginpageBanner>
             <SignUpPage></SignUpPage>
         </div>
