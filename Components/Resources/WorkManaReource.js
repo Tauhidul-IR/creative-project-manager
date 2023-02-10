@@ -60,7 +60,7 @@ const WorkManaReource = () => {
                             <div className='gri'>
                                 <div className="card w-96 bg-base-100 shadow-xl border">
                                     <div className="card-body">
-                                        <h2 className="card-title text-center text-3xl"><Link href=" ">Project planning <span></span></Link></h2>
+                                        <h2 className="card-title text-center text-3xl"><Link href="/resources/project-planning">Project planning <span></span></Link></h2>
 
 
                                     </div>
@@ -94,6 +94,20 @@ const WorkManaReource = () => {
 
 
 
+
+{/* All Resource  */}
+                          <div>
+                            <h1>All resources</h1>
+                          </div>
+
+                          <div>
+                            <div>
+                                <div>
+
+                                </div>
+                            </div>
+                          </div>
+                    
 
                 </div>
             </div>

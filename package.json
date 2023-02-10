@@ -27,6 +27,7 @@
     "frappe-gantt-react": "^0.2.2",
     "next": "^13.1.6",
     "node-releases": "^2.0.8",
+    "nodemon": "^2.0.20",
     "react": "18.2.0",
     "react-beautiful-dnd": "^13.1.1",
     "react-datepicker": "^4.8.0",
