@@ -113,11 +113,11 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
-          {
-            isAdminRole && <li className='p-4'>
+        
+            <li className='p-4'>
               <Link href='/admindashboard/Dashboard'>Admin</Link>
             </li>
-          }
+     
 
 
           {
@@ -181,13 +181,10 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Services</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <button htmlFor="drawer" > Admin Dashbord</button>
-              {/* <Link href='/work'></Link> */}
-            </li>
-            {isAdminRole &&   <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+           
+             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/admindashboard/Dashboard'>Admin</Link>
-            </li>}
+            </li>
            
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>

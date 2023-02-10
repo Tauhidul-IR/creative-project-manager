@@ -4,9 +4,11 @@ import { useContext, useEffect, useState } from 'react';
 import { AiFillCustomerService,AiOutlineTeam,RiTeamLine } from 'react-icons/ai';
 import User from '../../Components/admin/user';
 import AdminRole from '../../Components/Adminhook/AdminRole';
+
 import AdminSideV from '../../Components/AdminRoles/AdminSideV';
-import Navbar from '../../Components/Navbar/Navbar';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+
+
 
 
 
@@ -14,17 +16,22 @@ import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 
 const UserAll = () => {
     const {user,loader}=useContext(AuthContext)
+    
     const [allusers,setAllusers]=useState()
-    if(loader){
+ 
+   const [isAdminRole]= AdminRole(user?.email)
+      if(loader){
         return<h1>Loader</h1>
     }
-   const [isAdminRole]= AdminRole(user?.email)
     useEffect(
         ()=>{
-             fetch("https://creative-project-manager-server.vercel.app/allusers").then(res=>res.json()).then(data =>setAllusers(data)) 
+             fetch("https://creative-project-manager-server.vercel.app/allusers").then(res=>res.json()).then(data =>{
+                setAllusers(data)
+               
+             }) 
                 }
     ,[])
-   
+ 
     return (
         <AdminSideV>
             
@@ -57,9 +64,9 @@ const UserAll = () => {
                            <div className="card-body items-center text-center">
                                <h2 className="card-title"><AiFillCustomerService /></h2>
                                <h1>{user?.displayName}</h1>
-                               {isAdminRole ? <h1 className='text-3xl'>Admin</h1>: <p>Active User</p>
+                               <p>Active User</p>
    
-                               } 
+                            
                                
    
                            </div>
@@ -105,3 +112,16 @@ const UserAll = () => {
                                 }
 
 export default UserAll;
+
+
+// export const getStaticProps = async () => {
+//     const res = await fetch("http://localhost:5000/allusers/allusers");
+//     const data = await res.json();
+    
+
+//     return {
+//         props: {
+//             alluser: data
+//         }
+//     }
+// }
