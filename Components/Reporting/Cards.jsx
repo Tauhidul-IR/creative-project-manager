@@ -30,7 +30,7 @@ function TopCards() {
 
                 </div>
                 <p className='bg-green-200 flex justify-center items-center p-2 rounded-lg'>
-                    <span className='text-green-700 text-lg font-bold'>+10</span>
+                    <span className='text-green-700 text-lg font-bold'>+11</span>
                 </p>
             </div>
 
