@@ -63,6 +63,8 @@ const Navbar = () => {
               <div className="items-center absolute  invisible group-hover:visible">
                 <ul className="list-reset bg-blue-400 text-black">
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
+                  <li><Link href="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
+                  <li><Link href="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
                   <li> <Link className="px-2 py-2   block" href='/Features/features'>Portfolios</Link></li>
                   <li> <Link className="px-2 py-2   block" href='/AllProjects/AllProjects'>My Projects</Link></li>
 
