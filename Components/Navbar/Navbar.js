@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import TaskManagement from './../../pages/TaskManagement/TaskManagement';
 import AdminRole from '../Adminhook/AdminRole';
 
 const Navbar = () => {
