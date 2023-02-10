@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillSetting, AiOutlineRadiusSetting, AiTwotoneHome, AiTwotoneMessage, AiTwotoneSetting ,} from 'react-icons/ai';
-import {RxSketchLogo, RxDashboard, RxPerson ,FcManager, RxCardStackMinus,} from "react-icons/rx"
-import { HiOutlineShoppingBag } from 'react-icons/hi';
+import { AiTwotoneHome, AiTwotoneMessage, AiTwotoneSetting ,} from 'react-icons/ai';
+import { RxPerson } from "react-icons/rx"
 import Navbar from '../Navbar/Navbar';
 
 const AdminSideV = ({children}) => {

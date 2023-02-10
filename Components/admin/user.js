@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { AiOutlineDelete, } from 'react-icons/ai';
-import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
-import AdminRole from '../Adminhook/AdminRole';
+
 
 const User = ({users}) => {
    

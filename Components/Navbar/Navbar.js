@@ -10,6 +10,7 @@ const Navbar = () => {
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
   const [isAdminRole] = AdminRole(user?.email)
+  console.log(isAdminRole,)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
@@ -30,6 +31,7 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', changeColor);
   }, []);
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
