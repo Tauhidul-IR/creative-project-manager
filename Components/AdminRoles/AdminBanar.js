@@ -5,7 +5,7 @@ const AdminBanar = () => {
         <div>
           
            <div className="hero min-h-screen  w-full" style={{ backgroundImage: `url("https://d3kqdc25i4tl0t.cloudfront.net/articles/content/499_936307_management.hero.jpg")`,
-           height:""
+           
           }
           }>
   <div className="hero-overlay bg-opacity-60"></div>

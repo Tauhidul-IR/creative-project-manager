@@ -10,7 +10,7 @@ const AdminSideV = ({children}) => {
      <div >
         <Navbar></Navbar>
         <div className='flex mt-16' id="drawer">
-            <div  clcassName='fixed  p-4 bg-white border-r-[1px] flex flex-col justify-between'>
+            <div  className='fixed  p-4 bg-white border-r-[1px] flex flex-col justify-between'>
             <div className='flex flex-col item-center'>
                 <Link href="/admindashboard/Dashboard">
                   <div className='bg-teal-300 text-white p-3 rounded-lg inline-block '>
