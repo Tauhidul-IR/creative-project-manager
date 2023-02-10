@@ -397,7 +397,7 @@ height: 700px
 }
 
 .containerCard .cardArticle .content .contentBx h3 {
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 500;
@@ -427,7 +427,7 @@ height: 700px
 	opacity: 0;
 }
 
-.containerCard .card:hover .sci li {
+.containerCard .cardArticle:hover .sci li {
 	transform: translateY(0px);
 	opacity: 1;
 }
