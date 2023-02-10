@@ -10,14 +10,17 @@ const Blog = () => {
   <div className="hero-content text-center">
     <div className="max-w-md">
       <h1 className="text-3xl font-semibold">What's New in CPM</h1>
-      <p className="py-6 text-2xl ">Discover the latest product and News</p>
+      <p className="py-6 text-3xl ">Discover the latest product and News</p>
       
-      <p >At the start of a creative process, when stakeholders come together to build something new, there’s often a surplus of enthusiasm, a lack of rules, and a compulsion to collaborate using whatever material is available. And that’s sort of the point. It’s why great ideas are often first scribbled on cocktail napkins, marked on physical whiteboards, or jotted down on sticky notes.Managing distributed teams
-Get the CPM playbook on how to effectively manage distributed teams.</p>
+      <p className="text-2xl">
+     <span className="text-5xl text-sky-700  "> A</span>
+       t the start of a creative process,<br></br> <span className="text-4xl text-gray-700 mt-5 mb-5">"when stakeholders come together to build something new, there’s often a surplus of enthusiasm"</span><br></br></p>
     </div>
   </div>
   
 </div>
+
+
 
 <div>
 
