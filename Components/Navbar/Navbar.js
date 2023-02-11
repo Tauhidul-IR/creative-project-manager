@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
+import TaskManagement from './../../pages/TaskManagement/TaskManagement';
 import AdminRole from '../Adminhook/AdminRole';
 
 const Navbar = () => {
@@ -10,6 +11,7 @@ const Navbar = () => {
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
   const [isAdminRole] = AdminRole(user?.email)
+  console.log(isAdminRole,)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
@@ -30,6 +32,7 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', changeColor);
   }, []);
+
   return (
     <div
       style={{ backgroundColor: `${color}` }}
@@ -62,6 +65,8 @@ const Navbar = () => {
               <div className="items-center absolute  invisible group-hover:visible">
                 <ul className="list-reset bg-blue-400 text-black">
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
+                  <li><Link href="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
+                  <li><Link href="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
                   <li> <Link className="px-2 py-2   block" href='/Features/features'>Portfolios</Link></li>
                   <li> <Link className="px-2 py-2   block" href='/AllProjects/AllProjects'>My Projects</Link></li>
 
@@ -81,17 +86,35 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/Enterprise/Enterprise'>Enterprises</Link>
           </li>
+          <ul className="menu menu-horizontal px-1">
+
+            <li tabIndex={0}>
+              <a className='p-4 mb-5'>
+                Resources
+                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+              </a>
+              <ul className="p-2 bg-base-200 text-black">
+                <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+                <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
+
+              </ul>
+            </li>
+
+          </ul>
           <li className='p-4'>
             <Link href='/Dashboard/Dashboard'>Dashboard</Link>
           </li>
           <li className='p-4'>
             <Link href='/contact'>About us</Link>
           </li>
-          {
-            isAdminRole && <li className='p-4'>
+          {isAdminRole &&
+            <li className='p-4'>
               <Link href='/admindashboard/dashboard'>Admin</Link>
             </li>
           }
+
+
+
 
 
 
@@ -164,10 +187,20 @@ const Navbar = () => {
             <li className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/Enterprise/Enterprise'>Enterprises</Link>
             </li>
-            {isAdminRole && <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/admindashboard/dashboard'>Admin</Link>
-            </li>}
+            <ul className="menu menu-vertical px-1">
 
+              <li tabIndex={0}>
+                <a className='p-4 text-4xl hover:text-gray-500'>
+                  Resources
+                  <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                </a>
+                <ul className="p-2 bg-base-200 text-black">
+                  <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+
+                </ul>
+              </li>
+
+            </ul>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>
             </li>

@@ -19,7 +19,7 @@ const AllProjects = () => {
 
     })
     return (
-        <div>
+        <div id="details">
             {/* <Navbar></Navbar>
             <Background></Background> */}
 

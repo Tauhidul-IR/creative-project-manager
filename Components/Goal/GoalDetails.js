@@ -16,7 +16,6 @@ const GoalDetails = ({ goal }) => {
                     <p>PostId:{goal?._id}</p>
                     <h2 className="card-title">Title: </h2>
                     <p>Post: {goal?.body}</p>
-
                     <button onClick={handleBack} className="btn btn-primary">Back to post</button>
                 </div>
             </div> */}

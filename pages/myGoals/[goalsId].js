@@ -16,8 +16,6 @@ const GoalsDetails = ({ goal }) => {
 
     return (
         <div>
-            <Background></Background>
-
             {/* <GoalDetails goal={goal}></GoalDetails> */}
 
             <div className="my-6 flex flex-col w-3/4 mx-auto min-h-screen lg:flex-row">

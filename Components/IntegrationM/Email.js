@@ -55,7 +55,7 @@ const Email = () => {
                             <div className="card lg:card-side ">
                                 <figure><img className='w-52 h-52' src="http://10xinteractive.com/wp-content/uploads/2018/08/icp-contentm.png" alt="Album" /></figure>
                                 <div className="card-body">
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
 
 
                                         Create status messages by sending an email to the unique email address of each workspace.</p>
@@ -68,7 +68,7 @@ const Email = () => {
                                 <figure><img className='w-52 h-52' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWkp76CpvaudL-xq9xpyfaU-68T-hbm9RPA&usqp=CAU" alt="Album" /></figure>
                                 <div className="card-body">
 
-                                    <p className='text-xl'>
+                                    <p className='text-xl text-center'>
                                         Forward emails to any of your Creative Project Manager, for example to start a new project or add a new lead to your CRM.
 
                                     </p>
@@ -80,10 +80,10 @@ const Email = () => {
                 </div>
                 <div>
                     <h1 className='text-center mx-3'>
-                        Connecting your Google Drive and Creative Project Manager accounts is done in just a couple of clicks. Need a hand? Check out <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM article.</span>
+                    For comprehensive, step-by-step guides to these features, see the <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM Email section article.</span>
                     </h1>
                     <h1 className='my-5 mx-4 text-center'>
-                        See first-hand how Podio can transform the way your team works together.
+                        See first-hand how CPM can transform the way your team works together.
                     </h1>
                     <div className='text-center mb-4'>
                         <Link className='btn rounded px-2 py-1' href="">Sign Up now-its free</Link>
