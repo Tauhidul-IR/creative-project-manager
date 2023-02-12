@@ -67,7 +67,7 @@ const Navbar = () => {
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
                   <li><Link href="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
                   <li><Link href="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
-                  <li> <Link className="px-2 py-2   block" href='/Features/features'>Portfolios</Link></li>
+                
                   <li> <Link className="px-2 py-2   block" href='/AllProjects/AllProjects'>My Projects</Link></li>
 
                   <li> <Link className="px-2 py-2   block" href='/integration/integrations'>Integration</Link></li>
@@ -174,7 +174,7 @@ const Navbar = () => {
                 <div className="items-center absolute text-white  invisible group-hover:visible">
                   <ul className="list-reset">
                     <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block bg-base-200  text-black text-xl">Task Management</Link></li>
-                    <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/Features/features'>Portfolios</Link></li>
+                 
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/AllProjects/AllProjects'>My Projects</Link></li>
 
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/integration/integrations'>Integraion M</Link></li>

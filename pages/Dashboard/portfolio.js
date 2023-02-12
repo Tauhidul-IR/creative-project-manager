@@ -2,6 +2,7 @@ import React from 'react';
 import DashboardPageCover from '../../Components/Dashboard/DashboardPageCover';
 import Sidebar from '../../Components/Dashboard/Sidebar';
 import Navbar from '../../Components/Navbar/Navbar';
+import Features from '../Features/features';
 
 const portfolio = () => {
     return (
@@ -10,6 +11,7 @@ const portfolio = () => {
             <DashboardPageCover></DashboardPageCover>
             <div>
                 <h2>Portfolio</h2>
+                <Features></Features>
             </div>
         </Sidebar>
     );
