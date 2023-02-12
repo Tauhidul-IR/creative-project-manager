@@ -4,7 +4,7 @@ import ArticleCard from "../../Components/Resources/Blog/ArticleCard";
 
 
 const BlogPage = ({articles}) => {
-    console.log(articles)
+    console.log(articles);
 
     return (
 <div>

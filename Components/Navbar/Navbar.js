@@ -69,6 +69,7 @@ const Navbar = () => {
                   <li><Link href="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
                 
                   <li> <Link className="px-2 py-2   block" href='/AllProjects/AllProjects'>My Projects</Link></li>
+                  <li> <Link className="px-2 py-2   block" href='/GetProjects/GetProjects'>All Projects</Link></li>
 
                   <li> <Link className="px-2 py-2   block" href='/integration/integrations'>Integration</Link></li>
                   <li> <Link className="px-2 py-2   block" href="/myGoals">Goals</Link></li>
