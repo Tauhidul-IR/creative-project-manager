@@ -1,47 +1,56 @@
-import Link from "next/link";
-import { AiTwotoneHome } from "react-icons/ai";
-import { HiBell, HiChartPie, HiExclamationCircle, HiOutlineTrendingUp, HiShieldCheck } from "react-icons/hi";
+// import { AiTwotoneHome } from "react-icons/ai";
+// import { HiBell, HiChartPie, HiExclamationCircle, HiOutlineTrendingUp, HiShieldCheck } from "react-icons/hi";
 
+import TaskManagement from './../../pages/TaskManagement/TaskManagement';
+import { Link } from 'next/link';
+
+import {
+    UserCircleIcon, ChartBarSquareIcon,
+    ServerStackIcon,
+    CalendarDaysIcon,
+    Cog6ToothIcon
+} from '@heroicons/react/24/solid';
 
 const DashboardPage = () => {
     return (
-        <div>
-            <div className="drawer drawer-mobile">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    {/* <!-- Page content here --> */}
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
-                </div>
-                <div className="drawer-side">
-                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 bg-indigo-200 text-base-content">
-                        {/* <!-- Sidebar content here --> */}
-                        <li>
+        <div className=" inset-y-0 left-0 bg-white w-40">
+            <h1 className="flex items-center justify-center text-2xl
+        h-16 bg-purple-600 text-white font-bold">hussle</h1>
 
+            <ul className="flex flex-col text-lg h-full">
+                <li className="flex justify-center items-center flex-col
+            py-7 text-gray-500">
+                    <UserCircleIcon className="w-7 h-7" />
+                    Manage
+                </li>
+                <li className="flex justify-center items-center flex-col
+            py-7 border-l-4 border-purple-500 text-purple-500
+            font-bold">
+                    <ServerStackIcon className="w-7 h-7 text-purple-500" />
+                    <Link href="/">
+                        <a>Task Boards</a>
+                    </Link>
 
-                            <a className="font-bold"> <AiTwotoneHome className="text-cyan-400 text-2xl" ></AiTwotoneHome>Home</a>
-                        </li>
-                        <li>
-                            <a className="font-bold"> <HiShieldCheck className="text-cyan-400 text-2xl" ></HiShieldCheck>My Task</a>
-                        </li>
-                        <li>
-                            <a className="font-bold"> <HiBell className="text-cyan-400 text-2xl" ></HiBell>Inbox</a>
-                        </li>
-                        <li>
-                            <a className="font-bold"> <HiExclamationCircle className="text-cyan-400 text-2xl" ></HiExclamationCircle>Reporting</a>
-                        </li>
-                        <li>
-                            <a className="font-bold"> <HiOutlineTrendingUp className="text-cyan-400 text-2xl" ></HiOutlineTrendingUp>Goals</a>
-                        </li>
+                </li>
+                <li className="flex justify-center items-center flex-col
+            py-7 text-gray-500">
+                    <CalendarDaysIcon className="w-7 h-7" />
+                    Schedule
+                </li>
+                <li className="flex justify-center items-center flex-col
+            py-7 text-gray-500">
+                    <ChartBarSquareIcon className="w-7 h-7" />
+                    Report
+                </li>
 
-                        <  li />
-
-                    </ul>
-
-                </div>
-            </div>
-        </div >
+                <li className="flex justify-center items-center flex-col
+            py-7 text-gray-500 mt-auto mb-16">
+                    <Cog6ToothIcon className="w-7 h-7" />
+                    Settings
+                </li>
+            </ul>
+        </div>
 
 
 

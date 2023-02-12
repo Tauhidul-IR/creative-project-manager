@@ -21,7 +21,7 @@ const TaskForm = () => {
         }
         console.log(taskData);
 
-        const url = 'https://creative-project-manager-server-d0d44dts8.vercel.app/task'
+        const url = 'https://creative-project-manager-server.vercel.app/task'
 
 
         fetch(url, {

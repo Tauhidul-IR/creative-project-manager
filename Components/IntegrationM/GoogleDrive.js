@@ -5,7 +5,7 @@ const GoogleDrive = () => {
     return (
         <div>
             <div>
-                <didv className="grid mt-4 justify-center items-center">
+                <div className="grid mt-4 justify-center items-center">
                     <div className="card w-72 ">
                         <div>
                             <div className='grid grid-cols-3'>
@@ -21,7 +21,7 @@ const GoogleDrive = () => {
                             </div>
                         </div>
                     </div>
-                </didv>
+                </div>
                 <div className="grid justify-center items-center">
                     <h1 className='text-center text-3xl mx-3 my-3'>Creative Project Manager works with Google Drive </h1>
                     <div className='justify-center items-center grid'>

@@ -1,17 +1,44 @@
 import { HiChatAlt } from 'react-icons/hi';
-import { PaperClipIcon, PlusIcon } from '@heroicons/react/24/solid'
+import { PaperClipIcon, PlusIcon, TrashIcon, } from '@heroicons/react/24/solid'
 import { Draggable } from 'react-beautiful-dnd';
-import { useState } from 'react';
 
-const TodoCard = ({ data }) => {
+
+
+const TodoCard = ({ data, index }) => {
 
     return (
 
-        <Draggable index={data.id} draggableId={data.id.toString()} >
+        <Draggable index={index} draggableId={data.id.toString()} >
             {(provided) => (
-                <div ref={provided.innerRef} {...provided.draggableProps}  {...provided.dragHandleProps} className='bg-white rounded-md p-3 mt-3'>
-                    <label className='bg-gradient-to-r from-blue-600 to-blue-300 px-2 py-1 text-white text-sm'>Low priority</label>
-                    <h5 className='text-md my-3 text-lg leading-6 '>Home page design </h5>
+                <div ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                    className='bg-white rounded-md p-3 mt-3'>
+                    <div className='flex justify-between'>
+
+                        <label className={`bg-gradient-to-r  px-2 py-1 text-white text-sm
+                    ${data.priority === 0
+                                ? "from-blue-600 to-blue-300"
+                                : data.priority === 1
+                                    ? "from-bg-green-500 to-bg-green-300"
+                                    : "from-red-500 to-red-300"
+                            }`
+                        }
+                        >
+                            {
+                                data.priority === 0 ?
+                                    "Low Priority"
+                                    : data.priority === 1
+                                        ? "Medium Priority"
+                                        : "High Priority"
+
+                            }
+                        </label>
+                        {/* delete task btn */}
+                        <button className=''><TrashIcon className='text-red-500 h-6'></TrashIcon></button>
+
+                    </div>
+                    <h5 className='text-md my-3 text-lg leading-6 '>{data.title}</h5>
                     <div className='flex justify-between '>
                         <div className='flex space-x-4 items-center'>
                             <HiChatAlt className='w-4 h-4 text-gray-800 mr-2' />

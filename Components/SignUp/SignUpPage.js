@@ -6,11 +6,13 @@ import google from '../../public/images/google.png'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
+import { useRouter } from "next/router";
 
 
 const SignUpPage = () => {
     const { createUser, googleSignIn, updateUser } = useContext(AuthContext);
     const [singUpError, setSingUpError] = useState(null);
+    const router = useRouter();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -50,10 +52,7 @@ const SignUpPage = () => {
 
 
     const saveUser = (email, name) => {
-        const user = { 
-            email,
-             name ,
-            };
+        const user = { email, name };
         fetch('https://creative-project-manager-server.vercel.app/users', {
             method: "POST",
             headers: {
@@ -67,6 +66,7 @@ const SignUpPage = () => {
                 if (data.acknowledge) {
                     alert('Task added')
                     form.reset()
+                    router.push('/');
                 }
             })
             .catch(error => console.error(error))
@@ -106,6 +106,7 @@ const SignUpPage = () => {
                 const user = result.user;
                 toast.success('SignUp successfully')
                 // console.log(user);
+                router.push('/');
             })
             .catch(error => {
                 // console.log(error);
@@ -153,7 +154,7 @@ const SignUpPage = () => {
                             <div className='flex justify-around py-4'>
                                 <Image onClick={handleGoogle} className='w-8 h-8' src={google}></Image>
                             </div>
-                            <p className='text-center text-black mb-5'>Already Have an Account<Link href={'/Login/login'} className='text-orange-500 font-bold ml-2'>Sign in</Link></p>
+                            <p className='text-center text-black mb-5'>Already Have an Account<Link href={'/Login/login'} className='text-orange-500 font-bold ml-2'>Login</Link></p>
                         </div>
                     </div>
 

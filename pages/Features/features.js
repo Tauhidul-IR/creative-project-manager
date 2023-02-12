@@ -1,32 +1,30 @@
+import Background from "../../Components/Backgroud/Background";
+import Navbar from "../../Components/Navbar/Navbar";
 import NewPortfolio from "../../Components/Portfolio/NewPortfolio";
-import ProjectCard from "../../Components/Portfolio/ProjectCard";
-
-
+import MyAllProjects from "../MyAllProjects/MyAllProjects";
 
 const features = ({ projects }) => {
-    console.log(projects)
+    console.log(projects);
 
     return (
-        <div className="bg-sky-100">
+        <div className="featuresBg">
+            <div className="featuresBg mb-32">
 
-            <div>
                 <div>
-                    <NewPortfolio></NewPortfolio>
+
+                    <div className="grid lg:grid-cols-2 mb-36 md:grid-cols-2 sm:grid-cols-1 justify-center place-content-center mt-16 ">
+                        <div className="mr-10 ml-10">
+                            <NewPortfolio></NewPortfolio>
+                        </div>
+
+                        <div className='mr-10 ml-10  '>
+                            <h2 className='text-center text-4xl  text-black font-semibold  mt-20 mb-10'>My  Project</h2>
+
+                            <MyAllProjects></MyAllProjects>
+                        </div>
+                    </div>
                 </div>
-                <h2 className='text-center text-4xl text-gray-500 mt-16'>New Project</h2>
             </div>
-
-            <div className="grid  place-items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-
-                {
-                    projects.map(project => <ProjectCard project={project}
-
-                    ></ProjectCard>)
-                }
-
-
-            </div>
-
         </div>
     );
 };
@@ -43,5 +41,8 @@ export const getStaticProps = async () => {
         }
     }
 }
+
+
+
 
 export default features;
