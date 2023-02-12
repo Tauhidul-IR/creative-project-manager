@@ -17,7 +17,7 @@ const CreateProjects = () => {
     }
     console.log(projects);
 
-    const url = 'http://localhost:5000/create-project'
+    const url = 'https://creative-project-manager-server.vercel.app/create-project'
 
 
     fetch(url, {
