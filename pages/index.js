@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import KommunicateChat from "./Chat/Chat";
 import Footer from "../Components/Footer/Footer";
+import CreateProjects from "../Components/Projects/CreateProject/CreateProjects";
 
 
 
@@ -30,6 +31,7 @@ export default function Home() {
       <KommunicateChat></KommunicateChat>
       <Testimonial></Testimonial>
       <ContactForm></ContactForm>
+      <CreateProjects></CreateProjects>
     </div>
 
 

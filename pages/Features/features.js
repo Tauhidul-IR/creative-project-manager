@@ -17,7 +17,7 @@ const Features = ({ projects }) => {
                             <NewPortfolio></NewPortfolio>
                         </div>
 
-                        <div className='mr-10 ml-10  '>
+                        <div className='mr-10 ml-10 '>
                             <h2 className='text-center text-4xl  text-black font-semibold  mt-11'>My  Project</h2>
 
                             <MyAllProjects></MyAllProjects>

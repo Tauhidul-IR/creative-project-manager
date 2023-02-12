@@ -25,7 +25,7 @@ const MyAllProjects = () => {
             <div>
 
 
-                <div className="overflow-x-auto ">
+                <div className="overflow-x-auto mt-11 ">
 
                     <table className="table w-full">
                         <thead>

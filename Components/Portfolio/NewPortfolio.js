@@ -37,7 +37,7 @@ const NewPortfolio = () => {
 
   return (
     <div>
-      <h2 className='text-center text-4xl text-black font-semibold mt-20'> Create Portfolio</h2>
+      <h2 className='text-center text-4xl text-black font-semibold mt-11'> Create Portfolio</h2>
       <div className="card mx-auto mt-10 w-96 border-2 border-sky-300">
         <div className="card-body">
 
