@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
   return (
 
     <>
-      <QueryClientProvider client={queryClient}>
+     <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <Layout>
             <Component {...pageProps} />
@@ -20,7 +20,8 @@ export default function App({ Component, pageProps }) {
           {/* <Navbar /> */}
           <Toaster></Toaster>
         </AuthProvider>
-      </QueryClientProvider>
+        </QueryClientProvider>
+      
     </>
 
   )

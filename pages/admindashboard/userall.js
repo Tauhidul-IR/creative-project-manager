@@ -5,7 +5,8 @@ import { toast } from 'react-hot-toast';
 import AdminSideV from '../../Components/AdminRoles/AdminSideV';
 import ConfirmModals from '../../Components/ConfirmsModal/ConfirmModals';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
+
 
 const UserAll = () => {
     const {data: allusers =[],refetch}= useQuery({
