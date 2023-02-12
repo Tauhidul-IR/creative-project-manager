@@ -95,19 +95,19 @@ const WorkManaReource = () => {
 
 
 
-{/* All Resource  */}
-                          <div>
-                            <h1>All resources</h1>
-                          </div>
+                    {/* All Resource  */}
+                    <div>
+                        <h1>All resources</h1>
+                    </div>
 
-                          <div>
+                    <div>
+                        <div>
                             <div>
-                                <div>
 
-                                </div>
                             </div>
-                          </div>
-                    
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
