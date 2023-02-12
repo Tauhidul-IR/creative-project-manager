@@ -1,6 +1,6 @@
 import GetAllProjects from "../../Components/Projects/GetAllProjects/GetAllProjects";
 
-const  GetProjects = ({projects,i}) => {
+const  GetProjects = ({projects}) => {
 
 console.log(projects);
 
