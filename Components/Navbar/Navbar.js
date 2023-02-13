@@ -11,7 +11,7 @@ const Navbar = () => {
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
   const [isAdminRole] = AdminRole(user?.email)
-  console.log(isAdminRole,)
+  // console.log(isAdminRole)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
@@ -33,7 +33,12 @@ const Navbar = () => {
     window.addEventListener('scroll', changeColor);
   }, []);
 
-  console.log(user);
+  // console.log(user);
+
+
+
+
+
 
   return (
     <div
@@ -121,7 +126,7 @@ const Navbar = () => {
               <div className="dropdown dropdown-bottom dropdown-end">
                 <label tabIndex={0} className="btn btn-circle m-1">
                   {
-                    user?.photoURL ? <img className='rounded-full' src={user?.photoURL} alt="" /> :
+                    user?.photoURL ? <img className='rounded-full w-6 h-6' src={user?.photoURL} alt="" /> :
                       <>
                         <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
                           <h6 className="uppercase font-bold text-sm">{user?.displayName.split(' ')[0][0] + user?.displayName.split(' ')[0][1]}</h6>
