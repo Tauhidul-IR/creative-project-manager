@@ -64,17 +64,17 @@ const UserAll = () => {
            <div className="grid justify-center items-center w-auto ">
                <div className=" grid lg:grid-cols-3 grid-col-1 gap-2 my-4">
                    <div>
-                       <div className="card rounded-full w-30 bg-neutral text-neutral-content w-auto">
-                           <div className="card-body items-center text-center">
+                       <div className="card rounded-full  w-30 text-bold bg-green-200 text-black w-auto ">
+                           <div className="card-body items-center  text-center">
                                <h2 className="card-title"><AiOutlineUsergroupAdd /></h2>
                                <h1>{allusers?.length}</h1>
-                               <p>Customer</p>
+                               <p>All Users</p>
    
                            </div>
                        </div>
                    </div>
                    <div>
-                       <div className="card rounded-full w-30 bg-neutral text-neutral-content w-auto">
+                       <div className="card rounded-full w-30 bg-teal-400 text-neutral-content w-auto">
                            <div className="card-body items-center text-center">
                                <h2 className="card-title"><AiOutlineTeam/></h2>
                                <h1>5</h1>
@@ -84,7 +84,7 @@ const UserAll = () => {
                        </div>
                    </div>
                    <div>
-                       <div className="card rounded-full w-30 bg-neutral text-neutral-content w-auto">
+                       <div className="card rounded-full w-30 bg-cyan-600 text-neutral-content w-auto">
                            <div className="card-body items-center text-center">
                                <h2 className="card-title"><AiOutlineUserSwitch /></h2>
                                <h1>{user?.displayName}</h1>
@@ -122,7 +122,7 @@ const UserAll = () => {
                                     (users)}>Make Admin</label>}
                                        </th>
                                       <th>
-                                      <label htmlFor="confirm-modal" className=" text-red-400" onClick={()=>setDeleteUser
+                                      <label htmlFor="confirm-modal" className=" text-red-400 text-6xl" onClick={()=>setDeleteUser
                                     (users)}><AiOutlineDelete/></label>
                                        </th>
                                   </tr>

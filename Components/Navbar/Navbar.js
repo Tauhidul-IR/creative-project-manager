@@ -196,6 +196,7 @@ const Navbar = () => {
                 </a>
                 <ul className="p-2 bg-base-200 text-black">
                   <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+                  <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
 
                 </ul>
               </li>

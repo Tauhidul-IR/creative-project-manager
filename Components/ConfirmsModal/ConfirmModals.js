@@ -10,8 +10,8 @@ const ConfirmModals = ({title,message,closeModale,sucesseceModal, modalData,conf
                     <h3 className="font-bold text-lg">{title}</h3>
                     <p className="py-4">{message}</p>
                     <div className="modal-action">
-                        <label onClick={()=>sucesseceModal( modalData)}  htmlFor="confirm-modal" className="btn">{confirmDelete }</label>
-                        <button onClick={closeModale} className='btn btn-o
+                        <label onClick={()=>sucesseceModal( modalData)}  htmlFor="confirm-modal" className="btn btn-primary">{confirmDelete }</label>
+                        <button onClick={closeModale} className='btn btn-error
                         '>cencel</button>
                     </div>
                 </div>
