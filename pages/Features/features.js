@@ -1,5 +1,4 @@
-import Background from "../../Components/Backgroud/Background";
-import Navbar from "../../Components/Navbar/Navbar";
+import Link from 'next/link';
 import NewPortfolio from "../../Components/Portfolio/NewPortfolio";
 import MyAllProjects from "../MyAllProjects/MyAllProjects";
 
@@ -8,10 +7,16 @@ const Features = ({ projects }) => {
 
     return (
         <div className="featuresBg ">
-            <div className=" mb-32">
+
+            <div className="mb-32">
 
                 <div>
-
+<div>
+<Link href='/AllProjects/AllProjects' >
+  <button className="btn btn-info normal-case font-bold rounded-full ml-5 mt-5">My projects</button>
+  
+</Link>
+</div>
                     <div className="grid lg:grid-cols-2 mb-36 md:grid-cols-2 sm:grid-cols-1 justify-center place-content-center mt-16 ">
                         <div className="mr-10 ml-10">
                             <NewPortfolio></NewPortfolio>
