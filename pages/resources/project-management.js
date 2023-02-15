@@ -26,8 +26,9 @@ const ProjectManament = ({ ProjMangeData }) => {
             <div className='grid justify-center items-center'>
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
-                        ProjMangeData?.map(projectData => <div>
-
+                        ProjMangeData?.map(projectData => <div key={projectData?._id}>
+                            <Link className='hover:border-primary' href={`/resources/projectManagement/${projectData?._id}`}>
+                            </Link>
 
                             <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
                                 <figure><img src={projectData?.picture} alt="Album" /></figure>
@@ -50,7 +51,7 @@ const ProjectManament = ({ ProjMangeData }) => {
 export default ProjectManament;
 export const getStaticProps = async () => {
 
-    const res = await fetch("http://localhost:5000/project-management");
+    const res = await fetch("https://creative-project-manager-server.vercel.app/project-management");
     const data = await res.json()
     return {
         props: {

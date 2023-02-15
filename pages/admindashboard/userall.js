@@ -28,7 +28,7 @@ const UserAll = () => {
     setAdminUser(null)
    }
    const handleMakeAdminUser= (adminData)=>{
-    fetch(`http://localhost:5000/user/admin/${adminData?._id}`,
+    fetch(`https://creative-project-manager-server.vercel.app/user/admin/${adminData?._id}`,
     {
         method:"PUT"
     }).then(res=>res.json())
@@ -44,7 +44,7 @@ const UserAll = () => {
    }
 
    const handleDeleteUser = (userData)=>{
-    fetch(`http://localhost:5000/allusers/${userData?._id}`,{
+    fetch(`https://creative-project-manager-server.vercel.app/allusers/${userData?._id}`,{
         method:"DELETE"
     }).then(res=>res.json()).then(
         data=>{

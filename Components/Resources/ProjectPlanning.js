@@ -3,13 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 
 const ProjectPlanning = ({ proPlnningData}) => {
-    // const [proPlnningData, setPrPlDat] = useState()
-    // useEffect(() => {
 
-    //     fetch("https://creative-project-manager-server.vercel.app/project-planning").then(res => res.json())
-    //         .then(data => setPrPlDat(data))
-    // }, [])
-    console.log(proPlnningData)
     return (
         <div>
             <div>
@@ -34,10 +28,12 @@ const ProjectPlanning = ({ proPlnningData}) => {
                     </div>
 
                     <div className='grid  justify-center items-center'>
-                        <div className='grid my gap-4 mx-6 my-6 lg:grid-cols-2 grid-cols-1'>
+                        <div className='grid my gap-4 mx-6 my-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                             {
-                                proPlnningData?.map((planning) => <div>
-                                    <div className="card lg:card-side bg-base-100 h-100  shadow-xl">
+                                proPlnningData?.map((planning) => <div key={planning?._id}>
+                                    <Link className='hover:border-pr
+                                    ' href={`/resources/${planning?._id}`}>
+                                    <div className="card bg-base-100 h-96 w-96  shadow-xl">
                                         <figure><img src={planning?.picture} alt="Album" /></figure>
                                         <div className="card-body">
                                             <h1 ><span className='text-white px-2 py-1 bg-green-500'>ARTICLE</span></h1>
@@ -48,6 +44,7 @@ const ProjectPlanning = ({ proPlnningData}) => {
                                             </div>
                                         </div>
                                     </div>
+                                    </Link>
                                 </div>)
                             }
                         </div>

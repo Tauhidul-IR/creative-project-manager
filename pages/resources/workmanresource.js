@@ -3,21 +3,21 @@ import React from 'react';
 import WorkManaReource from '../../Components/Resources/WorkManaReource';
 
 const workmanresource = ({ allResorces }) => {
-    console.log(allResorces);
+   
     return (
         <div>
             <WorkManaReource></WorkManaReource>
 
 
 
-            <div className='grid justify-center items-center'>
+            <div className='grid justify-center my-5 items-center'>
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
-                        allResorces?.map(allReData => <div>
+                        allResorces?.map(allReData => <div key={allReData?._id}>
 
-                            <Link  href={`/allresource/${allReData?._id}`}>
+                            <Link className='hover-border-primary'  href={`/allresource/${allReData?._id}`}>
                             
-                            <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
+                            <div className="card w-96 h-96  bg-base-100 shadow-xl">
                                 <figure><img src={allReData?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{allReData?.title}</h2>
@@ -40,7 +40,7 @@ const workmanresource = ({ allResorces }) => {
 
 export const getStaticProps = async () => {
 
-    const res = await fetch("http://localhost:5000/all-resources");
+    const res = await fetch("https://creative-project-manager-server.vercel.app/all-resources");
     const data = await res.json()
     return {
         props: {

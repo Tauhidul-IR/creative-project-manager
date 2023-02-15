@@ -29,10 +29,11 @@ const InspireImpact = ({ inspireImacp }) => {
             <div className='grid justify-center items-center'>
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
-                        inspireImacp?.map(inspireImpact => <div>
+                        inspireImacp?.map(inspireImpact => <div key={inspireImpact?._id}>
 
 
-                            <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
+                           <Link className='hover:border-spacing-4' href={`/resources/instpire/${inspireImpact?._id}`} >
+                           <div className="card w-96 h-96 bg-base-100 shadow-xl">
                                 <figure><img src={inspireImpact?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{inspireImpact?.title}</h2>
@@ -41,7 +42,7 @@ const InspireImpact = ({ inspireImacp }) => {
                                         <Link className='btn btn-primary' href={`/resources/instpire/${inspireImpact?._id}`}>See Details</Link>
                                     </div>
                                 </div>
-                            </div>
+                            </div></Link>
                         </div>)
                     }
                 </div>
@@ -53,7 +54,7 @@ const InspireImpact = ({ inspireImacp }) => {
 export default InspireImpact;
 export const getStaticProps = async () => {
 
-    const res = await fetch("http://localhost:5000/inspire-impact");
+    const res = await fetch("https://creative-project-manager-server.vercel.app/inspire-impact");
     const data = await res.json()
     return {
         props: {

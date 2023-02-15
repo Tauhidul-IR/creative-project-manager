@@ -82,7 +82,7 @@ const TodoList = () => {
                 }
 
 
-                const url = 'http://localhost:5000/todoTask'
+                const url = 'https://creative-project-manager-server.vercel.app/todoTask'
                 fetch(url, {
                     method: 'POST',
                     headers: {

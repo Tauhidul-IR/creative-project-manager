@@ -101,7 +101,7 @@ const Adetails = (
 };
  export const getStaticProps = async (context)=>{
     const {params}= context;
-const res = await fetch(`http://localhost:5000/all-resources/${params?.AId}`)
+const res = await fetch(`https://creative-project-manager-server.vercel.app/all-resources/${params?.AId}`)
 const data = await res.json()
 return{
     props:{
@@ -113,7 +113,7 @@ return{
 
 export  const getStaticPaths = async ()=>{
 
-const res = await fetch("http://localhost:5000/all-resources");
+const res = await fetch("https://creative-project-manager-server.vercel.app/all-resources");
 const datas = await res.json();
 const paths = datas.map(data =>{
 

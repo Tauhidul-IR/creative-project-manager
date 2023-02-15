@@ -9,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import KommunicateChat from "./Chat/Chat";
-import Footer from "../Components/Footer/Footer";
+
 
 
 

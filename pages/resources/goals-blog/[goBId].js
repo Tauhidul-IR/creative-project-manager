@@ -1,30 +1,28 @@
+
 import React from 'react';
 
-const PlanningDetails = ({ planning }) => {
-
+const GolsBlogsDetails = ({goalsBlog}) => {
+   
+   
     return (
         <div>
-
-
-
-
-            <div className='grid justify-center items-center  '>
+             <div className='grid justify-center items-center  '>
                 <div className='' >
                     {/* title ,nameImagt ,,name ,,picture add  */}
 
 
                     <div className="card w-96  bg-base-100 shadow-xl my-6 lg:min-w-max">
                         <div className="card-body">
-                            <h2 className="card-title text-3xl">{planning?.title}</h2>
+                            <h2 className="card-title text-3xl">{goalsBlog?.title}</h2>
                             <div>
                                 <div>
-                                    <p className='flex my-6'><img src={planning?.imgname} className="w-16 h-14 mx-3" alt="" />  <span className='mx-4 px-4 '>{planning?.name}</span></p>
-                                    <p>{planning?.time}</p>
+                                    <p className='flex my-6'><img src={goalsBlog?.imgname} className="w-16 h-14 mx-3" alt="" />  <span className='mx-4 px-4 '>{goalsBlog?.name}</span></p>
+                                    <p>{goalsBlog?.time}</p>
                                 </div>
                             </div>
 
                         </div>
-                        <figure><img src={planning?.picture} alt="Shoes" /></figure>
+                        <figure><img src={goalsBlog?.picture} alt="Shoes" /></figure>
                     </div>
                     {/* ------------------------ */}
 
@@ -36,8 +34,8 @@ const PlanningDetails = ({ planning }) => {
                     <div className="card w-96  bg-base-100 shadow-xl  lg:max-w-full">
                         <div className="card-body">
                             <h2 className="card-title text-3xl">
-                                {planning?.q1}</h2>
-                            <p>{planning?.d1}</p>
+                                {goalsBlog?.q1}</h2>
+                            <p>{goalsBlog?.d1}</p>
                             <div>
                             </div>
                         </div>
@@ -48,8 +46,8 @@ const PlanningDetails = ({ planning }) => {
                     <div className="card w-96 my-4 bg-base-100 shadow-xl  lg:max-w-full">
                         <div className="card-body">
                             <h2 className="card-title text-3xl">
-                                {planning?.q2}</h2>
-                            <p>{planning?.d2}</p>
+                                {goalsBlog?.q2}</h2>
+                            <p>{goalsBlog?.d2}</p>
                             <div>
                             </div>
                         </div>
@@ -60,8 +58,8 @@ const PlanningDetails = ({ planning }) => {
                     <div className="card w-96  my-4 bg-base-100 shadow-xl  lg:max-w-full">
                         <div className="card-body">
                             <h2 className="card-title text-3xl">
-                                {planning?.q3}</h2>
-                            <p>{planning?.d3}</p>
+                                {goalsBlog?.q3}</h2>
+                            <p>{goalsBlog?.d3}</p>
                             <div>
                             </div>
                         </div>
@@ -72,8 +70,8 @@ const PlanningDetails = ({ planning }) => {
                     <div className="card w-96 my-4 bg-base-100 shadow-xl  lg:max-w-full">
                         <div className="card-body">
                             <h2 className="card-title text-3xl">
-                                {planning?.q4}</h2>
-                            <p>{planning?.d4}</p>
+                                {goalsBlog?.q4}</h2>
+                            <p>{goalsBlog?.d4}</p>
                             <div>
                             </div>
                         </div>
@@ -89,7 +87,7 @@ const PlanningDetails = ({ planning }) => {
                             <div>        
                             </div>
                         </div>
-                        <figure><img src={planning?.img2} alt="Shoes" /></figure>
+                        <figure><img src={goalsBlog?.img2} alt="Shoes" /></figure>
                     </div>
                     {/* ----------------------------- */}
                 </div>
@@ -99,39 +97,33 @@ const PlanningDetails = ({ planning }) => {
 };
 
 
-
-
-export const getStaticProps = async (context) => {
-    const { params } = context;
-    const res = await fetch(`https://creative-project-manager-server.vercel.app/project-planning/${params?.planningId}`);
-    const data = await res.json()
-    return {
-        props: {
-            planning: data
-        }
+export const getStaticProps = async (context)=>{
+    const {params}= context;
+const res = await fetch(`https://creative-project-manager-server.vercel.app/goals-blog/${params?.goBId}`)
+const data = await res.json()
+return{
+    props:{
+       goalsBlog:data
     }
 }
+}
 
+export  const getStaticPaths = async ()=>{
 
-export const getStaticPaths = async () => {
-
-    const res = await fetch("https://creative-project-manager-server.vercel.app/project-planning")
-    const planningData = await res.json()
-    const paths = planningData.map(planning => {
-        return {
-            params: {
-                planningId: `${planning?._id}`
-            }
-        }
+    const res = await fetch("https://creative-project-manager-server.vercel.app/goals-blog");
+    const datas = await res.json();
+    const paths = datas.map(data =>{
+    
+       return {params:{
+        goBId:`${data?._id}`
+       }} 
     })
-    return {
+    return{
         paths,
-        fallback: false
+        fallback:false
     }
-}
+    
+    
+    }
 
-export default PlanningDetails;
-
-
-
-
+export default GolsBlogsDetails;
