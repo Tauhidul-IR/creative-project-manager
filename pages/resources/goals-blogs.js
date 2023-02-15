@@ -31,7 +31,7 @@ const GoalsBlogsResources = ({ goalsBlog}) => {
                         goalsBlog?.map( goalsBlog => <div key={goalsBlog?._id}>
 {/* lg:card-side */}
 
-                           <Link className='hover:border-spacing-3' href={`/resources/goals-blog/${ goalsBlog?._id}`}>
+                          
                            
                            <div className="card w-96 h-96  bg-base-100 shadow-xl">
                                 <figure><img src={ goalsBlog?.picture} alt="Album" /></figure>
@@ -42,7 +42,7 @@ const GoalsBlogsResources = ({ goalsBlog}) => {
                                         <Link className='btn btn-primary' href={`/resources/goals-blog/${ goalsBlog?._id}`}>See Details</Link>
                                     </div>
                                 </div>
-                            </div></Link>
+                            </div>
                         </div>)
                     }
                 </div>

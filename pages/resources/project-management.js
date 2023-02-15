@@ -27,8 +27,7 @@ const ProjectManament = ({ ProjMangeData }) => {
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         ProjMangeData?.map(projectData => <div key={projectData?._id}>
-                            <Link className='hover:border-primary' href={`/resources/projectManagement/${projectData?._id}`}>
-                            </Link>
+                         
 
                             <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
                                 <figure><img src={projectData?.picture} alt="Album" /></figure>

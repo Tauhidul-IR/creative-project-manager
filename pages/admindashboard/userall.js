@@ -25,8 +25,14 @@ const UserAll = () => {
    const closeModale = ()=>
    {
     setDeleteUser(null)
+    
+   }
+   const closeModalesss = ()=>
+   {
+   
     setAdminUser(null)
    }
+  
    const handleMakeAdminUser= (adminData)=>{
     fetch(`https://creative-project-manager-server.vercel.app/user/admin/${adminData?._id}`,
     {
@@ -78,8 +84,7 @@ const UserAll = () => {
                            <div className="card-body items-center text-center">
                                <h2 className="card-title"><AiOutlineTeam/></h2>
                                <h1>5</h1>
-                               <p>Team Member</p>
-   
+                               <p>Team Member</p>  
                            </div>
                        </div>
                    </div>
@@ -113,7 +118,7 @@ const UserAll = () => {
                            <tbody className=''>
                                {
                                    allusers?.map(users =>
-                                    <tr>
+                                    <tr key={users?._id}>
                                       
                                     <td>{users?.name}</td>
                                       <td>{users?.email}</td>
@@ -135,14 +140,12 @@ const UserAll = () => {
                     makeAdmin && <ConfirmModals 
                     title={`Are you sure you want to ${makeAdmin?.name} Admin ?`}
                     message= {`If you Admin ${makeAdmin?.email} .It can Confirm Click Admin `}
-                    closeModale={closeModale}
+                    closeModale={closeModalesss}
                     sucesseceModal= {handleMakeAdminUser}
                     modalData = {makeAdmin}
                     confirmDelete = "Admin"
-                    
                     >
-
-                    </ConfirmModals>
+                  </ConfirmModals>
                    }
                    {/* delete user modals */}
                   { deleteUser && <ConfirmModals
@@ -153,14 +156,10 @@ const UserAll = () => {
                   sucesseceModal= {handleDeleteUser}
                   modalData = {deleteUser}
                   confirmDelete = "Delete"
-                  >
-                    
-                    
+                  >                  
                     </ConfirmModals>}
                </div>
            </div>
-   
-   
             </div>
        
         </AdminSideV>

@@ -32,7 +32,7 @@ const InspireImpact = ({ inspireImacp }) => {
                         inspireImacp?.map(inspireImpact => <div key={inspireImpact?._id}>
 
 
-                           <Link className='hover:border-spacing-4' href={`/resources/instpire/${inspireImpact?._id}`} >
+                          
                            <div className="card w-96 h-96 bg-base-100 shadow-xl">
                                 <figure><img src={inspireImpact?.picture} alt="Album" /></figure>
                                 <div className="card-body">
@@ -42,7 +42,7 @@ const InspireImpact = ({ inspireImacp }) => {
                                         <Link className='btn btn-primary' href={`/resources/instpire/${inspireImpact?._id}`}>See Details</Link>
                                     </div>
                                 </div>
-                            </div></Link>
+                            </div>
                         </div>)
                     }
                 </div>

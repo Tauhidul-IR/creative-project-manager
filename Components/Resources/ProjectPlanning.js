@@ -31,8 +31,7 @@ const ProjectPlanning = ({ proPlnningData}) => {
                         <div className='grid my gap-4 mx-6 my-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                             {
                                 proPlnningData?.map((planning) => <div key={planning?._id}>
-                                    <Link className='hover:border-pr
-                                    ' href={`/resources/${planning?._id}`}>
+                                   
                                     <div className="card bg-base-100 h-96 w-96  shadow-xl">
                                         <figure><img src={planning?.picture} alt="Album" /></figure>
                                         <div className="card-body">
@@ -44,7 +43,7 @@ const ProjectPlanning = ({ proPlnningData}) => {
                                             </div>
                                         </div>
                                     </div>
-                                    </Link>
+                                    
                                 </div>)
                             }
                         </div>

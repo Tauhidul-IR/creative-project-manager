@@ -15,7 +15,7 @@ const workmanresource = ({ allResorces }) => {
                     {
                         allResorces?.map(allReData => <div key={allReData?._id}>
 
-                            <Link className='hover-border-primary'  href={`/allresource/${allReData?._id}`}>
+                      
                             
                             <div className="card w-96 h-96  bg-base-100 shadow-xl">
                                 <figure><img src={allReData?.picture} alt="Album" /></figure>
@@ -28,7 +28,7 @@ const workmanresource = ({ allResorces }) => {
                                 </div>
                             </div>
 
-                            </Link>
+                         
                         </div>)
                     }
                 </div>
