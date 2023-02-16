@@ -123,7 +123,7 @@ const Navbar = () => {
           {
             user?.email ?
 
-              <div className="dropdown dropdown-bottom dropdown-end">
+              <div className="dropdown dropdown-hover dropdown-end">
                 <label tabIndex={0} className="btn btn-circle m-1">
                   {
                     user?.photoURL ? <img className='rounded-full w-6 h-6' src={user?.photoURL} alt="" /> :
@@ -136,10 +136,10 @@ const Navbar = () => {
                 </label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                   <li className='p-4 text-white'>
-                    <Link className='bg-primary' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+                    <Link className='bg-info' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
                   </li>
-                  <li className='p-4 text-white'>
-                    <Link className='bg-primary' href='/updateProfile/updateProfile'>Update Profile</Link>
+                  <li className='p-4 text-white btn-xm'>
+                    <Link className='bg-info' href='/updateProfile/updateProfile'>Update Profile</Link>
                   </li>
                 </ul>
               </div>

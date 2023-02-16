@@ -4,22 +4,27 @@ import { useQuery } from "@tanstack/react-query";
 import { useContext } from 'react';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 import { useForm } from 'react-hook-form';
+import Loading from '../../Components/Loading/Loading';
 
 const updateProfile = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const { user } = useContext(AuthContext)
 
-    const { data: singleUser = [], refetch, isLoading } = useQuery({
+    const { data: singleUser, refetch, isLoading } = useQuery({
         queryKey: ['users', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/users?email=${user?.email}`);
+            const res = await fetch(`https://creative-project-manager-server.vercel.app/users?email=${user?.email}`);
             const data = await res.json();
             return data;
         }
-    });
+    })
 
-    console.log(singleUser._id);
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+    console.log(singleUser);
 
 
     const handleUpdateUser = (data) => {
@@ -43,10 +48,10 @@ const updateProfile = () => {
                         img: imgData.data.url
                     }
 
-                    console.log(userProfile);
+                    // console.log(singleUser._id);
+                    // console.log(userProfile);
 
-
-                    fetch(`http://localhost:5000/users/${singleUser._id}`, {
+                    fetch(`https://creative-project-manager-server.vercel.app/users/${singleUser._id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
@@ -55,13 +60,15 @@ const updateProfile = () => {
                     })
                         .then(res => res.json())
                         .then(data => {
+                            console.log(data);
                             if (data.modifiedCount > 0) {
                                 toast.success('Data Updated')
                                 console.log(data);
                                 refetch()
                             }
-
                         })
+                        .catch(error => console.log(error))
+
                 }
             })
             .catch(error => console.log(error))
@@ -116,7 +123,7 @@ const updateProfile = () => {
 
 
                     {/* --------------Submit Btn---------------------------------- */}
-                    <input className='btn btn-primary mt-5' type="submit" value={'Update'} />
+                    <input className='btn btn-info btn-sm mt-5' type="submit" value={'Update'} />
                     {/* display Error */}
                     <div>
                         {
