@@ -10,6 +10,7 @@ const Goals = () => {
             <DashboardPageCover></DashboardPageCover>
             <div>
                 <h2>Goals</h2>
+                
             </div>
         </Sidebar>
     );

@@ -3,7 +3,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import NewPortfolio from "../../Components/Portfolio/NewPortfolio";
 import MyAllProjects from "../MyAllProjects/MyAllProjects";
 
-const features = ({ projects }) => {
+const Features = ({ projects }) => {
     console.log(projects);
 
     return (
@@ -45,4 +45,4 @@ export const getStaticProps = async () => {
 
 
 
-export default features;
+export default Features;
