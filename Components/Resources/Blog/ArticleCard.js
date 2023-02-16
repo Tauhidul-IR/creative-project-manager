@@ -1,7 +1,9 @@
 const ArticleCard = ({article}) => {
     return (
         <div>
-           	<div class="containerCard ">
+         
+		 
+		 <div class="containerCard ">
 			<div class="cardArticle">
 				<div class="content">
 					<div class="imgBx">
@@ -19,6 +21,8 @@ const ArticleCard = ({article}) => {
 				</ul>
 			</div>
         </div>
+		 
+	
         </div>
     );
 };

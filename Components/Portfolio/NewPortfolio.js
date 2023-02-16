@@ -28,7 +28,7 @@ const NewPortfolio = () => {
       .then(data => {
         console.log(data)
         if (data.acknowledge) {
-          alert('Task added')
+          alert('project added')
           form.reset()
         }
       })
@@ -48,7 +48,7 @@ const NewPortfolio = () => {
             <input type="text"
               name='project'
               placeholder="Project name" className="input input-bordered w-full max-w-xs mt-5 mb-3" /><br></br>
-            <button class="mt-3  btn btn-outline text-black py-2 px-4 ">
+            <button class="mt-3  btn btn-success text-black hover:text-gray-500 py-2 px-4 ">
               Create
             </button>
           </form>

@@ -1,4 +1,11 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../Others/AuthProvider/AuthProvider";
+import GetMembers from "../../../pages/GetMembers/GetMembers";
+
 const CreateProjects = () => {
+  
+  const { user } = useContext(AuthContext);
+
   const formHandler = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -7,13 +14,14 @@ const CreateProjects = () => {
     const startDate = form.startDate.value;
     const endDate = form.endDate.value;
     const projectManager = form.projectManager.value;
+    const email = form.email.value;
     const teamMembers = form.teamMembers.value;
     const priority = form.priority.value;
     const status = form.status.value;
     const description = form.description.value;
 
     const projects = {
-      projectName,category,startDate,endDate,projectManager,teamMembers,priority,status, description
+      projectName,category,startDate,endDate,projectManager,email,teamMembers,priority,status, description
     }
     console.log(projects);
 
@@ -38,7 +46,9 @@ const CreateProjects = () => {
   }
     return (
         <div >
- <div class=" mx-auto bg-sky-100 shadow-lg rounded-lg py-8 px-6 w-9/12">
+          <h2 className="text-2xl text-sky-500 font-bold ml-9 p-5 ">Create Project </h2>
+ <div className=" mt-8 mx-auto bg-sky-100 shadow-lg rounded-lg py-8 px-6 w-9/12">
+  
   <form  onSubmit={formHandler}>
     {/* div 1 */}
 <div className="grid justify-center place-content-center lg:grid-cols-2 md:grid-cols-1 gap-5">
@@ -115,26 +125,31 @@ const CreateProjects = () => {
         Project Manager
       </label>
       <input
+     defaultValue={user?.displayName}
         class="w-full border border-sky-400 rounded-lg p-2"
         type="text"
         id="project-manager"
         name="projectManager"
-        required
+        disabled
+   
       />
     </div>
     <div class="mb-4">
-      <label class="block text-sky-500 font-bold mb-2" for="team-members">
-        Team Members
+      <label class="block text-sky-500 font-bold mb-2" for="project-email">
+        Manager Email
       </label>
       <input
         class="w-full border border-sky-400 rounded-lg p-2"
         type="text"
-        id="team-members"
-        name="teamMembers"
-        placeholder="Enter team member names, separated by commas"
-      
+        id="project-email"
+        name="email"
+        defaultValue={user?.email} disabled 
       />
     </div>
+
+
+
+   
 </div>
   
 
@@ -175,6 +190,12 @@ const CreateProjects = () => {
       </select>
     </div>
 </div>
+
+ {/* div 5*/}
+<div  className="grid justify-center place-content-center lg:grid-cols-2 md:grid-cols-1 gap-5">
+
+<GetMembers></GetMembers>
+
 <div class="mb-4">
     <label class="block text-sky-500 font-medium mb-2" for="description">
       Description
@@ -186,8 +207,13 @@ const CreateProjects = () => {
       rows="5"
     ></textarea>
   </div>
+
+
+</div>
+
+
   <div class="flex items-center justify-center">
-    <button class="bg-sky-400 hover:bg-green-400 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+    <button class="bg-sky-400 hover:bg-green-400 text-white font-medium py-2 px-4 focus:outline-none focus:shadow-outline rounded-full ml-9 mt-5">
      Create
     </button>
   </div>

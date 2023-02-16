@@ -13,7 +13,7 @@ const Features = ({ projects }) => {
                 <div>
 <div>
 <Link href='/AllProjects/AllProjects' >
-  <button className="btn btn-info normal-case font-bold rounded-full ml-5 mt-5">My projects</button>
+  <button className="btn btn-info normal-case font-bold rounded-full ml-5 mt-5 ">My projects</button>
   
 </Link>
 </div>

@@ -16,7 +16,7 @@ const MyAllProjects = () => {
             const res = await fetch(url);
             const data = await res.json();
             // console.log(data);
-
+                  refetch()
             return data;
         }
     })
@@ -42,7 +42,7 @@ const MyAllProjects = () => {
                                     <th>{i + 1}</th>
                                     <td>{project.project}</td>
                                     <td> <Link href='/ProjectDetails/ProjectDetails'>
-                                        <button class="btn btn-outline text-sky-500 mt-5 py-2 px-4 ">
+                                        <button class="btn btn-outline text-green-500 mt-5 py-2 px-4 hover:btn-success">
                                             Add Details
                                         </button>
 
