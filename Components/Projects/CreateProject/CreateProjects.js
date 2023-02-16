@@ -207,17 +207,12 @@ const CreateProjects = () => {
       rows="5"
     ></textarea>
   </div>
-
-
 </div>
-
-
   <div class="flex items-center justify-center">
     <button class="bg-sky-400 hover:bg-green-400 text-white font-medium py-2 px-4 focus:outline-none focus:shadow-outline rounded-full ml-9 mt-5">
      Create
     </button>
   </div>
-  
     </form>
     </div>
 

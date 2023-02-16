@@ -21,7 +21,6 @@ const BlogPage = ({articles}) => {
     articles.map(article=><ArticleCard
     key={article._id}
     article={article}
-    
     ></ArticleCard>)
   }
 
@@ -30,21 +29,12 @@ const BlogPage = ({articles}) => {
 )};
 
 
-
-
-
-
-
-
-
-export const getStaticProps = async ()=>{
-
+export const getStaticProps = async () => {
 const res = await fetch('https://creative-project-manager-server.vercel.app/blog-article');
 const data = await res.json();
-
 return {
     props:{
-articles:data
+articles: JSON.parse(JSON.stringify(data))  
     }
 }
 

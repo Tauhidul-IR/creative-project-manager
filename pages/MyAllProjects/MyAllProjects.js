@@ -1,8 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { useContext } from "react";
-import Background from '../../Components/Backgroud/Background';
-import Navbar from '../../Components/Navbar/Navbar';
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 
 const MyAllProjects = () => {

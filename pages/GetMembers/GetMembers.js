@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react';
 import Select from 'react-select';
 const GetMembers = () => {
-  
 
   const [options, setOptions] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
-
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,9 +45,7 @@ const GetMembers = () => {
         </div>
       )}
     </div>
-
     </div>
-
         </div>
     );
 };

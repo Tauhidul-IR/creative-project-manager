@@ -69,13 +69,12 @@ console.log(projects);
 
 
 export const getStaticProps = async () => {
-
     const res = await fetch('https://creative-project-manager-server.vercel.app/create-project');
     const data = await res.json();
     return {
         props: {
-            projects: JSON.parse(JSON.stringify(data))
-        }
+            projects: JSON.parse(JSON.stringify(data))  
+           }
     }
 }
 

@@ -42,7 +42,7 @@ export const getStaticProps = async () => {
     const data = await res.json();
     return {
         props: {
-            projects: data
+            projects:JSON.parse(JSON.stringify(data))  
         }
     }
 }
