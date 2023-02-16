@@ -23,7 +23,7 @@ const WorkManaReource = () => {
                                         <h2 className="card-title">Collaboration resources</h2>
                                         <p>Collaboration is the cornerstone of great teamwork. Get resources on how to unlock collaboration and empower team members to work together effortlessly.</p>
                                         <div className="card-actions justify-center ">
-                                           <Link href="/resources/collabiration" className='btn btn-primary' > See Detail</Link>
+                                            <Link href="/resources/collabiration" className='btn btn-primary' > See Detail</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@ const WorkManaReource = () => {
                             </div>
                         </div>
                     </div>
-                   
+
                     <div>
                         <div>
                             <div>

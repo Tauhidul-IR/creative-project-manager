@@ -23,7 +23,7 @@ const workmanresource = ({ allResorces }) => {
                                     <h2 className="card-title">{allReData?.title}</h2>
                                     <p>Click the button to listen on Spotiwhy app.</p>
                                     <div className="card-actions justify-center">
-                                        <Link className='btn btn-primary'  href={`/allresource/${allReData?._id}`}>See Details</Link>
+                                        <Link className='btn btn-primary'  href={`/resources/allresource/${allReData?._id}`}>See Details</Link>
                                     </div>
                                 </div>
                             </div>

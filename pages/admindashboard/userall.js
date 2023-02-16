@@ -123,8 +123,16 @@ const UserAll = () => {
                                     <td>{users?.name}</td>
                                       <td>{users?.email}</td>
                                       <th>
-                                    { users?.role !== "admin" &&   <label htmlFor="confirm-modal" className=" btn btn-primary" onClick={()=>setAdminUser
-                                    (users)}>Make Admin</label>}
+                                        {users?.role ? 
+                                        <div> {users?.role}</div>: <label htmlFor="confirm-modal" className=" btn btn-primary" onClick={()=>setAdminUser
+                                            (users)}>Make Admin</label> }
+                                    {/* { users?.role !== "admin" && 
+                                       
+                                    
+                                        <div> {users?.role}</div>: <label htmlFor="confirm-modal" className=" btn btn-primary" onClick={()=>setAdminUser
+                                            (users)}>Make Admin</label>
+                                    
+                                     } */}
                                        </th>
                                       <th>
                                       <label htmlFor="confirm-modal" className=" text-red-400 text-6xl" onClick={()=>setDeleteUser

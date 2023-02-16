@@ -11,7 +11,7 @@ const AdminSideV = ({children}) => {
         <div className='flex mt-16' id="drawer">
             <div  className='fixed  p-4 bg-violet-400 border-r-[1px] flex flex-col justify-between'>
             <div className='flex flex-col item-center'>
-                <Link href="/admindashboard/Dashboard">
+                <Link href="/admindashboard/dashboard">
                   <div className='bg-green-500 text-white p-3 rounded-lg inline-block '>
                     <AiTwotoneHome size={20}/> 
                   </div>

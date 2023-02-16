@@ -1,16 +1,9 @@
 
-import {useRouter} from "next/router"
 
-const Adetails = (
-    {allData}
-    
-) => {
-   
-    const router = useRouter()
-    const id = router.query.AId
+const AllResouceDetails = ({allData}) => {
     return (
         <div>
-             <div className='grid justify-center items-center  '>
+              <div className='grid justify-center items-center  '>
                 <div className='' >
                     {/* title ,nameImagt ,,name ,,picture add  */}
 
@@ -99,7 +92,10 @@ const Adetails = (
         </div>
     );
 };
- export const getStaticProps = async (context)=>{
+
+
+
+export const getStaticProps = async (context)=>{
     const {params}= context;
 const res = await fetch(`https://creative-project-manager-server.vercel.app/all-resources/${params?.AId}`)
 const data = await res.json()
@@ -129,4 +125,4 @@ return{
 
 }
 
-export default Adetails;
+export default AllResouceDetails;
