@@ -25,7 +25,7 @@ export default () => {
             .then(imgData => console.log(imgData))
             .catch(error => console.error(error))
 
-        fetch('http://localhost:5000/create_member', {
+        fetch('https://creative-project-manager-server.vercel.app/create_member', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

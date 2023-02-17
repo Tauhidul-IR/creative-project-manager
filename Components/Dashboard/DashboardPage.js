@@ -29,7 +29,7 @@ const DashboardPage = () => {
             font-bold">
                     <ServerStackIcon className="w-7 h-7 text-purple-500" />
                     <Link href="/">
-                        <a>Task Boards</a>
+                       <p>Task Board</p>
                     </Link>
 
                 </li>

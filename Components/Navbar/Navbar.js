@@ -202,6 +202,7 @@ const Navbar = () => {
                 </a>
                 <ul className="p-2 bg-base-200 text-black">
                   <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+                  <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
 
                 </ul>
               </li>
@@ -213,7 +214,6 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Careers</Link>
             </li>
-
 
             {
               user?.email ? <li className='p-4 text-4xl hover:text-gray-500'>

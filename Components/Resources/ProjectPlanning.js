@@ -1,21 +1,17 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
-const ProjectPlanning = () => {
-    const [proPlnningData, setPrPlDat] = useState()
-    useEffect(() => {
 
-        fetch("https://creative-project-manager-server.vercel.app/project-planning").then(res => res.json())
-            .then(data => setPrPlDat(data))
-    }, [])
-    console.log(proPlnningData)
+const ProjectPlanning = ({ proPlnningData}) => {
+
     return (
         <div>
             <div>
                 <div>
 
                     {/* img add  */}
-                    <div className=' mx-3 my-3 grid justify-center items-center'>
-                        <div className="card  lg:flex-row-reverse bg-base-100 shadow-xl ">
+                    <div className=' mx-3 my-5 grid justify-center items-center'>
+                        <div className="card mx-4 my-3 lg:flex-row-reverse bg-base-100 shadow-xl ">
                             <figure><img src="https://assets.asana.biz/transform/3a769a69-befe-4953-adc7-3b20e91aa01e/hub-project-planning-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title"> Project planning resources</h2>
@@ -31,21 +27,23 @@ const ProjectPlanning = () => {
                         <h1 className='text-3xl mx-5 my-8'>Browse all project planning resources</h1>
                     </div>
 
-                    <div className='grid mx-2 my-3 justify-center items-center'>
-                        <div className='grid gap-4 lg:grid-cols-2 grid-cols-1'>
+                    <div className='grid  justify-center items-center'>
+                        <div className='grid my gap-4 mx-6 my-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                             {
-                                proPlnningData?.map((planning) => <div>
-                                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                                proPlnningData?.map((planning) => <div key={planning?._id}>
+                                   
+                                    <div className="card bg-base-100 h-96 w-96  shadow-xl">
                                         <figure><img src={planning?.picture} alt="Album" /></figure>
                                         <div className="card-body">
                                             <h1 ><span className='text-white px-2 py-1 bg-green-500'>ARTICLE</span></h1>
                                             <h2 className="card-title">{planning?.title}</h2>
                                            
-                                            <div className="card-actions justify-end">
-                                                <button className="btn btn-primary">See Details</button>
+                                            <div className="card-actions justify-center">
+                                                <Link className="btn btn-primary" href={`/resources/${planning?._id}`}>Seel All</Link>
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>)
                             }
                         </div>

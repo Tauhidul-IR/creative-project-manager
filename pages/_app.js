@@ -1,7 +1,6 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast'
-import Footer from '../Components/Footer/Footer'
-import Navbar from '../Components/Navbar/Navbar'
+
 import AuthProvider from '../Others/AuthProvider/AuthProvider'
 import '../styles/globals.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -13,7 +12,7 @@ export default function App({ Component, pageProps }) {
   return (
 
     <>
-      <QueryClientProvider client={queryClient}>
+     <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <Layout>
             <Component {...pageProps} />
@@ -21,7 +20,8 @@ export default function App({ Component, pageProps }) {
           {/* <Navbar /> */}
           <Toaster></Toaster>
         </AuthProvider>
-      </QueryClientProvider>
+        </QueryClientProvider>
+      
     </>
 
   )
