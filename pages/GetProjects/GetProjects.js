@@ -39,7 +39,7 @@ console.log(projects);
         </Tr>
       </Thead>
       <Tbody >
-      {projects.map((project,i) => {
+      {projects?.map((project,i) => {
                 return (
                     <tr key={project._id}>
                         <td>{i+1}</td>

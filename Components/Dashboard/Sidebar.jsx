@@ -31,8 +31,14 @@ function Sidebar({ children }) {
               <div className="dropdown dropdown-top ">
                 <label tabIndex={0} className="font-semibold ">Projects</label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 bg-gray-100  rounded-box w-52">
-                  <li className='hover:bg-purple-200 '><h2>Create Project</h2></li>
-                  <li className='hover:bg-purple-200 '><h2>Show Projects</h2></li>
+                 <Link href='/Dashboard/CreateProject'>
+                 <li className='hover:bg-purple-200 '><h2>Create Project</h2></li>
+                 
+                 </Link>
+                <Link href='/Dashboard/InfoProject'>
+                <li className='hover:bg-purple-200 '><h2>Show Projects</h2></li>
+                </Link>
+
                 </ul>
               </div>
 
@@ -45,8 +51,15 @@ function Sidebar({ children }) {
               <div className="dropdown dropdown-top ">
                 <label tabIndex={0} className="font-semibold ">Productivity</label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 bg-gray-100  rounded-box w-52">
-                  <li className='hover:bg-purple-200 '><h2 >Productivity</h2></li>
-                  <li className='hover:bg-purple-200 '><h2>Create New</h2></li>
+<Link href='/Dashboard/Productivities'>
+  
+<li className='hover:bg-purple-200 '><h2 >Create New</h2></li>
+</Link>
+<Link href='/Dashboard/InfoProductivities'>
+<li className='hover:bg-purple-200 '><h2>Show Productivities</h2></li>
+</Link>
+
+                
                 </ul>
               </div>
 

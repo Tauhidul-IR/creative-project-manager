@@ -1,17 +1,21 @@
 import DashboardPageCover from '../../Components/Dashboard/DashboardPageCover';
 import Sidebar from '../../Components/Dashboard/Sidebar';
-import Features from '../Features/features';
+import GetProductivities from '../GetProductivities/GetProductivities';
 
-const portfolio = () => {
+const InfoProductivities = () => {
     return (
-        <Sidebar>
+        <div>
+
+<Sidebar>
             {/* <Navbar></Navbar> */}
             <DashboardPageCover></DashboardPageCover>
-            <div>
-                <Features></Features>
+            <div className='ml-8'>
+           <GetProductivities></GetProductivities>
             </div>
         </Sidebar>
+            
+        </div>
     );
 };
 
-export default portfolio;
+export default InfoProductivities;

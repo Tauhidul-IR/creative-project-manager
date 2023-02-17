@@ -33,7 +33,7 @@ const GetProductivities = ({productivities}) => {
         </Tr>
       </Thead>
       <Tbody >
-      {productivities.map((productivity,i) => {
+      {productivities?.map((productivity,i) => {
                 return (
                     <tr key={productivity._id}>
                         <td>{i+1}</td>
