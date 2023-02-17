@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { RxSketchLogo, RxDashboard, RxPerson, FcManager, RxCardStackMinus } from "react-icons/rx"
+import { RxDashboard, RxPerson, RxCardStackMinus } from "react-icons/rx"
 import { GiStairsGoal } from 'react-icons/gi'
-import { MdWifiProtectedSetup } from 'react-icons/Md'
-import { AiFillSetting, AiOutlineLineChart, AiTwotoneFlag } from 'react-icons/ai'
+
+import { AiFillSetting, AiOutlineLineChart, AiTwotoneFlag,AiOutlineRotateRight } from 'react-icons/ai'
 
 function Sidebar({ children }) {
   return (
@@ -40,7 +40,7 @@ function Sidebar({ children }) {
           </div>
           <div>
             <div className='bg-gray-100 hover:bg-purple-200 cursor-pointer my-4  p-3 rounded-lg inline-block '>
-              <MdWifiProtectedSetup size={20} />
+              <AiOutlineRotateRight size={20} />
 
               <div className="dropdown dropdown-top ">
                 <label tabIndex={0} className="font-semibold ">Productivity</label>
