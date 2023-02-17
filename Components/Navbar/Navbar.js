@@ -67,13 +67,17 @@ const Navbar = () => {
                   <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
                   <li><Link href="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
                   <li><Link href="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
-                
-                 
-                  <li> <Link className="px-2 py-2   block" href='/GetProjects/GetProjects'>All Projects</Link></li>
+                  
+                  <li> <Link href='/CreateProject/CreateProject' className="px-2 py-2   block" >Create Project</Link></li>
+
+                  <li> <Link className="px-2 py-2   block" href='/GetProjects/GetProjects'>Info Project</Link></li>
 
                   <li> <Link className="px-2 py-2   block" href='/integration/integrations'>Integration</Link></li>
                   <li> <Link className="px-2 py-2   block" href="/myGoals">Goals</Link></li>
-                  <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/CreateProject/CreateProject'>Create Projects</Link></li>
+
+                  <li> <Link href='/Productivities/Productivities' className="px-2 py-2   block" >Productivities</Link></li>
+
+                  <li> <Link  href='/GetProductivities/GetProductivities' className="px-2 py-2   block">Info Productivity</Link></li>
 
                 </ul>
 
