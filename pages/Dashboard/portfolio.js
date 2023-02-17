@@ -7,7 +7,7 @@ const portfolio = () => {
         <Sidebar>
             {/* <Navbar></Navbar> */}
             <DashboardPageCover></DashboardPageCover>
-            <div>
+            <div className='ml-14'>
                 <Features></Features>
             </div>
         </Sidebar>
