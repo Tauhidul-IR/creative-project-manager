@@ -11,7 +11,7 @@ const Navbar = () => {
   const [textColor, setTextColor] = useState('white');
   const { user, logOutUser } = useContext(AuthContext);
   const [isAdminRole] = AdminRole(user?.email)
-  console.log(isAdminRole,)
+  // console.log(isAdminRole)
   const handlelogOut = () => {
     logOutUser()
       .then(() => { })
@@ -32,6 +32,13 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', changeColor);
   }, []);
+
+  // console.log(user);
+
+
+
+
+
 
   return (
     <div
@@ -118,18 +125,31 @@ const Navbar = () => {
             </li>
           }
 
-
-
-
-
-
           {
             user?.email ?
-              <li className='p-4 '>
 
+              <div className="dropdown dropdown-hover dropdown-end">
+                <label tabIndex={0} className="btn btn-circle m-1">
+                  {
+                    user?.photoURL ? <img className='rounded-full w-6 h-6' src={user?.photoURL} alt="" /> :
+                      <>
+                        <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
+                          <h6 className="uppercase font-bold text-sm">{user?.displayName.split(' ')[0][0] + user?.displayName.split(' ')[0][1]}</h6>
+                        </div>
+                      </>
+                  }
+                </label>
+                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li className='p-4 text-white'>
+                    <Link className='bg-info' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+                  </li>
+                  <li className='p-4 text-white btn-xm'>
+                    <Link className='bg-info' href='/updateProfile/updateProfile'>Update Profile</Link>
+                  </li>
+                </ul>
+              </div>
 
-                <Link onClick={handlelogOut} href='/Login/login'>Log Out</Link>
-              </li> :
+              :
               <li className='p-4'>
                 <Link href='/Login/login'>Login</Link>
               </li>
