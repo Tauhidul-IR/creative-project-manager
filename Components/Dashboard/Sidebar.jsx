@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { RxDashboard, RxPerson, RxCardStackMinus } from "react-icons/rx"
 import { GiStairsGoal } from 'react-icons/gi'
 
-import { AiFillSetting, AiOutlineLineChart, AiTwotoneFlag,AiOutlineRotateRight } from 'react-icons/ai'
+import { AiFillSetting, AiOutlineLineChart, AiTwotoneFlag, AiOutlineRotateRight } from 'react-icons/ai'
 
 function Sidebar({ children }) {
   return (
@@ -31,13 +31,13 @@ function Sidebar({ children }) {
               <div className="dropdown dropdown-top ">
                 <label tabIndex={0} className="font-semibold ">Projects</label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 bg-gray-100  rounded-box w-52">
-                 <Link href='/Dashboard/CreateProject'>
-                 <li className='hover:bg-purple-200 '><h2>Create Project</h2></li>
-                 
-                 </Link>
-                <Link href='/Dashboard/InfoProject'>
-                <li className='hover:bg-purple-200 '><h2>Show Projects</h2></li>
-                </Link>
+                  <Link href='/Dashboard/CreateProject'>
+                    <li className='hover:bg-purple-200 '><h2>Create Project</h2></li>
+
+                  </Link>
+                  <Link href='/Dashboard/InfoProject'>
+                    <li className='hover:bg-purple-200 '><h2>Show Projects</h2></li>
+                  </Link>
 
                 </ul>
               </div>
@@ -51,15 +51,15 @@ function Sidebar({ children }) {
               <div className="dropdown dropdown-top ">
                 <label tabIndex={0} className="font-semibold ">Productivity</label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 bg-gray-100  rounded-box w-52">
-<Link href='/Dashboard/Productivities'>
-  
-<li className='hover:bg-purple-200 '><h2 >Create New</h2></li>
-</Link>
-<Link href='/Dashboard/InfoProductivities'>
-<li className='hover:bg-purple-200 '><h2>Show Productivities</h2></li>
-</Link>
+                  <Link href='/Dashboard/Productivities'>
 
-                
+                    <li className='hover:bg-purple-200 '><h2 >Create New</h2></li>
+                  </Link>
+                  <Link href='/Dashboard/InfoProductivities'>
+                    <li className='hover:bg-purple-200 '><h2>Show Productivities</h2></li>
+                  </Link>
+
+
                 </ul>
               </div>
 

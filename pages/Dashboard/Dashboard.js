@@ -14,7 +14,7 @@ const Dashboard = () => {
         <div>
             <Sidebar>
 
-                {/* <Navbar></Navbar> */}
+
                 <DashboardPageCover></DashboardPageCover>
                 <main className=" ml-14 bg-gray-100 min-h-screen">
                     <Header></Header>
