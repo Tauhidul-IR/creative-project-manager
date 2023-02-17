@@ -137,7 +137,7 @@ const teamMembers = ({ data }) => {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch('http://localhost:5000/create_member')
+    const res = await fetch('https://creative-project-manager-server.vercel.app/create_member')
     let data = await res.json()
 
     return {

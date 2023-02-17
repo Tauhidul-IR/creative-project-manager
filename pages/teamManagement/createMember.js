@@ -33,7 +33,7 @@ export default () => {
                 }
                 console.log(allData)
 
-                fetch('http://localhost:5000/create_member', {
+                fetch('https://creative-project-manager-server.vercel.app/create_member', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
