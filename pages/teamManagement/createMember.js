@@ -3,41 +3,54 @@ import { useForm } from "react-hook-form";
 
 
 export default () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
-    const imgKey = process.env.HOST_KEY;
+    const imgKey = process.env.NEXT_PUBLIC_HOST_KEY;
     // console.log(imgKey)
     const onSubmit = data => {
 
-        console.log(data.image[0])
+        // console.log(data.image[0])
         const image = data.image[0]
         const formData = new FormData()
         formData.append('image', image)
 
-        const url = (`https://api.imgbb.com/1/upload?expiration=700&key=${imgKey}`)
+        const url = (`https://api.imgbb.com/1/upload?key=${imgKey}`)
         fetch(url, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: formData
         }).then(res => res.json())
-            .then(imgData => console.log(imgData))
+            .then(imgData => {
+                // console.log(imgData.data)
+                const imgUrl = imgData.data.display_url
+                const allData = {
+                    address: data.address,
+                    category: data.category,
+                    designation: data.designation,
+                    email: data.email,
+                    name: data.name,
+                    pNumber: data.pNumber,
+                    imgUrl: imgUrl,
+                }
+                console.log(allData)
+
+                fetch('http://localhost:5000/create_member', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(allData)
+                }).then(res => res.json())
+                    .then(info => {
+                        console.log(info)
+                    })
+            })
             .catch(error => console.error(error))
 
-        fetch('http://localhost:5000/create_member', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-
-
-
     }
-
-
+    // clear form
+    const handleCLearForm = () => {
+        reset();
+    }
 
 
     return (
@@ -113,13 +126,16 @@ export default () => {
                                 </div>
 
                             </div>
-
-                            <button type="submit" className='btn bg-green-600 hover:to-blue-500'>Submit</button>
+                            <span className=' col-start-2 text-center col-end-7 '>
+                                <button type="submit" onClick={handleCLearForm} className='btn sm:w-full lg:w-2/6  bg-green-600 hover:to-blue-500'>Submit</button>
+                            </span>
 
                         </div>
                     </fieldset>
+
                 </form>
             </section>
+
         </div>
     );
 }
