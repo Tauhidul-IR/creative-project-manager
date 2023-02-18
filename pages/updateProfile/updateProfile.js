@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const updateProfile = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    // const { register, formState: { errors }, handleSubmit } = useForm();
     const [aboutUser, setAboutUser] = useState(null);
 
     const { user } = useContext(AuthContext)
@@ -34,6 +34,7 @@ const updateProfile = () => {
         return <Loading></Loading>
     }
 
+    console.log(user);
     console.log(singleUser);
 
 
@@ -44,16 +45,18 @@ const updateProfile = () => {
             <div className='my-16 w-2/4 mx-auto'>
 
                 <h1 className='text-4xl font-bold my-7'>User Info.</h1>
-                <div className='flex justify-between'>
+                <div className=''>
 
-                    <div>
-                        <div>
-                            <img src={user?.profilePhoto} alt="" />
+                    <div className='flex items-center'>
+                        <div className='w-16 mr-4'>
+                            <img src={singleUser?.profilePhoto} alt="" />
                         </div>
-                        <h2>Name : {singleUser?.name}</h2>
-                        <h2>Email : {singleUser?.email}</h2>
+                        <div>
+                            <h2>Name : {singleUser?.name}</h2>
+                            <h2>Email : {singleUser?.email}</h2>
+                        </div>
                     </div>
-                    <div>
+                    <div className='mt-10 '>
 
                         {/* The button to open modal */}
                         <label htmlFor="updateUserModal" onClick={handlesetuser} className="btn btn-sm btn-info">Edit Profile</label>

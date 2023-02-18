@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 
 const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -39,7 +40,7 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
                         .then(res => res.json())
                         .then(data => {
                             console.log(data);
-                            if (data.modifiedCount > 0) {
+                            if (data.acknowledged) {
                                 toast.success('Data Updated')
                                 console.log(data);
                                 setAboutUser(null)

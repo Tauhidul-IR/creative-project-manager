@@ -4,6 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
 import TaskManagement from './../../pages/TaskManagement/TaskManagement';
 import AdminRole from '../Adminhook/AdminRole';
+import { useQuery } from "@tanstack/react-query";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -35,7 +36,14 @@ const Navbar = () => {
 
   // console.log(user);
 
-
+  const { data: singleUser, refetch, isLoading } = useQuery({
+    queryKey: ['users', user?.email],
+    queryFn: async () => {
+      const res = await fetch(`https://creative-project-manager-server.vercel.app/users?email=${user?.email}`);
+      const data = await res.json();
+      return data;
+    }
+  })
 
 
 
@@ -78,9 +86,9 @@ const Navbar = () => {
                   <li> <Link className="px-2 py-2   block" href='/integration/integrations'>Integration</Link></li>
                   <li> <Link className="px-2 py-2   block" href="/myGoals">Goals</Link></li>
 
-           
 
-                  
+
+
 
                 </ul>
 
@@ -127,17 +135,17 @@ const Navbar = () => {
               <div className="dropdown dropdown-hover dropdown-end">
                 <label tabIndex={0} className="btn btn-circle m-1">
                   {
-                    user?.photoURL ? <img className='rounded-full w-6 h-6' src={user?.photoURL} alt="" /> :
+                    singleUser?.profilePhoto ? <img className='rounded-full w-6 h-6' src={singleUser?.profilePhoto} alt="" /> :
                       <>
                         <div className="w-7 h-7 rounded-full bg-sky-400 flex justify-center items-center ">
-                          <h6 className="uppercase font-bold text-sm">{user?.displayName.split(' ')[0][0] + user?.displayName.split(' ')[0][1]}</h6>
+                          <h6 className="uppercase font-bold text-sm">{singleUser?.name.split(' ')[0][0] + singleUser?.name.split(' ')[0][1]}</h6>
                         </div>
                       </>
                   }
                 </label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                   <li className='p-4 text-white'>
-                    <Link className='bg-info' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+                    <Link className='bg-info ' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
                   </li>
                   <li className='p-4 text-white btn-xm'>
                     <Link className='bg-info' href='/updateProfile/updateProfile'>Update Profile</Link>
@@ -195,9 +203,9 @@ const Navbar = () => {
                 <div className="items-center absolute text-white  invisible group-hover:visible">
                   <ul className="list-reset">
                     <li><Link href="/TaskManagement/TaskManagement" className="px-2 py-2 block bg-base-200  text-black text-xl">Task Management</Link></li>
-                 
+
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/CreateProject/CreateProject'>Create Projects</Link></li>
-            
+
 
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/integration/integrations'>Integraion M</Link></li>
                     <li> <Link className="px-2 py-2 block bg-base-200  text-black text-xl " href='/myGoals'>Goals</Link></li>
