@@ -57,8 +57,8 @@ const Navbar = () => {
         <li><a><Link href="/teamManagement/createMember" className="px-2 py-2 font-bold  block">Create Team</Link></a></li>
         <li><a><Link href="/teamManagement/teamMembers" className="px-2 py-2 font-bold  block">TeamMember</Link></a></li>
         <li><a><Link className="px-2 py-2 font-bold  block" href='/integration/integrations'>Integration</Link></a></li>
-        <li><a><Link className="px-2 py-2  font-bold block" href="/myGoals">Goals</Link></a></li>
-        <li><a><Link className='font-bold' href='/Enterprise/Enterprise'>Enterprises</Link></a></li>
+        <li><a><Link className="px-2 py-2 font-bold block" href="/myGoals">Goals</Link></a></li>
+        <li><a><Link className='font-bold px-2 py-2 block' href='/Enterprise/Enterprise'>Enterprises</Link></a></li>
       </ul>
     </li>
     <li tabIndex={0}>
@@ -68,7 +68,7 @@ const Navbar = () => {
       </a>
       <ul className="p-2 bg-sky-200  z-50">
         <li className='font-bold'><a><Link href='/BlogPage/BlogPage'>Blog</Link></a></li>
-        <li><a><Link className="font-bold" href='/resources/workmanresource'>Work management resources</Link></a></li>
+        <li><a><Link className="font-bold" href='/resources/workmanresource'>Work Management</Link></a></li>
       </ul>
     </li>
     <li className='font-bold'><a><Link href='/Dashboard/Dashboard'>Dashboard</Link></a></li>
@@ -293,7 +293,7 @@ const Navbar = () => {
 
     // -------------------------------------------------------------------------
 
-    <div className="navbar bg-blue-500 ">
+    <div className="navbar bg-blue-500 fixed z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -311,7 +311,7 @@ const Navbar = () => {
           </Link>
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex ">
+      <div className="navbar-center hidden lg:flex text-white">
         <ul className="menu menu-horizontal px-1 ">
           {/* {menubar} */}
           <li className='font-bold'><a><Link href='/'>Home</Link></a></li>
@@ -320,13 +320,13 @@ const Navbar = () => {
               Feature
               <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
             </a>
-            <ul className="p-2 bg-sky-200  z-50">
+            <ul className="p-2 bg-sky-200 text-black z-50">
               <li><a><Link href="/TaskManagement/TaskManagement" className="px-2 py-2  font-bold block">Task Management</Link></a></li>
               <li><a><Link href="/teamManagement/createMember" className="px-2 py-2 font-bold  block">Create Team</Link></a></li>
               <li><a><Link href="/teamManagement/teamMembers" className="px-2 py-2 font-bold  block">TeamMember</Link></a></li>
               <li><a><Link className="px-2 py-2 font-bold  block" href='/integration/integrations'>Integration</Link></a></li>
               <li><a><Link className="px-2 py-2  font-bold block" href="/myGoals">Goals</Link></a></li>
-              <li><a><Link className='font-bold' href='/Enterprise/Enterprise'>Enterprises</Link></a></li>
+              <li><a><Link className='px-2 py-2  font-bold block' href='/Enterprise/Enterprise'>Enterprises</Link></a></li>
             </ul>
           </li>
           <li tabIndex={0}>
@@ -334,9 +334,9 @@ const Navbar = () => {
               Resource
               <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
             </a>
-            <ul className="p-2 bg-sky-200  z-50">
+            <ul className="p-2 bg-sky-200 text-black z-50">
               <li className='font-bold '><a><Link href='/BlogPage/BlogPage'>Blog</Link></a></li>
-              <li><a><Link className="font-bold " href='/resources/workmanresource'>Work management resources</Link></a></li>
+              <li><a><Link className="font-bold " href='/resources/workmanresource'>Work Management</Link></a></li>
             </ul>
           </li>
           <li className='font-bold'><a><Link href='/Dashboard/Dashboard'>Dashboard</Link></a></li>
