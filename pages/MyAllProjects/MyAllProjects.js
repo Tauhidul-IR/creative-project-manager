@@ -14,7 +14,7 @@ const MyAllProjects = () => {
             const res = await fetch(url);
             const data = await res.json();
             // console.log(data);
-                  refetch()
+            refetch()
             return data;
         }
     })

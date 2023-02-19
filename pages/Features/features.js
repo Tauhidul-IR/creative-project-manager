@@ -11,12 +11,12 @@ const Features = ({ projects }) => {
             <div className="mb-32">
 
                 <div>
-<div>
-<Link href='/AllProjects/AllProjects' >
-  <button className="btn btn-info normal-case font-bold rounded-full ml-5 mt-5 ">My projects</button>
-  
-</Link>
-</div>
+                    <div>
+                        <Link href='/AllProjects/AllProjects' >
+                            <button className="buttonColor rounded px-3 py-1 font-bold ml-5 mt-5 ">My projects</button>
+
+                        </Link>
+                    </div>
                     <div className="grid lg:grid-cols-2 mb-36 md:grid-cols-2 sm:grid-cols-1 justify-center place-content-center mt-16 ">
                         <div className="mr-10 ml-10">
                             <NewPortfolio></NewPortfolio>
@@ -42,7 +42,7 @@ export const getStaticProps = async () => {
     const data = await res.json();
     return {
         props: {
-            projects:JSON.parse(JSON.stringify(data))  
+            projects: JSON.parse(JSON.stringify(data))
         }
     }
 }

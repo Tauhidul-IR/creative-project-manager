@@ -127,7 +127,7 @@ export default () => {
 
                             </div>
                             <span className=' col-start-2 text-center col-end-7 '>
-                                <button type="submit" onClick={handleCLearForm} className='btn sm:w-full lg:w-2/6  bg-green-600 hover:to-blue-500'>Submit</button>
+                                <button type="submit" onClick={handleCLearForm} className=' sm:w-full lg:w-2/6  buttonColor rounded p-2 font-bold'>Submit</button>
                             </span>
 
                         </div>

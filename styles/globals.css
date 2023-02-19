@@ -541,7 +541,7 @@ a {
 }
 
 .buttonColor {
-  background: linear-gradient(90deg, #0061ff, #e81cff);
+  background: linear-gradient(90deg, #0061ff, #60efff);
   border-color: white;
   color: white;
 
@@ -549,9 +549,8 @@ a {
   height: 100px; */
 }
 
-/* .buttonColor:hover {
+.buttonColor:hover {
   background: linear-gradient(90deg, #60efff, #0061ff);
-  border-color: black;
-  width: 200px;
-  height: 100px;
-} */
+  border-color: white;
+  color: black;
+}

@@ -145,10 +145,10 @@ const Navbar = () => {
                 </label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                   <li className='p-4 text-white'>
-                    <Link className='bg-info ' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
+                    <Link className='buttonColor rounded px-3 py-1 font-bold' onClick={handlelogOut} href='/Login/login'>Log Out</Link>
                   </li>
                   <li className='p-4 text-white btn-xm'>
-                    <Link className='bg-info' href='/updateProfile/updateProfile'>Update Profile</Link>
+                    <Link className='buttonColor rounded px-3 py-1 font-bold' href='/updateProfile/updateProfile'>Update Profile</Link>
                   </li>
                 </ul>
               </div>

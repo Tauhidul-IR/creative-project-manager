@@ -59,7 +59,7 @@ const updateProfile = () => {
                     <div className='mt-10 '>
 
                         {/* The button to open modal */}
-                        <label htmlFor="updateUserModal" onClick={handlesetuser} className="rounded p-2 buttonColor">Edit Profile</label>
+                        <label htmlFor="updateUserModal" onClick={handlesetuser} className="rounded p-2 font-bold buttonColor">Edit Profile</label>
                     </div>
                 </div>
                 {

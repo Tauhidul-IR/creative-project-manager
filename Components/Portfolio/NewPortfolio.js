@@ -48,7 +48,7 @@ const NewPortfolio = () => {
             <input type="text"
               name='project'
               placeholder="Project name" className="input input-bordered w-full max-w-xs mt-5 mb-3" /><br></br>
-            <button class="mt-3  btn btn-success text-black hover:text-gray-500 py-2 px-4 ">
+            <button class="mt-3  buttonColor rounded px-3 py-1 font-bold ">
               Create
             </button>
           </form>
