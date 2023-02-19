@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar';
 const WorkManaReource = () => {
     return (
         <div className=''>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             <div className='grid '>
                 <div>
                     {/* resource heading */}
