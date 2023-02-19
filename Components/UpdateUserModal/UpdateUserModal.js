@@ -106,7 +106,7 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
 
 
                         {/* --------------Submit Btn---------------------------------- */}
-                        <input className='btn btn-info btn-sm mt-5' type="submit" value={'Update'} />
+                        <input className='btn buttonColor btn-sm mt-5 ' type="submit" value={'Update'} />
                         {/* display Error */}
                         <div>
                             {
