@@ -30,7 +30,7 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
                     }
 
 
-                    fetch(`http://localhost:5000/users/${singleUser._id}`, {
+                    fetch(`https://creative-project-manager-server.vercel.app/users/${singleUser._id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
