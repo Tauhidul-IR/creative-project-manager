@@ -42,12 +42,16 @@ const updateProfile = () => {
 
     return (
         <div>
-            <div className='my-16 w-2/4 mx-auto'>
-
-                <h1 className='text-4xl font-bold my-7'>User Info.</h1>
+            <div className='mb-16 w-2/4 mx-auto'>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 className='text-4xl font-bold mb-7'>User Info.</h1>
                 <div className=''>
 
-                    <div className='flex items-center'>
+                    <div className='flex flex-col sm:flex-row items-center'>
                         <div className='w-16 mr-4'>
                             <img src={singleUser?.profilePhoto} alt="" />
                         </div>
