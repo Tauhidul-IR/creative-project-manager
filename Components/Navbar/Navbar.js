@@ -359,7 +359,7 @@ const Navbar = () => {
           user?.email ?
             <div>
               <div className="dropdown dropdown-hover dropdown-end">
-                <label tabIndex={0} className="btn btn-circle m-1">
+                <label tabIndex={0} className="btn btn-sm btn-circle m-1">
                   {
                     singleUser?.profilePhoto ? <img className='rounded-full w-6 h-6' src={singleUser?.profilePhoto} alt="" /> :
                       <>

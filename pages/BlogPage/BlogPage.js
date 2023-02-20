@@ -10,9 +10,7 @@ const BlogPage = ({ articles }) => {
     <div>
       <div>
         <Blog></Blog>
-
       </div>
-
       <div>
         <BlogArticlePages></BlogArticlePages>
       </div>

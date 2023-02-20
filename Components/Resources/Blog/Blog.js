@@ -17,22 +17,10 @@ const Blog = () => {
                 t the start of a creative process,<br></br> <span className="text-4xl text-gray-700 mt-5 mb-5">"when stakeholders come together to build something new, there’s often a surplus of enthusiasm"</span><br></br></p>
             </div>
           </div>
-
         </div>
-
-
-
         <div>
-
-
-
-
         </div>
-
       </div>
-
-
-
     </div>
   );
 };
