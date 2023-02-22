@@ -5,10 +5,10 @@ const GoogleDrive = () => {
     return (
         <div>
             <div>
-                <div className="grid mt-4 justify-center items-center">
+                <div className="grid justify-center items-center">
                     <div className="card w-72 ">
                         <div>
-                            <div className='grid grid-cols-3'>
+                            <div className='grid grid-cols-3  mt-24'>
                                 <div>
                                     <figure><img src="https://www.cpmintl.com/wp-content/uploads/2022/04/CPM-Logo.png" alt="Album" /></figure>
                                 </div>
@@ -68,7 +68,7 @@ const GoogleDrive = () => {
                                 <div className="card-body">
 
                                     <p className='text-xl text-center'>
-                                    Create CPM tasks with attached content from Drive to streamline your feedback or sign-off process.</p>
+                                        Create CPM tasks with attached content from Drive to streamline your feedback or sign-off process.</p>
 
                                 </div>
                             </div>
@@ -77,10 +77,10 @@ const GoogleDrive = () => {
                 </div>
                 <div>
                     <h1 className='text-center mx-3'>
-                    Connecting your Google Drive and Creative Project Manager accounts is done in just a couple of clicks. Need a hand? Check out <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM article.</span>
+                        Connecting your Google Drive and Creative Project Manager accounts is done in just a couple of clicks. Need a hand? Check out <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM article.</span>
                     </h1>
                     <h1 className='my-5 mx-4 text-center'>
-                    See first-hand how CPM can transform the way your team works together.
+                        See first-hand how CPM can transform the way your team works together.
                     </h1>
                     <div className='text-center mb-4'>
                         <Link className='btn rounded px-2 py-1' href="">Sign Up now-its free</Link>

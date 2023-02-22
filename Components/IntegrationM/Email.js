@@ -5,10 +5,10 @@ const Email = () => {
     return (
         <div>
             <div>
-                <div className="grid mt-4 justify-center items-center">
+                <div className="grid  justify-center items-center">
                     <div className="card w-72 ">
                         <div>
-                            <div className='grid grid-cols-3'>
+                            <div className='grid grid-cols-3 mt-24'>
                                 <div>
                                     <figure><img src="https://www.cpmintl.com/wp-content/uploads/2022/04/CPM-Logo.png" alt="Album" /></figure>
                                 </div>
@@ -80,7 +80,7 @@ const Email = () => {
                 </div>
                 <div>
                     <h1 className='text-center mx-3'>
-                    For comprehensive, step-by-step guides to these features, see the <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM Email section article.</span>
+                        For comprehensive, step-by-step guides to these features, see the <span className='hover:text-sky-300 text-emerald-500'> Help Center CPM Email section article.</span>
                     </h1>
                     <h1 className='my-5 mx-4 text-center'>
                         See first-hand how CPM can transform the way your team works together.
