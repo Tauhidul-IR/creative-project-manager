@@ -27,7 +27,6 @@ const SignUpPage = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                // console.log(user);
                 form.reset();
                 const userInfo = {
                     displayName: name
@@ -86,7 +85,6 @@ const SignUpPage = () => {
                 saveUser(user?.email, user?.displayName)
             })
             .catch(error => {
-                // console.log(error);
                 setSingUpError(error.message)
             })
     }

@@ -1,16 +1,13 @@
-import Image from 'next/image';
+
 import React from 'react';
 import { useQuery } from "@tanstack/react-query";
 import { useContext } from 'react';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
-import { useForm } from 'react-hook-form';
 import Loading from '../../Components/Loading/Loading';
 import UpdateUserModal from '../../Components/UpdateUserModal/UpdateUserModal';
 import { useState } from 'react';
-import { useEffect } from 'react';
 
 const updateProfile = () => {
-    // const { register, formState: { errors }, handleSubmit } = useForm();
     const [aboutUser, setAboutUser] = useState(null);
 
     const { user } = useContext(AuthContext)
@@ -29,16 +26,9 @@ const updateProfile = () => {
     })
 
 
-
     if (isLoading) {
         return <Loading></Loading>
     }
-
-    console.log(user);
-    console.log(singleUser);
-
-
-    // 1d1e77a53a5d9e586aa1731efba2a018
 
     return (
         <div>

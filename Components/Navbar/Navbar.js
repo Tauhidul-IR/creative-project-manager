@@ -18,9 +18,11 @@ const Navbar = () => {
       .then(() => { })
       .catch(error => console.error(error))
   }
-  const handleNav = () => {
-    setNav(!nav);
-  };
+
+
+  // const handleNav = () => {
+  //   setNav(!nav);
+  // };
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
