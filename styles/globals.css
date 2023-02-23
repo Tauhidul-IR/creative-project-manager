@@ -209,32 +209,29 @@
 
 
 #card1 {
-  background-image: url('https://www.imaginenation.com.au/wp-content/uploads/2017/04/Blog-Image-18.jpg');
+  /* background-image: url('https://media.tenor.com/lWr5DQFVcskAAAAd/features.gif'); */
+  background-color:#0F52BA;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 90%;
 }
 
 #card2 {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRptxcm1qESsRmuI20uAtxzUikdaaLr5918Zw&usqp=CAU');
+  /* background-image: url('https://digitalscholar.in/wp-content/uploads/2022/12/it-and-software-companies-in-delhi.gif'); */
+  background-color:#0F52BA;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 90%;
 }
 
 #card3 {
-  background-image: url('https://images.unsplash.com/photo-1496115965489-21be7e6e59a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  /* background-image: url('https://cdn.dribbble.com/users/2898/screenshots/4655773/resource-identity.gif'); */
+  background-color:#0F52BA;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 90%;
 }
 
-#card4 {
-  background-image: url('https://slatesafety.com/wp-content/uploads/2022/08/downtown-atlanta-smaller.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 90%;
-}
 
 
 
@@ -323,119 +320,129 @@
   background-repeat: no-repeat;
   opacity: 90%;
 }
-#blogBg{
-background-image: url(https://images.pexels.com/photos/442574/pexels-photo-442574.jpeg?cs=srgb&dl=pexels-jeshootscom-442574.jpg&fm=jpg);
-background-size: cover;
-background-repeat: no-repeat;
-height: 700px;
-}
-.featuresBg{
-  background-image: url(https://c4.wallpaperflare.com/wallpaper/63/375/698/sky-blue-blur-gradation-wallpaper-preview.jpg);
+
+#blogBg {
+  background-image: url(https://images.pexels.com/photos/442574/pexels-photo-442574.jpeg?cs=srgb&dl=pexels-jeshootscom-442574.jpg&fm=jpg);
   background-size: cover;
-background-repeat: no-repeat;
-height: 700px
+  background-repeat: no-repeat;
+  height: 700px;
 }
-#details{
-  background-image: url(https://papers.co/wallpaper/papers.co-sn66-clear-sky-blue-blur-gradation-36-3840x2400-4k-wallpaper.jpg);
+
+.featuresBg {
+  background-image: url(https://rare-gallery.com/thumbs/993011-sky-gradient-clear-sky-cyan-cyan-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px
+}
+
+#details {
+  background-image: url(https://st.depositphotos.com/65154472/61324/i/450/depositphotos_613249812-stock-photo-gradient-blue-color-abstract-pastel.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px
 }
 
+/* get all project */
+#height {
+  height: 900px;
+
+}
+
 /* article card */
 .containerCard {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	margin: 40px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
 }
 
 .containerCard .cardArticle {
-	position: relative;
-	width: 300px;
-	height: 400px;
-	background: rgba(255, 255, 255, 0.05);
-	margin: 20px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-	border-radius: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	backdrop-filter: blur(10px);
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
 }
 
 .containerCard .cardArticle .content {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	transition: 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
 }
 
 .containerCard .cardArticle:hover .content {
-	transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 .containerCard .cardArticle .content .imgBx {
-	position: relative;
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
 }
 
 .containerCard .cardArticle .content .imgBx img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .containerCard .cardArticle .content .contentBx h3 {
-	color: black;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 500;
-	font-size: 18px;
-	text-align: center;
-	margin: 20px 0 10px;
-	line-height: 1.1em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
 }
 
 .containerCard .cardArticle .content .contentBx h3 span {
-	font-size: 12px;
-	font-weight: 300;
-	text-transform: initial;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
 }
 
 .containerCard .cardArticle .sci {
-	position: absolute;
-	bottom: 50px;
-	display: flex;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
 }
 
 .containerCard .cardArticle .sci li {
-	list-style: none;
-	margin: 0 10px;
-	transform: translateY(40px);
-	transition: 0.5s;
-	opacity: 0;
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .containerCard .cardArticle:hover .sci li {
-	transform: translateY(0px);
-	opacity: 1;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .containerCard .cardArticle.sci li p {
-	color: black;
-	font-size: 20px;
+  color: black;
+  font-size: 20px;
 }
+
 @-webkit-keyframes check {
   50% {
     outline-color: #333;
@@ -459,6 +466,7 @@ height: 700px
     box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
   }
 }
+
 
 
 
@@ -528,3 +536,18 @@ a {
     color-scheme: rgb(163, 125, 125);
   }
 }
+
+.buttonColor {
+  background: linear-gradient(90deg, #0061ff, #60efff);
+  border-color: white;
+  color: white;
+
+  /* width: 200px;
+  height: 100px; */
+}
+
+/* .buttonColor:hover {
+  background: linear-gradient(90deg, #60efff, #0061ff);
+  border-color: white;
+  color: black;
+} */

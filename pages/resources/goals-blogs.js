@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-const GoalsBlogsResources = ({ goalsBlog}) => {
+const GoalsBlogsResources = ({ goalsBlog }) => {
     return (
         <div>
-            
+
             <div className='grid justify-center items-center'>
                 <div className='mx-14 my-4 gap-4'>
                     <div className="card lg:card-side  bg-base-100 shadow-xl">
@@ -28,18 +28,18 @@ const GoalsBlogsResources = ({ goalsBlog}) => {
             <div className='grid justify-center items-center'>
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
-                        goalsBlog?.map( goalsBlog => <div key={goalsBlog?._id}>
-{/* lg:card-side */}
+                        goalsBlog?.map(goalsBlog => <div key={goalsBlog?._id}>
+                            {/* lg:card-side */}
 
-                          
-                           
-                           <div className="card w-96 h-96  bg-base-100 shadow-xl">
-                                <figure><img src={ goalsBlog?.picture} alt="Album" /></figure>
+
+
+                            <div className="card w-96 h-96  bg-base-100 shadow-xl">
+                                <figure><img src={goalsBlog?.picture} alt="Album" /></figure>
                                 <div className="card-body">
-                                    <h2 className="card-title">{ goalsBlog?.title}</h2>
+                                    <h2 className="card-title">{goalsBlog?.title}</h2>
                                     <p>Click the button to listen on Spotiwhy app.</p>
                                     <div className="card-actions justify-center">
-                                        <Link className='btn btn-primary' href={`/resources/goals-blog/${ goalsBlog?._id}`}>See Details</Link>
+                                        <Link className='buttonColor rounded font-bold px-2 py-1' href={`/resources/goals-blog/${goalsBlog?._id}`}>See Details</Link>
                                     </div>
                                 </div>
                             </div>

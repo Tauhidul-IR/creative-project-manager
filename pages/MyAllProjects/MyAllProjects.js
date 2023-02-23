@@ -1,8 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { useContext } from "react";
-import Background from '../../Components/Backgroud/Background';
-import Navbar from '../../Components/Navbar/Navbar';
 import { AuthContext } from "../../Others/AuthProvider/AuthProvider";
 
 const MyAllProjects = () => {
@@ -16,7 +14,7 @@ const MyAllProjects = () => {
             const res = await fetch(url);
             const data = await res.json();
             // console.log(data);
-
+            refetch()
             return data;
         }
     })
@@ -25,7 +23,7 @@ const MyAllProjects = () => {
             <div>
 
 
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto mt-11 ">
 
                     <table className="table w-full">
                         <thead>
@@ -42,7 +40,7 @@ const MyAllProjects = () => {
                                     <th>{i + 1}</th>
                                     <td>{project.project}</td>
                                     <td> <Link href='/ProjectDetails/ProjectDetails'>
-                                        <button class="btn btn-outline text-sky-500 mt-5 py-2 px-4 ">
+                                        <button class="btn btn-outline text-green-500 mt-5 py-2 px-4 hover:btn-success">
                                             Add Details
                                         </button>
 

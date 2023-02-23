@@ -18,16 +18,16 @@ const ProjectManament = ({ ProjMangeData }) => {
                 </div>
 
             </div>
-{/* database data loade  */}
-<div>
-                        <h1 className='text-3xl mx-5 my-8'>Browse all project management resources</h1>
-                    </div>
+            {/* database data loade  */}
+            <div>
+                <h1 className='text-3xl mx-5 my-8'>Browse all project management resources</h1>
+            </div>
 
             <div className='grid justify-center items-center'>
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         ProjMangeData?.map(projectData => <div key={projectData?._id}>
-                         
+
 
                             <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
                                 <figure><img src={projectData?.picture} alt="Album" /></figure>
@@ -35,7 +35,7 @@ const ProjectManament = ({ ProjMangeData }) => {
                                     <h2 className="card-title">{projectData?.title}</h2>
                                     <p>Click the button to listen on Spotiwhy app.</p>
                                     <div className="card-actions justify-center">
-                                        <Link className='btn btn-primary' href={`/resources/projectManagement/${projectData?._id}`}>See Details</Link>
+                                        <Link className='buttonColor rounded font-bold py-1 px-2' href={`/resources/projectManagement/${projectData?._id}`}>See Details</Link>
                                     </div>
                                 </div>
                             </div>

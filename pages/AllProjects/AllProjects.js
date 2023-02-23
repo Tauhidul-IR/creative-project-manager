@@ -20,11 +20,8 @@ const AllProjects = () => {
     })
     return (
         <div id="details">
-            {/* <Navbar></Navbar>
-            <Background></Background> */}
-
-            <div className="overflow-x-auto mt-24">
-                <h2 className=" text-center text-4xl mt-9 mb-9 font-semibold text-gray-500">All My Projects</h2>
+            <div className="overflow-x-auto ml-5 mr-5">
+                <h2 className=" text-left text-4xl mt-9 mb-9 font-semibold text-black">All My Projects</h2>
 
                 <table className="table w-full">
                     <thead>

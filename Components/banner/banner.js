@@ -18,7 +18,7 @@ const Banner = () => {
                         Collaborate, plan projects and manage resources with powerful features that your whole team can use.
                     </p>
                     <div className='sm:text-3xl text-white text-center font-semibold'>If you want  know more about us?
-                        <br /> <button className="btn text-blue-300 text-2xl btn-ghost">Learn More <HiArrowSmRight className='inline-block' /></button></div>
+                        <br /> <button className="buttonColor rounded px-3 py-1 font-bold text-lg">About Us <HiArrowSmRight className='inline-block' /></button></div>
 
                 </div>
 

@@ -4,7 +4,6 @@ import ContactForm from "../Components/ContactForm/ContactForm";
 import Product from "../Components/Product/Product";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import CoreConcept from "../Components/CoreConcept/CoreConcept";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -30,6 +29,8 @@ export default function Home() {
       <KommunicateChat></KommunicateChat>
       <Testimonial></Testimonial>
       <ContactForm></ContactForm>
+     
+      
     </div>
 
 

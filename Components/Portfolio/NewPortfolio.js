@@ -28,7 +28,7 @@ const NewPortfolio = () => {
       .then(data => {
         console.log(data)
         if (data.acknowledge) {
-          alert('Task added')
+          alert('project added')
           form.reset()
         }
       })
@@ -37,8 +37,8 @@ const NewPortfolio = () => {
 
   return (
     <div>
-      <h2 className='text-center text-4xl text-gray-500 mt-16'> Create Portfolio</h2>
-      <div className="card mx-auto mt-20 w-96 bg-base-200 ">
+      <h2 className='text-center text-4xl text-black font-semibold mt-11'> Create Portfolio</h2>
+      <div className="card mx-auto mt-10 w-96 border-2 border-sky-300">
         <div className="card-body">
 
           <form onSubmit={formHandler}>
@@ -48,7 +48,7 @@ const NewPortfolio = () => {
             <input type="text"
               name='project'
               placeholder="Project name" className="input input-bordered w-full max-w-xs mt-5 mb-3" /><br></br>
-            <button class="mt-3  btn btn-outline text-black py-2 px-4 ">
+            <button class="mt-3  buttonColor rounded px-3 py-1 font-bold ">
               Create
             </button>
           </form>

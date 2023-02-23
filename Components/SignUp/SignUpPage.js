@@ -27,7 +27,6 @@ const SignUpPage = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                // console.log(user);
                 form.reset();
                 const userInfo = {
                     displayName: name
@@ -53,6 +52,7 @@ const SignUpPage = () => {
 
     const saveUser = (email, name) => {
         const user = { email, name };
+        console.log(user);
         fetch('https://creative-project-manager-server.vercel.app/users', {
             method: "POST",
             headers: {
@@ -63,38 +63,13 @@ const SignUpPage = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.acknowledge) {
-                    alert('Task added')
-                    form.reset()
+                if (data.acknowledged) {
+                    // form.reset()
                     router.push('/');
                 }
             })
             .catch(error => console.error(error))
     }
-
-
-
-
-    console.log(singUpError);
-
-
-    // const saveUser = (email, name) => {
-    //     const user = { email, name };
-    //     fetch('', {
-    //         method: "POST",
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(user)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    // console.log(data);
-    //         })
-    //         .catch(error => console.error(error))
-    // }
-
-
 
 
 
@@ -105,16 +80,19 @@ const SignUpPage = () => {
             .then(result => {
                 const user = result.user;
                 toast.success('SignUp successfully')
-                // console.log(user);
-                router.push('/');
+                console.log(user?.email, user?.displayName);
+                // router.push('/');
+                saveUser(user?.email, user?.displayName)
             })
             .catch(error => {
-                // console.log(error);
                 setSingUpError(error.message)
             })
     }
+
+
     return (
         <div className="">
+            <br />
             <div className="hero min-h-screen bg-base-200 py-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left w-1/2">

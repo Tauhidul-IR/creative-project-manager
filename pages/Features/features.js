@@ -1,24 +1,29 @@
-import Background from "../../Components/Backgroud/Background";
-import Navbar from "../../Components/Navbar/Navbar";
+import Link from 'next/link';
 import NewPortfolio from "../../Components/Portfolio/NewPortfolio";
 import MyAllProjects from "../MyAllProjects/MyAllProjects";
 
-const features = ({ projects }) => {
+const Features = ({ projects }) => {
     console.log(projects);
 
     return (
-        <div className="featuresBg">
-            <div className="featuresBg mb-32">
+        <div className="featuresBg ">
+
+            <div className="mb-32">
 
                 <div>
+                    <div>
+                        <Link href='/AllProjects/AllProjects' >
+                            <button className="buttonColor rounded px-3 py-1 font-bold ml-5 mt-5 ">My projects</button>
 
+                        </Link>
+                    </div>
                     <div className="grid lg:grid-cols-2 mb-36 md:grid-cols-2 sm:grid-cols-1 justify-center place-content-center mt-16 ">
                         <div className="mr-10 ml-10">
                             <NewPortfolio></NewPortfolio>
                         </div>
 
-                        <div className='mr-10 ml-10  '>
-                            <h2 className='text-center text-4xl  text-black font-semibold  mt-20 mb-10'>My  Project</h2>
+                        <div className='mr-10 ml-10 '>
+                            <h2 className='text-center text-4xl  text-black font-semibold  mt-11'>My  Project</h2>
 
                             <MyAllProjects></MyAllProjects>
                         </div>
@@ -37,7 +42,7 @@ export const getStaticProps = async () => {
     const data = await res.json();
     return {
         props: {
-            projects: data
+            projects: JSON.parse(JSON.stringify(data))
         }
     }
 }
@@ -45,4 +50,4 @@ export const getStaticProps = async () => {
 
 
 
-export default features;
+export default Features;

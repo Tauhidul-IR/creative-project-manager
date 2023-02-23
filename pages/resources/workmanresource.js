@@ -3,7 +3,7 @@ import React from 'react';
 import WorkManaReource from '../../Components/Resources/WorkManaReource';
 
 const workmanresource = ({ allResorces }) => {
-   
+
     return (
         <div>
             <WorkManaReource></WorkManaReource>
@@ -15,20 +15,20 @@ const workmanresource = ({ allResorces }) => {
                     {
                         allResorces?.map(allReData => <div key={allReData?._id}>
 
-                      
-                            
+
+
                             <div className="card w-96 h-96  bg-base-100 shadow-xl">
                                 <figure><img src={allReData?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{allReData?.title}</h2>
                                     <p>Click the button to listen on Spotiwhy app.</p>
                                     <div className="card-actions justify-center">
-                                        <Link className='btn btn-primary'  href={`/resources/allresource/${allReData?._id}`}>See Details</Link>
+                                        <Link className='buttonColor rounded font-bold px-3 py-1' href={`/resources/allresource/${allReData?._id}`}>See Details</Link>
                                     </div>
                                 </div>
                             </div>
 
-                         
+
                         </div>)
                     }
                 </div>

@@ -3,45 +3,58 @@ import { useForm } from "react-hook-form";
 
 
 export default () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
-    const imgKey = process.env.HOST_KEY;
+    const imgKey = process.env.NEXT_PUBLIC_HOST_KEY;
     // console.log(imgKey)
     const onSubmit = data => {
 
-        console.log(data.image[0])
+        // console.log(data.image[0])
         const image = data.image[0]
         const formData = new FormData()
         formData.append('image', image)
 
-        const url = (`https://api.imgbb.com/1/upload?expiration=700&key=${imgKey}`)
+        const url = (`https://api.imgbb.com/1/upload?key=${imgKey}`)
         fetch(url, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: formData
         }).then(res => res.json())
-            .then(imgData => console.log(imgData))
+            .then(imgData => {
+                // console.log(imgData.data)
+                const imgUrl = imgData.data.display_url
+                const allData = {
+                    address: data.address,
+                    category: data.category,
+                    designation: data.designation,
+                    email: data.email,
+                    name: data.name,
+                    pNumber: data.pNumber,
+                    imgUrl: imgUrl,
+                }
+                console.log(allData)
+
+                fetch('https://creative-project-manager-server.vercel.app/create_member', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(allData)
+                }).then(res => res.json())
+                    .then(info => {
+                        console.log(info)
+                    })
+            })
             .catch(error => console.error(error))
 
-        fetch('https://creative-project-manager-server.vercel.app/create_member', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-
-
-
+    }
+    // clear form
+    const handleCLearForm = () => {
+        reset();
     }
 
 
-
-
     return (
-        <div className="mt-20 p-18">
+        <div className=" p-18">
             <span className='flex items-center'>
                 <PlusCircleIcon className='h-9 w-9' />
                 <div className=' bg-gradient-to-r from-gray-900 via-yellow-500 to-gray-500 inline-block text-transparent bg-clip-text'>
@@ -51,10 +64,10 @@ export default () => {
                 </div>
             </span>
 
-            <section className="p-6 bg-blue-400 dark:text-white h-screen">
+            <section className="p-6  dark:text-white min-h-screen">
                 <form onSubmit={handleSubmit(onSubmit)} className="container h-screen flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
 
-                    <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-blue-900">
+                    <fieldset className="grid grid-cols-4 gap-6 p-6  mt-5 rounded-md shadow-sm dark:bg-blue-900">
 
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-4">
                             <div className="col-span-full sm:col-span-3">
@@ -113,13 +126,18 @@ export default () => {
                                 </div>
 
                             </div>
-
-                            <button type="submit" className='btn bg-green-600 hover:to-blue-500'>Submit</button>
+                            <span className=' col-start-2 text-center col-end-7 '>
+                                <button type="submit" onClick={handleCLearForm} className=' sm:w-full lg:w-2/6  buttonColor rounded p-2 font-bold'>Submit</button>
+                            </span>
 
                         </div>
                     </fieldset>
+
                 </form>
+                <br />
+                <br />
             </section>
+
         </div>
     );
 }

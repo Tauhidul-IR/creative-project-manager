@@ -3,8 +3,8 @@ import React from 'react'
 function Header() {
   return (
     <div className='flex justify-between px-4 pt-4'>
-        <h2 className='font-bold bg-purple-800 text-white rounded-lg'>Dashboard</h2>
-        <h2 className='font-bold bg-green-800 text-white rounded-lg'>Welcome</h2>
+      <h2 className='font-bold text-info uppercase text-2xl'>Welcome <span className='text-primary'>Dashboard</span></h2>
+      {/* <h2 className='font-bold text-primary text-2xl'>Welcome</h2> */}
     </div>
   )
 }

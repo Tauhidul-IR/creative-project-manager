@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 
-const ProjectPlanning = ({ proPlnningData}) => {
+const ProjectPlanning = ({ proPlnningData }) => {
 
     return (
         <div>
@@ -31,19 +31,19 @@ const ProjectPlanning = ({ proPlnningData}) => {
                         <div className='grid my gap-4 mx-6 my-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                             {
                                 proPlnningData?.map((planning) => <div key={planning?._id}>
-                                   
+
                                     <div className="card bg-base-100 h-96 w-96  shadow-xl">
                                         <figure><img src={planning?.picture} alt="Album" /></figure>
                                         <div className="card-body">
                                             <h1 ><span className='text-white px-2 py-1 bg-green-500'>ARTICLE</span></h1>
                                             <h2 className="card-title">{planning?.title}</h2>
-                                           
+
                                             <div className="card-actions justify-center">
-                                                <Link className="btn btn-primary" href={`/resources/${planning?._id}`}>Seel All</Link>
+                                                <Link className="buttonColor rounded font-bold px-3 py-1" href={`/resources/${planning?._id}`}>Seel All</Link>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>)
                             }
                         </div>

@@ -5,7 +5,6 @@ import Navbar from '../Navbar/Navbar';
 const WorkManaReource = () => {
     return (
         <div className=''>
-            <Navbar></Navbar>
             <div className='grid '>
                 <div>
                     {/* resource heading */}
@@ -23,7 +22,7 @@ const WorkManaReource = () => {
                                         <h2 className="card-title">Collaboration resources</h2>
                                         <p>Collaboration is the cornerstone of great teamwork. Get resources on how to unlock collaboration and empower team members to work together effortlessly.</p>
                                         <div className="card-actions justify-center ">
-                                            <Link href="/resources/collabiration" className='btn btn-primary' > See Detail</Link>
+                                            <Link href="/resources/collabiration" className='buttonColor rounded font-bold px-3 py-1' > See Detail</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -37,7 +36,7 @@ const WorkManaReource = () => {
                                         <h2 className="card-title">Business strategy resources</h2>
                                         <p>Craft your business strategy, improve operational processes, and do more of the work you love. Get resources to plan and execute your business with CPM.</p>
                                         <div className="card-actions justify-center">
-                                            <button className="btn btn-primary">See Details</button>
+                                            <button className="buttonColor rounded font-bold px-3 py-1">See Details</button>
                                         </div>
                                     </div>
                                 </div>

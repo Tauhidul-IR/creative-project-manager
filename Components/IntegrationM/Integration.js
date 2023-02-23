@@ -5,9 +5,9 @@ import Navbar from '../Navbar/Navbar';
 const Integration = () => {
     return (
         <div className='mb-16'>
-            <Navbar className="text-black"></Navbar>
+            {/* <Navbar className="text-black"></Navbar> */}
             {/* intergration heading */}
-            <div className='grid justify-center items-center my-5 mt-16  mb-16 text-center mx-3'>
+            <div className='grid justify-center items-center  mb-16 text-center mx-3'>
                 <h1 className='text-3xl'>Out of the box, Create Project Management works seamlessly with these servies:</h1>
             </div>
             {/* card create */}

@@ -52,7 +52,7 @@ function PiChart() {
     }, [])
     return (
         <>
-            <div className='w-full md:col-span-2 relative lg:h-[50vh] m-auto p-4 border rounded-lg bg-white'>
+            <div className='w-96 md:col-span-2 relative lg:h-[50vh] m-auto p-4 border rounded-lg bg-white'>
                 <Pie data={chartData} options={chartOptions} />
             </div>
         </>
