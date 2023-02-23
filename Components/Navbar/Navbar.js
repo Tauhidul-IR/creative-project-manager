@@ -75,7 +75,6 @@ const Navbar = () => {
 
 
                 </ul>
-
               </div>
 
             </div>
@@ -86,21 +85,30 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/Enterprise/Enterprise'>Enterprises</Link>
           </li>
-          <ul className="menu menu-horizontal px-1">
+          <li>
 
-            <li tabIndex={0}>
-              <a className='p-4 mb-5'>
-                Resources
-                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-              </a>
-              <ul className="p-2 bg-base-200 text-black">
-                <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
-                <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
+            <div className="relative group">
+              <div className="flex items-center cursor-pointer py-1">
+                <button className="bg-blue p-3 inline-flex justify-center items-center ">
+                  <span> Resources</span>
+                  <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+              </div>
+              <div className="items-center absolute  invisible group-hover:visible">
+                <ul className="p-2 bg-base-200 text-black">
+                  <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+                  <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
+                </ul>
 
-              </ul>
-            </li>
+              </div>
 
-          </ul>
+            </div>
+
+
+
+          </li>
           <li className='p-4'>
             <Link href='/Dashboard/Dashboard'>Dashboard</Link>
           </li>
@@ -184,24 +192,32 @@ const Navbar = () => {
               </div>
 
             </li>
+            <li className='text-4xl'>
+              <div className="relative group">
+                <div className="flex items-center cursor-pointer py-1">
+                  <button className="bg-blue p-3 text-white inline-flex justify-center items-center ">
+                    <span>Resources</span>
+                    <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="items-center absolute text-white  invisible group-hover:visible">
+                 
+
+                <ul className="p-2 bg-base-200 text-black">
+                    <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
+                    <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </li>
             <li className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/Enterprise/Enterprise'>Enterprises</Link>
             </li>
-            <ul className="menu menu-vertical px-1">
-
-              <li tabIndex={0}>
-                <a className='p-4 text-4xl hover:text-gray-500'>
-                  Resources
-                  <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                </a>
-                <ul className="p-2 bg-base-200 text-black">
-                  <li><Link href='/BlogPage/BlogPage'>Blog</Link></li>
-                  <li> <Link className="" href='/resources/workmanresource'>Work management resources</Link></li>
-
-                </ul>
-              </li>
-
-            </ul>
+        
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>About us</Link>
             </li>
