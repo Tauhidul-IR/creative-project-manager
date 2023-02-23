@@ -9,8 +9,8 @@ const CoreConcept = () => {
       <h1 data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="200"
-            className="text-5xl font-bold" class="text-5xl font-bold"><span className="text-blue-500 ">|</span>
-            Collaborative to the core.</h1>
+            className="text-5xl font-bold" class="text-7xl font-bold">
+<span className="text-7xl text-blue-500">C</span>ollaborative to the core.</h1>
       <p  data-aos="fade-right"
             data-aos-duration="900"
             data-aos-delay="400"

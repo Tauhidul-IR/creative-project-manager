@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
   function sendEmail(e) {
     e.preventDefault();
     emailjs.sendForm('service_kptk7p9', 'template_tazkdcw', e.target, 'LLV7xYubBmuxyE1nV')
@@ -10,7 +11,8 @@ const ContactForm = () => {
         console.log(error.text);
       });
     e.target.reset();
-  }
+  };
+
   return (
     <div>
       <section data-aos="fade-up" data-aos-duration="1900" id="contactBg" className="text-gray-700 body-font relative">

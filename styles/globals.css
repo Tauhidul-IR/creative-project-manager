@@ -209,32 +209,29 @@
 
 
 #card1 {
-  background-image: url('https://www.imaginenation.com.au/wp-content/uploads/2017/04/Blog-Image-18.jpg');
+  /* background-image: url('https://media.tenor.com/lWr5DQFVcskAAAAd/features.gif'); */
+  background-color:#0F52BA;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 90%;
 }
 
 #card2 {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRptxcm1qESsRmuI20uAtxzUikdaaLr5918Zw&usqp=CAU');
+  /* background-image: url('https://digitalscholar.in/wp-content/uploads/2022/12/it-and-software-companies-in-delhi.gif'); */
+  background-color:#0F52BA;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 90%;
 }
 
 #card3 {
-  background-image: url('https://images.unsplash.com/photo-1496115965489-21be7e6e59a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+  /* background-image: url('https://cdn.dribbble.com/users/2898/screenshots/4655773/resource-identity.gif'); */
+  background-color:#0F52BA;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 90%;
 }
 
-#card4 {
-  background-image: url('https://slatesafety.com/wp-content/uploads/2022/08/downtown-atlanta-smaller.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 90%;
-}
 
 
 
