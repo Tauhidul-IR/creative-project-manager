@@ -92,6 +92,7 @@ const SignUpPage = () => {
 
     return (
         <div className="">
+            <br />
             <div className="hero min-h-screen bg-base-200 py-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left w-1/2">
