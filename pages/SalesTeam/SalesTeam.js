@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 
 const SalesTeam = () => {
+
   function sendEmail(e) {
     e.preventDefault();
     emailjs.sendForm('service_kptk7p9', 'template_1jbxn0l', e.target, 'LLV7xYubBmuxyE1nV')
@@ -10,6 +11,7 @@ const SalesTeam = () => {
         console.log(error.text);
       });
     e.target.reset();
+    
   }
   return (
 

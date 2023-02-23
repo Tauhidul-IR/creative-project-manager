@@ -1,5 +1,3 @@
-import enterprise1 from '../../../public/enterprises/enterprise1.svg'
-
 const BusinessValue = () => {
     return (
         <div>

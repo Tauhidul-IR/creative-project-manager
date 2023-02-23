@@ -7,7 +7,7 @@ const WhyCpm = () => {
             <h2 className="text-4xl font-bold text-center mt-6">Adaptable work management</h2>
             <p className="text-2xl font-semibold text-center mt-6">With CPM Enterprise, your organization has access to CPM full <br></br> suite of work management features. Implement advanced security <br></br>functionalities and powerful  admin and data controls.</p>
 
-            <div className='grid justify-items-center gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  mt-7 mb-9'>
+            <div className='grid justify-items-center lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1  gap-6 mt-7 mb-9'>
                 <div >
                    <img src="https://assets.asana.biz/m/85bf4686ab3d0cf/original/enterprise-benefits-icon-4.svg" alt="" /> 
                    <h2 className='text-left text-xl mt-4'>Connect people to purpose</h2>
