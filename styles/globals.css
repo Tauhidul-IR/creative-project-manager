@@ -221,11 +221,8 @@ background-color:#0F52BA;
  
 }
 
-<<<<<<< HEAD
-=======
 /* blog background */
 
->>>>>>> 57251e59d59d7c9bb7003a0a9ae77f806a215a4c
 #blogBg {
   background-image: url(https://images.pexels.com/photos/442574/pexels-photo-442574.jpeg?cs=srgb&dl=pexels-jeshootscom-442574.jpg&fm=jpg);
   background-size: cover;
@@ -262,26 +259,17 @@ background-color:#0F52BA;
   align-items: center;
   flex-wrap: wrap;
   margin: 40px 0;
-<<<<<<< HEAD
-=======
  
->>>>>>> 57251e59d59d7c9bb7003a0a9ae77f806a215a4c
 }
 
 .containerCard .cardArticle {
   position: relative;
   width: 300px;
   height: 400px;
-<<<<<<< HEAD
-  background: rgba(255, 255, 255, 0.05);
-  margin: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-=======
   background: rgba(232, 139, 139, 0.05);
   background-color: #67a2fa;
   margin: 20px;
   box-shadow: 0 15px 35px rgba(255, 253, 253, 0.5);
->>>>>>> 57251e59d59d7c9bb7003a0a9ae77f806a215a4c
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -319,11 +307,7 @@ background-color:#0F52BA;
 }
 
 .containerCard .cardArticle .content .contentBx h3 {
-<<<<<<< HEAD
-  color: black;
-=======
   color: rgb(255, 255, 255);
->>>>>>> 57251e59d59d7c9bb7003a0a9ae77f806a215a4c
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -359,11 +343,7 @@ background-color:#0F52BA;
 }
 
 .containerCard .cardArticle.sci li p {
-<<<<<<< HEAD
-  color: black;
-=======
   color: rgb(255, 249, 249);
->>>>>>> 57251e59d59d7c9bb7003a0a9ae77f806a215a4c
   font-size: 20px;
 }
 
