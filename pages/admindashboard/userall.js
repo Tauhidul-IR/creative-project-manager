@@ -65,7 +65,7 @@ const UserAll = () => {
     return (
         <AdminSideV>
             
- <div className='bg-gray-500'>
+ <div className='bg-inherit'>
            
            <div className="grid justify-center items-center w-auto ">
                <div className=" grid lg:grid-cols-3 grid-col-1 gap-2 my-4">

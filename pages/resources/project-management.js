@@ -8,8 +8,8 @@ const ProjectManament = ({ ProjMangeData }) => {
 
             <div className=' mx-9 my-5 grid justify-center items-center'>
                 <div className="card mx-4 my-3 lg:flex-row-reverse bg-base-100 shadow-xl ">
-                    <figure><img src="https://assets.asana.biz/transform/eb713e7c-d19a-4675-bdcf-a51b75e7b02f/hub-project-management-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
-                    <div className="card-body">
+                    <figure><img className='w-96'     src="https://assets.asana.biz/transform/eb713e7c-d19a-4675-bdcf-a51b75e7b02f/hub-project-management-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
+                    <div className="card-body w-96">
                         <h2 className="card-title">Project management resourcess</h2>
                         <p>Collaborate effortlessly, no matter where you are. With project management, you can track and manage all of your team’s work—from day one to deadline.</p>
 
@@ -29,7 +29,7 @@ const ProjectManament = ({ ProjMangeData }) => {
                         ProjMangeData?.map(projectData => <div key={projectData?._id}>
 
 
-                            <div className="card w-96 lg:card-side bg-base-100 shadow-xl">
+                            <div className="card w-96 bg-base-100 shadow-xl">
                                 <figure><img src={projectData?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{projectData?.title}</h2>

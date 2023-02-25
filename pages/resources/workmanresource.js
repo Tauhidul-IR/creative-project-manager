@@ -18,7 +18,7 @@ const workmanresource = ({ allResorces }) => {
 
 
                             <div className="card w-96 h-96  bg-base-100 shadow-xl">
-                                <figure><img src={allReData?.picture} alt="Album" /></figure>
+                                <figure><img className='w-96 h-52' src={allReData?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{allReData?.title}</h2>
                                     <p>Click the button to listen on Spotiwhy app.</p>

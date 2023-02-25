@@ -18,8 +18,8 @@ const WorkManaReource = () => {
                         <div className='grid gap-2 grid-cols-1 lg:grid-cols-1 md:grid-cols-1'>
                             <div className='mx-6 my-6'>
                                 <div className="card lg:card-side bg-base-100 shadow-xl">
-                                    <figure><img src="https://assets.asana.biz/transform/5f9973e8-0a51-499d-84dc-ac66431a3c55/hub-collaboration-2x?io=transform:fill,width:960&format=webp" alt="Album" /></figure>
-                                    <div className="card-body">
+                                    <figure><img className='w-96 h-72' src="https://assets.asana.biz/transform/5f9973e8-0a51-499d-84dc-ac66431a3c55/hub-collaboration-2x?io=transform:fill,width:960&format=webp" alt="Album" /></figure>
+                                    <div className="card-body w-96 h-52">
                                         <h2 className="card-title">Collaboration resources</h2>
                                         <p>Collaboration is the cornerstone of great teamwork. Get resources on how to unlock collaboration and empower team members to work together effortlessly.</p>
                                         <div className="card-actions justify-center ">
@@ -32,8 +32,8 @@ const WorkManaReource = () => {
                             {/* busness project articles */}
                             <div className='mx-6 my-6'>
                                 <div className="card lg:card-side bg-base-100 shadow-xl">
-                                    <figure><img src="https://assets.asana.biz/transform/f42e809b-eb5d-467b-8f5a-442eb3a51b4c/hub-work-management-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
-                                    <div className="card-body">
+                                    <figure><img className='w-96 h-96' src="https://assets.asana.biz/transform/f42e809b-eb5d-467b-8f5a-442eb3a51b4c/hub-work-management-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
+                                    <div className="card-body w-96 h-96">
                                         <h2 className="card-title">Business strategy resources</h2>
                                         <p>Craft your business strategy, improve operational processes, and do more of the work you love. Get resources to plan and execute your business with CPM.</p>
                                         <div className="card-actions justify-center">

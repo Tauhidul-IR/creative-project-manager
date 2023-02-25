@@ -12,8 +12,8 @@ const ProjectPlanning = ({ proPlnningData }) => {
                     {/* img add  */}
                     <div className=' mx-3 my-5 grid justify-center items-center'>
                         <div className="card mx-4 my-3 lg:flex-row-reverse bg-base-100 shadow-xl ">
-                            <figure><img src="https://assets.asana.biz/transform/3a769a69-befe-4953-adc7-3b20e91aa01e/hub-project-planning-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
-                            <div className="card-body">
+                            <figure><img className='w-96' src="https://assets.asana.biz/transform/3a769a69-befe-4953-adc7-3b20e91aa01e/hub-project-planning-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
+                            <div className="card-body w-96">
                                 <h2 className="card-title"> Project planning resources</h2>
                                 <p>Track your work—and get results. With project planning, organize and track everything to set each project up for success. Then, move work across the finish line and hit your deadlines.</p>
 
@@ -33,7 +33,7 @@ const ProjectPlanning = ({ proPlnningData }) => {
                                 proPlnningData?.map((planning) => <div key={planning?._id}>
 
                                     <div className="card bg-base-100 h-96 w-96  shadow-xl">
-                                        <figure><img src={planning?.picture} alt="Album" /></figure>
+                                        <figure><img className='w-96 h-52' src={planning?.picture} alt="Album" /></figure>
                                         <div className="card-body">
                                             <h1 ><span className='text-white px-2 py-1 bg-green-500'>ARTICLE</span></h1>
                                             <h2 className="card-title">{planning?.title}</h2>
