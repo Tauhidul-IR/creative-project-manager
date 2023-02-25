@@ -8,8 +8,8 @@ const AdminSideV = ({children}) => {
     return (
      <div >
         <Navbar></Navbar>
-        <div className='flex mt-16' id="drawer">
-            <div  className='fixed  p-4 bg-violet-400 border-r-[1px] flex flex-col justify-between'>
+        <div className='flex pt-16' id="drawer">
+            <div  className='fixed pt-10 p-4 bg-violet-400 border-r-[1px] flex flex-col justify-between'>
             <div className='flex flex-col item-center'>
                 <Link href="/admindashboard/dashboard">
                   <div className='bg-green-500 text-white p-3 rounded-lg inline-block '>
