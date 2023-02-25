@@ -100,7 +100,7 @@ const teamMembers = ({ data }) => {
 
 
     return (
-        <div>
+        <div className='pt-20'>
 
             {
                 domLoaded && (

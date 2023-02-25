@@ -32,12 +32,7 @@ const updateProfile = () => {
 
     return (
         <div>
-            <div className='mb-16 w-2/4 mx-auto'>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+            <div className='mb-16 pt-24 w-2/4 mx-auto'>
                 <h1 className='text-4xl font-bold mb-7'>User Info.</h1>
                 <div className=''>
 
