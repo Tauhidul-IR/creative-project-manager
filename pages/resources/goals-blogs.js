@@ -5,8 +5,9 @@ const GoalsBlogsResources = ({ goalsBlog }) => {
         <div>
 
             <div className='grid justify-center items-center'>
-                <div className='mx-14 my-4 gap-4'>
-                    <div className="card lg:card-side  bg-base-100 shadow-xl">
+                <div className='mx-14 pt-10 gap-4'>
+                    <div className="card
+                    pt-10 lg:card-side  bg-base-100 shadow-xl">
                         <figure><img src="https://assets.asana.biz/transform/5895eaa5-578e-4068-aeb6-c1bc36c0d7dc/article-goals-goals-2x?io=transform:fill,width:375&format=webp" alt="Album" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Goals resources</h2>
@@ -26,14 +27,15 @@ const GoalsBlogsResources = ({ goalsBlog }) => {
 
 
             <div className='grid justify-center items-center'>
-                <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+                <div className='grid gap-5  mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         goalsBlog?.map(goalsBlog => <div key={goalsBlog?._id}>
                             {/* lg:card-side */}
 
 
 
-                            <div className="card w-96 h-96  bg-base-100 shadow-xl">
+                            <div className="card w-96 h-96
+                            pt-5  bg-base-100 shadow-xl">
                                 <figure><img src={goalsBlog?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{goalsBlog?.title}</h2>

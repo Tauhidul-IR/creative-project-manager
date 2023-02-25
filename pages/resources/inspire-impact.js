@@ -5,8 +5,8 @@ const InspireImpact = ({ inspireImacp }) => {
     return (
         <div>
             <div className='grid justify-center items-center'>
-                <div className='mx-14 my-4 gap-4'>
-                    <div className="card lg:card-side  bg-base-100 shadow-xl">
+                <div className='mx-14  gap-4 pt-8'>
+                    <div className="card pt-11 lg:card-side  bg-base-100 shadow-xl">
                         <figure><img src="https://assets.asana.biz/transform/c018cebf-e680-42c3-a795-7f79a64ba663/hub-EMIM-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Inspire & Impact collection</h2>

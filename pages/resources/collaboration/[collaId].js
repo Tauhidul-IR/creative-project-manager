@@ -2,7 +2,7 @@
 const CollaborationDetails = ({collaboration}) => {
   
     return (
-        <div>
+        <div className="py-5 my-4">
            <div className='grid justify-center items-center  '>
                 <div className='' >
                     {/* title ,nameImagt ,,name ,,picture add  */}

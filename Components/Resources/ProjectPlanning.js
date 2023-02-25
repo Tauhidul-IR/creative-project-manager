@@ -5,13 +5,13 @@ import React, { useEffect, useState } from 'react';
 const ProjectPlanning = ({ proPlnningData }) => {
 
     return (
-        <div>
+        <div className='pt-14'>
             <div>
                 <div>
 
                     {/* img add  */}
-                    <div className=' mx-3 my-5 grid justify-center items-center'>
-                        <div className="card mx-4 my-3 lg:flex-row-reverse bg-base-100 shadow-xl ">
+                    <div className=' mx-3  grid justify-center items-center'>
+                        <div className="card mx-4 pt-13 lg:flex-row-reverse bg-base-100 shadow-xl ">
                             <figure><img src="https://assets.asana.biz/transform/3a769a69-befe-4953-adc7-3b20e91aa01e/hub-project-planning-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title"> Project planning resources</h2>

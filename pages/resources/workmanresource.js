@@ -14,10 +14,7 @@ const workmanresource = ({ allResorces }) => {
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         allResorces?.map(allReData => <div key={allReData?._id}>
-
-
-
-                            <div className="card w-96 h-96  bg-base-100 shadow-xl">
+                            <div className="card w-96 h-96 pt-10  bg-base-100 shadow-xl">
                                 <figure><img src={allReData?.picture} alt="Album" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{allReData?.title}</h2>

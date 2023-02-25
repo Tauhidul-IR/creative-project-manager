@@ -3,17 +3,12 @@ import React from 'react';
 const PlanningDetails = ({ planning }) => {
 
     return (
-        <div>
-
-
-
-
+        <div className='py-5 pt-5'>
             <div className='grid justify-center items-center  '>
                 <div className='' >
                     {/* title ,nameImagt ,,name ,,picture add  */}
 
-
-                    <div className="card w-96  bg-base-100 shadow-xl my-6 lg:min-w-max">
+                    <div className="card w-96 pt-9  bg-base-100 shadow-xl my-6 lg:min-w-max">
                         <div className="card-body">
                             <h2 className="card-title text-3xl">{planning?.title}</h2>
                             <div>
@@ -27,8 +22,6 @@ const PlanningDetails = ({ planning }) => {
                         <figure><img src={planning?.picture} alt="Shoes" /></figure>
                     </div>
                     {/* ------------------------ */}
-
-
                     <div className='grid justify-center items-centers'>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                          
@@ -97,9 +90,6 @@ const PlanningDetails = ({ planning }) => {
         </div>
     );
 };
-
-
-
 
 export const getStaticProps = async (context) => {
     const { params } = context;

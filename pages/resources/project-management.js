@@ -6,8 +6,8 @@ const ProjectManament = ({ ProjMangeData }) => {
     return (
         <div>
 
-            <div className=' mx-9 my-5 grid justify-center items-center'>
-                <div className="card mx-4 my-3 lg:flex-row-reverse bg-base-100 shadow-xl ">
+            <div className=' mx-9 pt-10 grid justify-center items-center'>
+                <div className="card mx-4 pt-10 lg:flex-row-reverse bg-base-100 shadow-xl ">
                     <figure><img src="https://assets.asana.biz/transform/eb713e7c-d19a-4675-bdcf-a51b75e7b02f/hub-project-management-2x?io=transform:fill,width:768&format=webp" alt="Album" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Project management resourcess</h2>

@@ -5,13 +5,14 @@ const GolsBlogsDetails = ({goalsBlog}) => {
    
    
     return (
-        <div>
+        <div className="py-5 ">
              <div className='grid justify-center items-center  '>
                 <div className='' >
                     {/* title ,nameImagt ,,name ,,picture add  */}
 
 
-                    <div className="card w-96  bg-base-100 shadow-xl my-6 lg:min-w-max">
+                    <div className="card w-96 
+                    pt-8 bg-base-100 shadow-xl my-6 lg:min-w-max">
                         <div className="card-body">
                             <h2 className="card-title text-3xl">{goalsBlog?.title}</h2>
                             <div>

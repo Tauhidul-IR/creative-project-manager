@@ -4,7 +4,7 @@ import ProjectPlanning from '../../Components/Resources/ProjectPlanning';
 
 const projectplanning = ({ proPlnningData }) => {
     return (
-        <div>
+        <div  className='pt-6'>
             {/* <Navbar></Navbar> */}
             <ProjectPlanning proPlnningData={proPlnningData}></ProjectPlanning>
         </div>
