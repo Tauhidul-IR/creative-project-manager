@@ -6,7 +6,7 @@ const Scalability = () => {
              <div>
 
 <div className="text-center mt-16 mb-16">
-    <p className="text-gray-300 text-xl">SCALABILITY</p>
+    <p className=" text-blue-400  text-xl">SCALABILITY</p>
     <h2 className="text-black text-4xl mt">Adapt with confidence</h2>
 </div>
 

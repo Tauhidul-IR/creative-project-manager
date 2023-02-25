@@ -1,15 +1,13 @@
-import enterprise1 from '../../../public/enterprises/enterprise1.svg'
-
 const BusinessValue = () => {
     return (
         <div>
             <div>
-                <p className='text-gray-300 text-center text-xl'>RIO</p>
+                <p className='text-blue-400 text-center text-xl'>RIO</p>
                 <h2 className='text-center text-5xl mt-3 mb-5'>Business value of CPM</h2>
-                <p className='text-center text-3xl mt-3 mb-3'>IDC's research demonstrates the impact Asana has on employee <br></br>  productivity and customer satisfaction.</p>
+                <p className='text-center text-blue-400 text-3xl mt-3 mb-3'>IDC's research demonstrates the impact Asana has on employee <br></br>  productivity and customer satisfaction.</p>
             </div>
 
-<div className='text-center text-xl mt-9 mb-9 font-bold hover:text-red-500'>
+<div className='text-center text-xl mt-9 mb-9 font-bold hover:text-blue-500'>
     <h2>Read the full report</h2>
 </div>
             <div className='grid  justify-center place-content-center lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 mt-9 mb-9 lg:ml-16 '>

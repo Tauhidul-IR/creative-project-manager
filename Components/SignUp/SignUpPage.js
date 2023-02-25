@@ -27,7 +27,6 @@ const SignUpPage = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                // console.log(user);
                 form.reset();
                 const userInfo = {
                     displayName: name
@@ -86,14 +85,13 @@ const SignUpPage = () => {
                 saveUser(user?.email, user?.displayName)
             })
             .catch(error => {
-                // console.log(error);
                 setSingUpError(error.message)
             })
     }
 
 
     return (
-        <div className="">
+        <div className="pt-10">
             <div className="hero min-h-screen bg-base-200 py-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left w-1/2">

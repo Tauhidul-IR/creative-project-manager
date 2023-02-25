@@ -54,7 +54,7 @@ export default () => {
 
 
     return (
-        <div className="mt-20 p-18">
+        <div className=" p-18">
             <span className='flex items-center'>
                 <PlusCircleIcon className='h-9 w-9' />
                 <div className=' bg-gradient-to-r from-gray-900 via-yellow-500 to-gray-500 inline-block text-transparent bg-clip-text'>
@@ -64,10 +64,10 @@ export default () => {
                 </div>
             </span>
 
-            <section className="p-6 bg-blue-400 dark:text-white h-screen">
+            <section className="p-6  dark:text-white min-h-screen">
                 <form onSubmit={handleSubmit(onSubmit)} className="container h-screen flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
 
-                    <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-blue-900">
+                    <fieldset className="grid grid-cols-4 gap-6 p-6  mt-5 rounded-md shadow-sm dark:bg-blue-900">
 
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-4">
                             <div className="col-span-full sm:col-span-3">
@@ -134,6 +134,8 @@ export default () => {
                     </fieldset>
 
                 </form>
+                <br />
+                <br />
             </section>
 
         </div>

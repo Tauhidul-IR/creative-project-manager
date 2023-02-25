@@ -1,16 +1,13 @@
-import Image from 'next/image';
+
 import React from 'react';
 import { useQuery } from "@tanstack/react-query";
 import { useContext } from 'react';
 import { AuthContext } from '../../Others/AuthProvider/AuthProvider';
-import { useForm } from 'react-hook-form';
 import Loading from '../../Components/Loading/Loading';
 import UpdateUserModal from '../../Components/UpdateUserModal/UpdateUserModal';
 import { useState } from 'react';
-import { useEffect } from 'react';
 
 const updateProfile = () => {
-    // const { register, formState: { errors }, handleSubmit } = useForm();
     const [aboutUser, setAboutUser] = useState(null);
 
     const { user } = useContext(AuthContext)
@@ -29,25 +26,17 @@ const updateProfile = () => {
     })
 
 
-
     if (isLoading) {
         return <Loading></Loading>
     }
 
-    console.log(user);
-    console.log(singleUser);
-
-
-    // 1d1e77a53a5d9e586aa1731efba2a018
-
     return (
         <div>
-            <div className='my-16 w-2/4 mx-auto'>
-
-                <h1 className='text-4xl font-bold my-7'>User Info.</h1>
+            <div className='mb-16 pt-24 w-2/4 mx-auto'>
+                <h1 className='text-4xl font-bold mb-7'>User Info.</h1>
                 <div className=''>
 
-                    <div className='flex items-center'>
+                    <div className='flex flex-col sm:flex-row items-center'>
                         <div className='w-16 mr-4'>
                             <img src={singleUser?.profilePhoto} alt="" />
                         </div>

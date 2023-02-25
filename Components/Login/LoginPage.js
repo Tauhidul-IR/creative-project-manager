@@ -53,7 +53,9 @@ const LoginPage = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            {/* <br />
+            <br /> */}
+            <div className="hero min-h-screen pt-20 bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left w-1/2">
                         <Image src={img} alt='#'></Image>

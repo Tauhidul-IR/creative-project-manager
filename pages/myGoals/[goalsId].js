@@ -18,7 +18,8 @@ const GoalsDetails = ({ goal }) => {
         <div>
             {/* <GoalDetails goal={goal}></GoalDetails> */}
 
-            <div className="my-6 flex flex-col w-3/4 mx-auto min-h-screen lg:flex-row">
+            <div className="mb-6 py-24 flex flex-col w-3/4 mx-auto min-h-screen lg:flex-row">
+
                 <div className=" w-2/3  justify-start">
                     <div className="">
                         <div>

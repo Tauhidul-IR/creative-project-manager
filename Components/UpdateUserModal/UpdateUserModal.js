@@ -7,9 +7,8 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
     console.log(singleUser);
 
 
-
+    //handle Update User
     const handleUpdateUser = (data) => {
-        // console.log(data)
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -29,8 +28,8 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
                         img: imgData.data.url
                     }
 
-
-                    fetch(`http://localhost:5000/users/${singleUser._id}`, {
+                    //Update user info
+                    fetch(`https://creative-project-manager-server.vercel.app/users/${singleUser._id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
@@ -90,7 +89,6 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
                         {/* --------------Name---------------------------------- */}
 
 
-
                         {/* --------------Upload photo---------------------------------- */}
                         <div className="form-control w-full">
                             <label className="label"><span className="label-text font-bold">Photo</span></label>
@@ -107,12 +105,7 @@ const UpdateUserModal = ({ singleUser, setAboutUser, refetch }) => {
 
                         {/* --------------Submit Btn---------------------------------- */}
                         <input className='btn buttonColor btn-sm mt-5 ' type="submit" value={'Update'} />
-                        {/* display Error */}
-                        <div>
-                            {
-                                // signUpError && <p className='text-red-600'>{signUpError}</p>
-                            }
-                        </div>
+
                     </form>
                 </div>
             </div>
