@@ -6,7 +6,7 @@ const ArticleCard = ({article}) => {
          
 		 
 	<Link href={`/BlogPage/BlogPage/${article?._id}`}>
-	<div class="containerCard ">
+	<div class="containerCard  ">
 			<div class="cardArticle">
 				<div class="content">
 					<div class="imgBx">
@@ -18,7 +18,7 @@ const ArticleCard = ({article}) => {
 					</div>
 				</div>
 				<ul class="sci">
-					<li >
+					<li className="text-white mt-4 mb-4" >
 						<a href="">{article.description.slice(0,50)}</a>
 					</li>
 					

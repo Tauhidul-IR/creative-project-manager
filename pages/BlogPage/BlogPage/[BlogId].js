@@ -1,14 +1,14 @@
 const BlogDetails = ({ article }) => {
     return (
         <div>
-            <div className="pt-20">
+            <div className="pt-20 mb-10">
 
                 <img style={{ height: '400px' }} className='flex mt-10 mx-auto rounded ' src={article.img} alt="" />
 
                 <div className="mt-10">
                     <div className=" text-center">
                         <div>
-                            <h1 className="text-4xl font-semibold">{article.title}</h1>
+                            <h1 className="text-4xl text-blue-400 font-semibold">{article.title}</h1>
                             <p className='mt-5'>- By <span className='text-blue-600'>{article.writer}</span></p>
                             <p className='mt-3 mb-5'> <span className='text-blue-600'>{article.date}</span></p>
                             <p className='text-left ml-10 mr-10' >{article.description}</p><br></br>
