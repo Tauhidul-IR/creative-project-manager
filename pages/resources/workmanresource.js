@@ -7,10 +7,7 @@ const workmanresource = ({ allResorces }) => {
     return (
         <div>
             <WorkManaReource></WorkManaReource>
-
-
-
-            <div className='grid justify-center my-5 items-center'>
+            <div className='grid justify-center pt-10 items-center'>
                 <div className='grid gap-5 my-2 mx-1  grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         allResorces?.map(allReData => <div key={allReData?._id}>

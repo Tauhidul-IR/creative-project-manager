@@ -6,7 +6,7 @@ const ControlData = () => {
 
 <div className="text-center mt-16 mb-16">
     <p className="text-gray-300 text-xl">SECURITY</p>
-    <h2 className="text-black text-4xl mt">Control your work data</h2>
+    <h2 className=" text-blue-400  text-4xl mt">Control your work data</h2>
 </div>
 
             <div className='grid justify-items-center gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>

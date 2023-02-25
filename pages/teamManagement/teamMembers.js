@@ -100,7 +100,11 @@ const teamMembers = ({ data }) => {
 
 
     return (
+<<<<<<< HEAD
         <div>
+=======
+        <div className='pt-20'>
+>>>>>>> 57251e59d59d7c9bb7003a0a9ae77f806a215a4c
 
             {
                 domLoaded && (
