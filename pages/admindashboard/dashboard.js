@@ -9,18 +9,17 @@ import Navbar from '../../Components/Navbar/Navbar';
 const Dashboard = () => {
   return (
     <div className=''>
-      <Navbar></Navbar>
       <AdminSideV>
 
 
 
         <main className="bg-gray-100 min-h-screen">
-         
+
           <AdminBanar></AdminBanar>
-        
+
           <div className="p-4 grid md:grid-cols-3 grid-cols-1 gap-4">
 
-         
+
           </div>
         </main>
 
